@@ -1,0 +1,47 @@
+{
+  "name": "@urbit/fdn-design-system",
+  "version": "0.1.0",
+  "description": "A system of design variables, Markdoc and React components intended for the redesigned Urbit Foundation projects.",
+  "main": "build/index.cjs.js",
+  "module": "build/index.esm.js",
+  "files": [
+    "build",
+    "styles",
+    "tailwind.config.js",
+    "next.config.js"
+  ],
+  "scripts": {
+    "rollup": "rollup -c",
+    "watch": "rollup -c -w",
+    "build": "npm i && npm run rollup && rm -rf node_modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/urbit/fdn-design-system.git"
+  },
+  "author": "Urbit Foundation",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/urbit/fdn-design-system/issues"
+  },
+  "homepage": "https://github.com/urbit/fdn-design-system#readme",
+  "peerDependencies": {
+    "classnames": "^2.3.2",
+    "next": "^13.4.19",
+    "postcss": "^8.4.29",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.3.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.11",
+    "@babel/preset-env": "^7.22.14",
+    "@babel/preset-react": "^7.22.5",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^25.0.4",
+    "@rollup/plugin-node-resolve": "^15.2.1",
+    "rollup": "^3.28.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2"
+  }
+}
