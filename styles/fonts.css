@@ -1,0 +1,136 @@
+/* Urbit Sans */
+@font-face {
+  font-family: "Urbit Sans";
+  src: url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-UltraThin.otf");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Urbit Sans";
+  src: url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-Thin.otf");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Urbit Sans";
+  src: url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-Light.otf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Urbit Sans";
+  src: url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Urbit Sans";
+  src: url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-Medium.otf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Urbit Sans";
+  src: url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-SemiBold.otf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Urbit Sans";
+  src: url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-Bold.otf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Urbit Sans Mono */
+@font-face {
+  font-family: "Urbit Sans Mono";
+  src: url("https://media.urbit.org/fonts/UrbitSansMono/UrbitSansMono-UltraThin.otf");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Urbit Sans Mono";
+  src: url("https://media.urbit.org/fonts/UrbitSansMono/UrbitSansMono-Thin.otf");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Urbit Sans Mono";
+  src: url("https://media.urbit.org/fonts/UrbitSansMono/UrbitSansMono-Light.otf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Urbit Sans Mono";
+  src: url("https://media.urbit.org/fonts/UrbitSansMono/UrbitSansMono-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Urbit Sans Mono";
+  src: url("https://media.urbit.org/fonts/UrbitSansMono/UrbitSansMono-Medium.otf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Urbit Sans Mono";
+  src: url("https://media.urbit.org/fonts/UrbitSansMono/UrbitSansMono-SemiBold.otf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Urbit Sans Mono";
+  src: url("https://media.urbit.org/fonts/UrbitSansMono/UrbitSansMono-Bold.otf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Urbit Serif Italic */
+@font-face {
+  font-family: "Urbit Serif Italic";
+  src: url("https://media.urbit.org/fonts/UrbitSerifItalic/UrbitSerifItalic-UltraThin.otf");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Urbit Serif Italic";
+  src: url("https://media.urbit.org/fonts/UrbitSerifItalic/UrbitSerifItalic-Thin.otf");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Urbit Serif Italic";
+  src: url("https://media.urbit.org/fonts/UrbitSerifItalic/UrbitSerifItalic-Light.otf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Urbit Serif Italic";
+  src: url("https://media.urbit.org/fonts/UrbitSerifItalic/UrbitSerifItalic-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Urbit Serif Italic";
+  src: url("https://media.urbit.org/fonts/UrbitSerifItalic/UrbitSerifItalic-Medium.otf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Urbit Serif Italic";
+  src: url("https://media.urbit.org/fonts/UrbitSerifItalic/UrbitSerifItalic-SemiBold.otf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Urbit Serif Italic";
+  src: url("https://media.urbit.org/fonts/UrbitSerifItalic/UrbitSerifItalic-Bold.otf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+html,
+body {
+  font-family: "Urbit Sans";
+}
