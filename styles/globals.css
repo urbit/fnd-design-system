@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* MOS color palette */
+.mos {
+  --black: #14140F;
+  --white: #F8FAF8;
+  --gray: #5A5A55;
+  --tint: #373733;
+  --lite: #F3F5F3;
+  --brite: #C3CDC3;
+}
+/* BLU color palette */
+.blu {
+  --black: #14141E;
+  --white: #F7FFFF;
+  --gray: #5A5A6E;
+  --tint: #383840;
+  --lite: #F0FFFF;
+  --brite: #A0DCE6;
+}
+/* GRN color palette */
+.grn {
+  --black: #141A14;
+  --white: #F9FFF9;
+  --gray: #5A735A;
+  --tint: #383C38;
+  --lite: #F5FFF5;
+  --brite: #AAE68C;
+}
+/* RED color palette */
+.red {
+  --black: #1E1414;
+  --white: #FFFCFF;
+  --gray: #645050;
+  --tint: #403838;
+  --lite: #FFFAFF;
+  --brite: #FACDB9;
+}
+
+:root {
+  /* Default to MOS */
+  @apply mos;
+}
