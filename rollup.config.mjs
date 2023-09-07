@@ -9,12 +9,12 @@ const config = {
   input: ["./src/index.js"],
   output: [
     {
-      file: pkg.main,
+      dir: pkg.main.slice(0, -8),
       format: "cjs",
       sourcemap: true,
     },
     {
-      file: pkg.module,
+      dir: pkg.module.slice(0, -8),
       format: "esm",
       sourcemap: true,
     },
