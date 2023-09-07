@@ -1,0 +1,19 @@
+import { Tag } from "@urbit/markdoc";
+
+export const heading = {
+  children: ["inline"],
+  attributes: {
+    id: { type: String },
+    level: { type: Number, required: true, default: 1 },
+  },
+  transform(node, config) {
+    const attributes = node.transformAttributes(config);
+    const children = node.transformChildren(config);
+
+    return new Tag(
+      `h${node.attributes["level"]}`,
+      { ...attributes },
+      children
+    );
+  },
+};
