@@ -44,6 +44,10 @@
   @apply mos;
 }
 
+.type-ui {
+  @apply text-xl font-medium leading-none;
+}
+
 .layout {
   @apply w-full max-w-screen-2xl px-5 md:px-12;
 }
