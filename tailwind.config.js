@@ -35,6 +35,17 @@ module.exports = {
         tint: "var(--tint)",
         lite: "var(--lite)",
         brite: "var(--brite)",
+        // markdown & prism
+        red: "#D2232A",
+        purple: "rgba(157, 82, 255, 0.8)",
+        wall: {
+          100: "#F3F2F0",
+          200: "#E3E0DB",
+          300: "#C8C4BD",
+          400: "#918C84",
+          500: "#5A564F",
+          600: "#24221E",
+        },
       },
     },
   },
