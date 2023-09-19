@@ -8,16 +8,10 @@ https://prismjs.com/download.html#themes=prism-coy&languages=markup+css+clike+ja
 
 code[class*="language-"],
 pre[class*="language-"] {
-  @apply text-wall-600;
+  @apply text-lite text-2xl font-mono font-semibold;
   background: none;
-  font-family: "Source Code Pro", monospace;
-  font-size: 1em;
   text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 1.5;
+  white-space: pre-wrap;
 
   -moz-tab-size: 4;
   -o-tab-size: 4;
@@ -33,6 +27,7 @@ pre[class*="language-"] {
 pre[class*="language-"] {
   position: relative;
   overflow: visible;
+  overflow-y: scroll;
 }
 
 code[class*="language-"] {
@@ -70,12 +65,12 @@ code[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-  @apply text-red;
+  @apply text-[#D57562];
 }
 
 .token.function-name,
 .token.function {
-  @apply text-wall-600;
+  @apply text-[#8F8F8F];
 }
 
 .token.selector,
@@ -84,24 +79,24 @@ code[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-  @apply text-green-400;
+  @apply text-[#62D5C2];
 }
 
 .token.operator,
 .token.entity,
 .token.url,
 .token.variable {
-  @apply text-wall-500;
+  @apply text-[#7994AE];
 }
 
 .token.atrule,
 .token.attr-value,
 .token.class-name {
-  @apply text-blue-400;
+  @apply text-[#609AD5];
 }
 
 .token.keyword {
-  @apply text-purple;
+  @apply text-[#7562D5];
 }
 
 .token.regex,
