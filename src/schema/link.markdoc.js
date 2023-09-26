@@ -3,10 +3,11 @@ import { Tag } from "@urbit/markdoc";
 function checkIfExternal(attributes) {
   const href = attributes.href;
   if (
-    href.includes("urbit.org") ||
-    href.startsWith("/") ||
-    href.startsWith("#") ||
-    href.startsWith("?")
+    href &&
+    (href.includes("urbit.org") ||
+     href.startsWith("/") ||
+     href.startsWith("#") ||
+     href.startsWith("?"))
   ) {
     return "_self";
   } else {
