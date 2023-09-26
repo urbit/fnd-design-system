@@ -132,14 +132,7 @@
   list-style-type: decimal;
 }
 
-.markdown li a,
-.markdown h3 a,
-.markdown h2 a {
-  @apply text-brite;
-}
-
-/* Links in list item tags should be green */
-.markdown li a {
+.markdown a:not(.md-exclude) {
   @apply text-brite font-semibold;
 }
 
