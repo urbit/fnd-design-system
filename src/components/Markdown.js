@@ -16,11 +16,15 @@ import { button } from "../schema/button.markdoc";
 import { callout } from "../schema/callout.markdoc";
 import { div } from "../schema/div.markdoc";
 import { iframe } from "../schema/iframe.markdoc";
+import { card } from "../schema/card.markdoc";
+import { iconcard } from "../schema/iconcard.markdoc";
 import Tabs from "./markdown/Tabs";
 import Tab from "./markdown/Tab";
 import Button from "./markdown/Button";
 import Callout from "./markdown/Callout";
 import Fence from "./markdown/Fence";
+import Card from "./ui/Card/Card";
+import IconCard from "./ui/IconCard/IconCard";
 import parse from "html-react-parser";
 
 const Math = dynamic(() => import("./markdown/Math"), {
@@ -80,6 +84,8 @@ export function MarkdownParse({ post }) {
       div,
       iframe,
       math,
+      card,
+      iconcard,
     },
   });
 }
@@ -87,6 +93,8 @@ export function MarkdownParse({ post }) {
 export function MarkdownRender({ content }) {
   return Markdoc.renderers.react(content, React, {
     components: {
+      IconCard,
+      Card,
       Fence,
       Tabs,
       Tab,

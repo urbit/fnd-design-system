@@ -19,16 +19,16 @@ export default function IconCard({
   return (
     <div className="text-2xl text-lite">
       <div className="relative h-60 p-5 rounded-t-2xl bg-tint">
-        <h3>{title}</h3>
+        <h3 className="md-exclude">{title}</h3>
         <div
           className="absolute w-32 h-32 bg-brite m-auto left-0 right-0 top-0 bottom-0"
           style={iconStyle}
         />
       </div>
       <div className="flex flex-col justify-between min-h-[9.5rem] p-5 rounded-b-2xl bg-gray">
-        <p className="font-semibold pb-2">{description}</p>
+        <p className="md-exclude font-semibold pb-2">{description}</p>
         <Link
-          className="px-2 py-1 w-fit rounded-xl text-gray bg-brite hover:bg-lite"
+          className="md-exclude px-2 py-1 w-fit rounded-xl text-gray bg-brite hover:bg-lite"
           href={href}
         >
           {label}
