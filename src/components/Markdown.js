@@ -56,7 +56,7 @@ const Iframe = ({ className, width, height, src, children }) => {
   return <iframe width={width} height={height} src={src} />;
 };
 
-export function MarkdownParse({ post }) {
+export function MarkdownParse({ post, variables={} }) {
   const tokeniser = new Markdoc.Tokenizer({ html: true, linkify: true });
   const tokens = tokeniser.tokenize(post.content);
   const ast = Markdoc.parse(tokens);
@@ -87,6 +87,7 @@ export function MarkdownParse({ post }) {
       card,
       iconcard,
     },
+    variables,
   });
 }
 
