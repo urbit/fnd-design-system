@@ -45,7 +45,7 @@
 }
 
 .type-ui {
-  @apply text-xl font-medium leading-none;
+  @apply text-base lg:text-lg xl:text-xl font-medium;
 }
 
 .layout {
