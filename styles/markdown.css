@@ -1,5 +1,5 @@
 .markdown {
-  @apply text-lite pl-2;
+  @apply text-lite;
 }
 
 .markdown .display * {
@@ -51,7 +51,7 @@
 }
 
 .markdown li {
-  @apply py-2 ml-6 text-base md:text-lg;
+  @apply py-2 ml-7 text-base md:text-lg;
 }
 
 .markdown hr {
@@ -94,7 +94,7 @@
 }
 
 .markdown.technical li {
-  @apply py-2 ml-6 text-2xl text-lite;
+  @apply py-2 ml-8 text-2xl text-lite;
 }
 
 /* Imagery */
