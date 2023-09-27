@@ -18,6 +18,7 @@ import { div } from "../schema/div.markdoc";
 import { iframe } from "../schema/iframe.markdoc";
 import { card } from "../schema/card.markdoc";
 import { iconcard } from "../schema/iconcard.markdoc";
+import { grid } from "../schema/grid.markdoc";
 import Tabs from "./markdown/Tabs";
 import Tab from "./markdown/Tab";
 import Button from "./markdown/Button";
@@ -47,6 +48,14 @@ const NextLink = ({ href, target, children }) => {
 const Div = ({ className, id = "", title = "", children }) => {
   return (
     <div className={className} id={id} title={title}>
+      {children}
+    </div>
+  );
+};
+
+const Grid = ({ children }) => {
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-11/12 mx-auto mb-16">
       {children}
     </div>
   );
@@ -86,6 +95,7 @@ export function MarkdownParse({ post, variables={} }) {
       math,
       card,
       iconcard,
+      grid,
     },
     variables,
   });
@@ -106,6 +116,7 @@ export function MarkdownRender({ content }) {
       Div,
       Iframe,
       Math,
+      Grid,
     },
   });
 }
