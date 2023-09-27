@@ -21,15 +21,15 @@
 /* Default Typography */
 
 .markdown h1 {
-  @apply text-4xl font-bold mt-32 mb-16;
+  @apply text-4xl mt-32 mb-16;
 }
 
 .markdown h2 {
-  @apply text-3xl font-bold mt-24 mb-12;
+  @apply text-3xl mt-24 mb-12;
 }
 
 .markdown h3:not(.md-exclude) {
-  @apply text-2xl font-semibold mt-16 mb-8;
+  @apply text-2xl font-medium mt-16 mb-8;
 }
 
 .markdown h4 {
@@ -70,15 +70,15 @@
 /* Technical Typography */
 
 .markdown.technical h1 {
-  @apply text-6xl text-lite font-bold mt-32 mb-16;
+  @apply text-6xl text-lite mt-32 mb-16;
 }
 
 .markdown.technical h2 {
-  @apply text-5xl text-lite font-bold mt-24 mb-12;
+  @apply text-5xl text-lite mt-24 mb-12;
 }
 
 .markdown.technical h3:not(.md-exclude) {
-  @apply text-4xl text-lite font-semibold mt-16 mb-8;
+  @apply text-4xl text-lite font-medium mt-16 mb-8;
 }
 
 .markdown.technical h4 {
