@@ -33,7 +33,7 @@ export default function IntraNav({ sites, ourSite, pages }) {
         <div className="layout h-16 px-8 mx-auto relative">
           <div className="flex justify-between items-center h-full">
             <div className="flex h-full items-center">
-              <div className="flex relative h-full w-52 items-center">
+              <div className="flex relative h-full side-bar items-center">
                 <a
                   className="flex flex-1 relative h-full items-center pr-auto bg-brite text-gray"
                   href="/"
@@ -118,11 +118,11 @@ export default function IntraNav({ sites, ourSite, pages }) {
                   </div>
                 )}
               </div>
-              <nav className="flex items-center hidden md:flex">
+              <nav className="flex items-center hidden md:flex nav-space-x-offset">
                 {pages.map((page) => (
                   <ActiveLink
                     currentPath={currentPath}
-                    className="ml-5 type-ui"
+                    className="type-ui"
                     href={page.href}
                     key={page.title}
                   >

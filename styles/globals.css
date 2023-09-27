@@ -49,5 +49,25 @@
 }
 
 .layout {
-  @apply w-full max-w-screen-2xl px-5 md:px-12;
+  @apply w-full max-w-screen-2xl px-5 md:px-8 lg:px-10 xl:px-12;
+}
+
+.offset-l {
+  @apply pl-5;
+}
+
+.offset-r {
+  @apply pr-5;
+}
+
+.nav-space-x {
+  @apply space-x-2 lg:space-x-3.5 xl:space-x-5;
+}
+
+.nav-space-x-offset {
+  @apply offset-l nav-space-x;
+}
+
+.side-bar {
+  @apply w-44 lg:w-48 xl:w-52 type-ui;
 }
