@@ -78,13 +78,14 @@ export default function IntraNav({ sites, ourSite, pages }) {
               )}
               {isDropdownOpen && (
                 <div
-                  className="absolute block md:hidden z-20 w-screen top-0 -left-8 top-full bg-brite overflow-y-scroll"
+                  className="absolute block md:hidden z-20 w-screen top-full bg-brite overflow-y-scroll"
                   style={{height: "calc(100vh - 3rem)"}}
                 >
                   {sites.map((site) => (
                     <a
                       className={
-                        "flex relative h-12 w-full items-center px-8 " +
+                        "flex relative h-12 w-full items-center " +
+                        "pl-5 md:pl-8 lg:pl-10 xl:pl-12 " +
                         "hover:opacity-100 hover:bg-brite text-gray " +
                         site.theme
                       }
@@ -95,7 +96,7 @@ export default function IntraNav({ sites, ourSite, pages }) {
                     </a>
                   ))}
                   <a
-                    className="flex whitespace-nowrap relative h-12 px-8 items-center text-gray hover:text-brite hover:bg-gray leading-none"
+                    className="flex whitespace-nowrap relative h-12 pl-5 md:pl-8 lg:pl-10 xl:pl-12 items-center text-gray hover:text-brite hover:bg-gray leading-none"
                     target="_blank"
                     href="https://network.urbit.org"
                   >
@@ -105,7 +106,7 @@ export default function IntraNav({ sites, ourSite, pages }) {
                   {pages.map((page) => (
                     <ActiveLink
                       currentPath={currentPath}
-                      className="flex relative w-full items-center px-8 py-1"
+                      className="flex relative w-full items-center pl-5 md:pl-8 lg:pl-10 xl:pl-12 py-1"
                       href={page.href}
                       key={page.title}
                       dark
