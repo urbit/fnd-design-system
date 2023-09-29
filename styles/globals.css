@@ -71,3 +71,7 @@
 .side-bar {
   @apply w-44 lg:w-48 xl:w-52 type-ui;
 }
+
+.side-bar-with-margin {
+  @apply w-[12.25rem] md:w-52 lg:w-[14.5rem] xl:w-64 type-ui;
+}

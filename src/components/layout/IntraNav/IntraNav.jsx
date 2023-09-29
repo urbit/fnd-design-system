@@ -32,18 +32,22 @@ export default function IntraNav({ sites, ourSite, pages }) {
       <div className="relative layout h-12 md:h-16">
         <div className="flex justify-between items-center h-full">
           <div className="flex h-full items-center">
-            <div className="relative flex h-full side-bar items-center bg-black">
+            <div className="relative flex h-full side-bar-with-margin -ml-5 md:-ml-8 lg:-ml-10 xl:-ml-12 items-center bg-black">
               <a
-                className="flex flex-1 relative h-full items-center pr-auto bg-brite text-gray"
+                className="flex flex-1 relative h-full items-center text-gray hover:opacity-80"
                 href="/"
               >
-                <span className="absolute flex items-center h-full w-12 pl-5 top-1/2 -left-12 transform -translate-y-1/2 bg-brite text-gray leading-none">
-                  ~
+                <div className="flex items-center h-full bg-black">
+                  <span className="flex justify-center items-center h-full w-5 md:w-8 lg:w-10 xl:w-12 bg-brite">
+                    ~
+                  </span>
+                </div>
+                <span className="flex items-center h-full w-full bg-brite">
+                  {ourSite.title}
                 </span>
-                {ourSite.title}
               </a>
               <button
-                className="h-full w-12 bg-brite text-gray hover:opacity-70"
+                className="h-full w-12 bg-brite text-gray hover:opacity-80 "
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               >
                 {(isDropdownOpen && "↑") || "↓"}
@@ -53,29 +57,21 @@ export default function IntraNav({ sites, ourSite, pages }) {
                   {sites.map((site) => (
                     <a
                       className={
-                        "flex relative h-16 w-full pr-4 items-center " +
+                        "flex relative h-16 w-full pl-12 pr-4 items-center " +
                         "hover:opacity-80 bg-brite text-gray " +
                         site.theme
                       }
                       href={site.href}
                       key={site.title}
                     >
-                      <div
-                        className={
-                          "absolute flex items-center h-16 w-12 bg-brite " +
-                          "top-1/2 -left-12 transform -translate-y-1/2 " +
-                          site.theme
-                        }
-                      ></div>
                       {site.title}
                     </a>
                   ))}
                   <a
-                    className="flex whitespace-nowrap relative h-16 pr-4 items-center hover:opacity-80 bg-gray text-lite leading-none"
+                    className="flex whitespace-nowrap relative h-16 pl-12 pr-4 items-center hover:opacity-80 bg-gray text-lite leading-none"
                     target="_blank"
                     href="https://network.urbit.org"
                   >
-                    <div className="absolute flex items-center h-16 w-12 top-1/2 -left-12 transform -translate-y-1/2  bg-gray text-lite"></div>
                     Network Explorer ↗
                   </a>
                 </div>
