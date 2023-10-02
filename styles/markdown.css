@@ -55,7 +55,7 @@
 }
 
 .markdown hr {
-  @apply my-16 border-t-2 border-wall-300;
+  @apply my-16 border-t-2 border-gray rounded-sm;
 }
 
 .markdown iframe {
