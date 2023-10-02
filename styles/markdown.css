@@ -137,7 +137,7 @@
 }
 
 .markdown blockquote {
-  @apply border-l-4 border-lite pl-6 italic;
+  @apply border-l-2 border-lite pl-6 italic;
 }
 .markdown blockquote cite {
   @apply not-italic font-semibold;
