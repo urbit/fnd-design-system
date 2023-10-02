@@ -9,6 +9,9 @@ export const card = {
       default: "gray",
       matches: ["gray", "brite", "lite"],
     },
+    href: {
+      type: String,
+    },
     title: {
       type: String,
     },

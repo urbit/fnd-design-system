@@ -1,9 +1,11 @@
 import React from "react";
+import Link from "next/link";
 import classnames from "classnames";
 
 export default function Card({
   className,
   colorScheme,
+  href,
   title,
   description,
   backgroundImage,
@@ -15,9 +17,9 @@ export default function Card({
     : {};
 
   return (
-    <div
+    <Link
       className={classnames(
-        "flex flex-col justify-between rounded-2xl text-2xl p-5 h-64",
+        "flex flex-col justify-between rounded-2xl text-2xl p-5 h-64 md-exclude",
         className,
         {
           "text-lite bg-gray": colorScheme === "gray",
@@ -27,9 +29,10 @@ export default function Card({
         }
       )}
       style={style}
+      href={href}
     >
       <h3 className="md-exclude">{title}</h3>
       <p className="md-exclude font-semibold">{description}</p>
-    </div>
+    </Link>
   );
 }
