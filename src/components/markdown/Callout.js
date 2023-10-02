@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-const Callout = ({ title, children, className = "bg-wall-100" }) => {
+const Callout = ({ title, children, className = "bg-gray" }) => {
   return (
     <div
       className={classNames(
