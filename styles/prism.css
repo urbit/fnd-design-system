@@ -11,7 +11,10 @@ pre[class*="language-"] {
   @apply text-lite text-lg font-mono font-semibold;
   background: none;
   text-align: left;
-  white-space: pre-wrap;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
 
   -moz-tab-size: 4;
   -o-tab-size: 4;
