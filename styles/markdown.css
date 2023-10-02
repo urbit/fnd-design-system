@@ -21,15 +21,15 @@
 /* Default Typography */
 
 .markdown h1 {
-  @apply text-4xl mt-32 mb-16;
+  @apply text-5xl mt-32 mb-16;
 }
 
 .markdown h2 {
-  @apply text-3xl mt-24 mb-12;
+  @apply text-4xl mt-24 mb-12;
 }
 
 .markdown h3:not(.md-exclude) {
-  @apply text-2xl font-medium mt-16 mb-8;
+  @apply text-3xl font-medium mt-16 mb-8;
 }
 
 .markdown h4 {
@@ -37,11 +37,11 @@
 }
 
 .markdown h5 {
-  @apply text-2xl font-semibold;
+  @apply text-2xl font-bold;
 }
 
 .markdown p:not(.md-exclude) {
-  @apply text-2xl text-lite leading-relaxed;
+  @apply text-xl text-lite leading-relaxed;
 }
 
 .markdown-callout p {
@@ -70,23 +70,23 @@
 /* Technical Typography */
 
 .markdown.technical h1 {
-  @apply text-6xl text-lite mt-32 mb-16;
+  @apply text-5xl text-lite mt-32 mb-16;
 }
 
 .markdown.technical h2 {
-  @apply text-5xl text-lite mt-24 mb-12;
+  @apply text-4xl text-lite mt-24 mb-12;
 }
 
 .markdown.technical h3:not(.md-exclude) {
-  @apply text-4xl text-lite font-medium mt-16 mb-8;
+  @apply text-3xl text-lite font-medium mt-16 mb-8;
 }
 
 .markdown.technical h4 {
-  @apply text-3xl text-lite font-semibold mt-8 mb-4;
+  @apply text-2xl text-lite font-semibold mt-8 mb-4;
 }
 
 .markdown.technical p:not(.md-exclude) {
-  @apply text-2xl text-lite leading-relaxed;
+  @apply text-xl text-lite leading-relaxed;
 }
 
 .markdown.technical p code {
@@ -94,7 +94,7 @@
 }
 
 .markdown.technical li {
-  @apply py-2 ml-8 text-2xl text-lite;
+  @apply py-2 ml-8 text-xl text-lite;
 }
 
 /* Imagery */
