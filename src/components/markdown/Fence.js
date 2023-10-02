@@ -41,16 +41,16 @@ export default function Fence({
       )}
       {copy && (
         <div
-          className="absolute flex items-center justify-center top-3 right-3 z-10 cursor-pointer !p-1 border rounded-lg border-[#afaeab]"
+          className="absolute flex h-[21px] w-[21px] items-center justify-center top-3 right-3 z-10 cursor-pointer"
           onClick={useCopy}
         >
-          <p>
+          <p className="!m-0">
             {copyStatus === "inactive" ? (
               <Copy />
             ) : (
               <svg
-                width="16"
-                height="16"
+                width="14"
+                height="14"
                 viewBox="0 0 16 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
