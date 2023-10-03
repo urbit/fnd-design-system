@@ -42,6 +42,7 @@
 :root {
   /* Default to MOS */
   @apply mos;
+  background-color: var(--black);
 }
 
 .type-ui {
