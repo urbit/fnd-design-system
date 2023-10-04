@@ -29,7 +29,7 @@ export default function IntraNav({ sites, ourSite, pages }) {
 
   return (
     <div className="sticky top-0 z-50 flex flex-col items-center w-full bg-gray">
-      <div className="relative layout h-12 md:h-16">
+      <div className="relative layout layout-px h-12 md:h-16">
         <div className="flex justify-between items-center h-full">
           <div className="flex h-full items-center">
             <div className="relative flex h-full side-bar-with-margin -ml-5 md:-ml-8 lg:-ml-10 xl:-ml-12 items-center bg-black">

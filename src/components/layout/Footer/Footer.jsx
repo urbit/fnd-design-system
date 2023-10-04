@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Footer({ title = "", data = [] }) {
   return (
     <footer className="bg-tint text-lite text-xl font-normal mt-20 w-full flex justify-center z-10">
-      <div className="layout">
+      <div className="layout layout-px">
         <section className="flex flex-row flex-wrap w-full pt-16 pb-8 ">
           {data?.[0]?.map((section, i) => {
             return (
