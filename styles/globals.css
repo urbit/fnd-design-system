@@ -70,9 +70,16 @@
 }
 
 .side-bar {
-  @apply w-44 lg:w-48 xl:w-52 type-ui;
+  @apply w-44 lg:w-48 xl:w-52;
 }
 
 .side-bar-with-margin {
   @apply w-[12.25rem] md:w-52 lg:w-[14.5rem] xl:w-64 type-ui;
+}
+
+.content-height {
+  height: calc(100vh - 3rem);
+  @screen md {
+    height: calc(100vh - 4rem);
+  }
 }
