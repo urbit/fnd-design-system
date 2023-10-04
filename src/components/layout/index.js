@@ -5,3 +5,4 @@ export { default as Main } from "./Main";
 export { default as SideBar } from "./SideBar";
 export { default as MenuTray } from "./MenuTray";
 export { default as ContentNav } from "./ContentNav";
+export { default as FragmentNav } from "./FragmentNav";
