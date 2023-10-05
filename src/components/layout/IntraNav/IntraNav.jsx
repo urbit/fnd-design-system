@@ -15,11 +15,11 @@ function ActiveLink({
   const activeClassName = !dark
     ? classnames({
         "text-lite": "/" + firstCrumb === href,
-        "text-brite": "/" + firstCrumb !== href,
+        "text-brite hover:text-lite": "/" + firstCrumb !== href,
       })
     : classnames({
         "text-black": "/" + firstCrumb === href,
-        "text-gray": "/" + firstCrumb !== href,
+        "text-gray hover:text-black": "/" + firstCrumb !== href,
       });
 
   return (
