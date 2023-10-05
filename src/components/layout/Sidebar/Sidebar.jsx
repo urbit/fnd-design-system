@@ -1,7 +1,7 @@
 import React from "react";
 import classnames from "classnames";
 
-export default function SideBar({
+export default function Sidebar({
   className = "",
   children,
   left = false,
@@ -13,7 +13,7 @@ export default function SideBar({
         "sticky flex top-12 md:top-16 z-40 py-5 content-height side-bar",
         className,
         {
-          "side-bar-with-margin": left || right,
+          "sidebar-with-margin": left || right,
           "layout-pl": left,
           "layout-pr": right,
         }

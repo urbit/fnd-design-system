@@ -81,11 +81,11 @@
   @apply offset-l nav-space-x;
 }
 
-.side-bar {
+.sidebar {
   @apply w-44 lg:w-48 xl:w-52;
 }
 
-.side-bar-with-margin {
+.sidebar-with-margin {
   @apply w-[12.25rem] md:w-52 lg:w-[14.5rem] xl:w-64 type-ui;
 }
 
