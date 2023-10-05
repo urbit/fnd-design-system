@@ -95,3 +95,10 @@
     height: calc(100vh - 4rem);
   }
 }
+
+.max-h-content {
+  max-height: calc(100vh - 3rem);
+  @screen md {
+    max-height: calc(100vh - 4rem);
+  }
+}

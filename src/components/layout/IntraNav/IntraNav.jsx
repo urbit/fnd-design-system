@@ -70,7 +70,7 @@ function Dropdown({ className = "", label, items }) {
         <span>{(isOpen && "↑") || "↓"}</span>
       </button>
       {isOpen && (
-        <div className="absolute top-full w-full bg-black">
+        <div className="absolute top-full w-full bg-black max-h-content overflow-y-scroll">
           {items.map((item) => {
             return (
               <ActiveLink
