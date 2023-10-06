@@ -32,7 +32,7 @@
   @apply text-3xl font-medium mt-16 mb-8;
 }
 
-.markdown h4 {
+.markdown h4:not(.md-exclude) {
   @apply text-2xl font-semibold mt-8 mb-4;
 }
 
@@ -54,7 +54,7 @@
   @apply py-2 ml-7 text-base md:text-lg;
 }
 
-.markdown hr {
+.markdown hr:not(.md-exclude) {
   @apply my-16 border-t-2 border-gray rounded-sm;
 }
 
@@ -81,7 +81,7 @@
   @apply text-3xl text-lite font-medium mt-16 mb-8;
 }
 
-.markdown.technical h4 {
+.markdown.technical h4:not(.md-exclude) {
   @apply text-2xl text-lite font-semibold mt-8 mb-4;
 }
 
@@ -91,6 +91,7 @@
 
 .markdown.technical p code {
   white-space: pre-wrap;
+  @apply text-lite;
 }
 
 .markdown.technical li {
