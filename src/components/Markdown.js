@@ -19,6 +19,7 @@ import { iframe } from "../schema/iframe.markdoc";
 import { imagecard } from "../schema/imagecard.markdoc";
 import { iconcard } from "../schema/iconcard.markdoc";
 import { contentcard } from "../schema/contentcard.markdoc";
+import { postcard } from "../schema/postcard.markdoc";
 import { grid } from "../schema/grid.markdoc";
 import { video } from "../schema/video.markdoc";
 import { tooltip } from "../schema/tooltip.markdoc";
@@ -30,6 +31,7 @@ import Fence from "./markdown/Fence";
 import ImageCard from "./ui/ImageCard/ImageCard";
 import IconCard from "./ui/IconCard/IconCard";
 import ContentCard from "./ui/ContentCard/ContentCard";
+import PostCard from "./ui/PostCard/PostCard";
 import Video from "./markdown/Video";
 import Tooltip from "./markdown/Tooltip";
 import parse from "html-react-parser";
@@ -102,6 +104,7 @@ export function MarkdownParse({ post, variables={} }) {
       imagecard,
       iconcard,
       contentcard,
+      postcard,
       grid,
       video,
       tooltip,
@@ -116,6 +119,7 @@ export function MarkdownRender({ content }) {
       IconCard,
       ImageCard,
       ContentCard,
+      PostCard,
       Fence,
       Tabs,
       Tab,

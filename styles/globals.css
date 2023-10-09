@@ -101,6 +101,10 @@
   @apply bg-brite hover:bg-lite rounded-xl text-gray text-xl px-2.5 py-1.5;
 }
 
+.hr-horizontal {
+  @apply w-full border-t-2 rounded-sm;
+}
+
 .content-height {
   height: calc(100vh - 3rem);
   @screen md {
