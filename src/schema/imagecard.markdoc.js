@@ -1,5 +1,5 @@
-export const card = {
-  render: "Card",
+export const imagecard = {
+  render: "ImageCard",
   attributes: {
     className: {
       type: String,

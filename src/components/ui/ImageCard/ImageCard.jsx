@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import classnames from "classnames";
 
-export default function Card({
+export default function ImageCard({
   className,
   colorScheme,
   href,

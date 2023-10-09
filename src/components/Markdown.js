@@ -16,7 +16,7 @@ import { button } from "../schema/button.markdoc";
 import { callout } from "../schema/callout.markdoc";
 import { div } from "../schema/div.markdoc";
 import { iframe } from "../schema/iframe.markdoc";
-import { card } from "../schema/card.markdoc";
+import { imagecard } from "../schema/imagecard.markdoc";
 import { iconcard } from "../schema/iconcard.markdoc";
 import { grid } from "../schema/grid.markdoc";
 import { video } from "../schema/video.markdoc";
@@ -26,7 +26,7 @@ import Tab from "./markdown/Tab";
 import Button from "./markdown/Button";
 import Callout from "./markdown/Callout";
 import Fence from "./markdown/Fence";
-import Card from "./ui/Card/Card";
+import ImageCard from "./ui/ImageCard/ImageCard";
 import IconCard from "./ui/IconCard/IconCard";
 import Video from "./markdown/Video";
 import Tooltip from "./markdown/Tooltip";
@@ -97,7 +97,7 @@ export function MarkdownParse({ post, variables={} }) {
       div,
       iframe,
       math,
-      card,
+      imagecard,
       iconcard,
       grid,
       video,
@@ -111,7 +111,7 @@ export function MarkdownRender({ content }) {
   return Markdoc.renderers.react(content, React, {
     components: {
       IconCard,
-      Card,
+      ImageCard,
       Fence,
       Tabs,
       Tab,
