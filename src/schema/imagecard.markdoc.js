@@ -18,7 +18,7 @@ export const imagecard = {
     description: {
       type: String,
     },
-    backgroundImage: {
+    imgSrc: {
       type: String,
     },
   },

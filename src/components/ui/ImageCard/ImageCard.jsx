@@ -8,13 +8,9 @@ export default function ImageCard({
   href,
   title,
   description,
-  backgroundImage,
+  imgSrc,
 }) {
-  const style = backgroundImage
-    ? {
-        backgroundImage: `url(${backgroundImage})`,
-      }
-    : {};
+  const style = imgSrc ? { backgroundImage: `url(${imgSrc})` } : {};
 
   return (
     <Link
@@ -25,7 +21,7 @@ export default function ImageCard({
           "text-lite bg-gray": colorScheme === "gray",
           "text-gray bg-brite": colorScheme === "brite",
           "text-black bg-lite": colorScheme === "lite",
-          "bg-center bg-cover": backgroundImage,
+          "bg-center bg-cover": imgSrc,
         }
       )}
       style={style}
