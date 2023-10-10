@@ -15,7 +15,7 @@ export default function ImageCard({
   return (
     <Link
       className={classnames(
-        "flex flex-col justify-between rounded-2xl text-2xl p-5 h-64 md-exclude",
+        "flex flex-col justify-between rounded-2xl text-2xl p-4 h-64 md-exclude",
         className,
         {
           "text-lite bg-gray": colorScheme === "gray",
