@@ -65,7 +65,7 @@ const Div = ({ className, id = "", title = "", children }) => {
 
 const Grid = ({ children }) => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 -mx-2 mb-16">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-2.5 -mx-4 mb-16">
       {children}
     </div>
   );
