@@ -160,8 +160,8 @@ export function formatTimeZone(dateTimeObject) {
   return dateTimeObject.offsetNameShort;
 }
 
-export function generateDisplayDate(iso8601, zone = "America/Los_Angeles") {
-  return DateTime.fromISO(iso8601, { zone });
+export function generateDisplayDate(iso8601, locale = "en-US") {
+  return DateTime.fromISO(iso8601).setLocale(locale);
 }
 
 // Takes an ISO 8601 date string
