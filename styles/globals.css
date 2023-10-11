@@ -118,6 +118,9 @@
 .hr-horizontal {
   @apply w-full border-t-2 rounded-sm;
 }
+.hr-vertical {
+  @apply h-full border-l-2 rounded-sm;
+}
 
 /* vertical area remaining under header */
 .content-height {

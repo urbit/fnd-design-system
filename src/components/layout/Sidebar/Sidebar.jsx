@@ -19,9 +19,9 @@ export default function Sidebar({
         }
       )}
     >
-      {right && <div className="w-0.5 h-100 rounded-sm bg-gray" />}
+      {right && <hr className="hr-vertical border-gray" />}
       {children}
-      {left && <div className="w-0.5 h-100 rounded-sm bg-gray" />}
+      {left && <hr className="hr-vertical border-gray" />}
     </div>
   );
 }
