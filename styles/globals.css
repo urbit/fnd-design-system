@@ -97,8 +97,16 @@
   @apply text-base sm:text-lg md:text-xl;
 }
 
+.btn-dark {
+  @apply bg-gray text-brite hover:text-lite;
+}
+
+.btn-light {
+  @apply bg-brite hover:bg-lite text-gray;
+}
+
 .btn-sm {
-  @apply bg-brite hover:bg-lite rounded-xl text-gray text-xl px-2.5 py-1.5;
+  @apply inline-flex justify-center items-center text-2xl font-semibold leading-none px-2.5 py-1.5 rounded-xl;
 }
 
 .hr-horizontal {

@@ -32,7 +32,7 @@ export default function ContentCard({
             <p className="body-sm text-lite md-exclude font-semibold mb-5">
               {description}
             </p>
-            <Link className="btn-sm md-exclude" href={href}>
+            <Link className="btn-sm btn-light md-exclude" href={href}>
               {label}
             </Link>
           </div>
@@ -47,7 +47,7 @@ export default function ContentCard({
         />
         <p className="h2b md-exclude">{title}</p>
         <p className="body-sm text-lite md-exclude font-semibold">{description}</p>
-        <Link className="btn-sm md-exclude" href={href}>
+        <Link className="btn-sm btn-light md-exclude" href={href}>
           {label}
         </Link>
       </div>
