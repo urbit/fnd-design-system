@@ -19,7 +19,7 @@ export default function Footer({ title = "", data = [] }) {
                   {section.links.map((link) => {
                     return (
                       <Link
-                        className="pb-1"
+                        className="hover:text-brite pb-1"
                         key={link.href}
                         href={link.href}
                         passHref
@@ -37,7 +37,7 @@ export default function Footer({ title = "", data = [] }) {
           {data?.[1]?.map((link) => {
             return (
               <div key={link.href} className="md:w-1/3">
-                <Link href={link.href} passHref>
+                <Link className="hover:text-brite" href={link.href} passHref>
                   {link.title}
                 </Link>
               </div>
