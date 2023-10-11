@@ -110,8 +110,17 @@
 .btn-light {
   @apply bg-brite hover:bg-lite text-gray;
 }
+.btn {
+  @apply inline-flex justify-center items-center;
+}
 .btn-sm {
-  @apply inline-flex justify-center items-center text-2xl font-semibold leading-none px-2.5 py-1.5 rounded-xl;
+  @apply btn text-2xl font-semibold leading-none px-2.5 py-1.5 rounded-xl;
+}
+.btn-md {
+  @apply btn text-3xl font-semibold leading-none px-3 py-1.5 rounded-xl;
+}
+.btn-lg {
+  @apply btn text-4xl font-semibold leading-none px-3.5 py-2 rounded-2xl;
 }
 
 /* rule lines */
