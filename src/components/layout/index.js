@@ -4,6 +4,7 @@ export { default as Footer } from "./Footer";
 export { default as Main } from "./Main";
 export { default as Header } from "./Header";
 export { default as Section } from "./Section";
+export { default as FatBlock } from "./FatBlock";
 export { default as SideBar } from "./Sidebar";
 export { default as MenuTray } from "./MenuTray";
 export { default as ContentNav } from "./ContentNav";
