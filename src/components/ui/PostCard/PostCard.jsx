@@ -34,7 +34,7 @@ export default function PostCard({
         <h3 className="h2b md-exclude">{title}</h3>
       </div>
       <div className="flex flex-col h-1/3 bg-brite text-gray rounded-b-lg p-4">
-        <p className="body-sm md-exclude font-semibold overflow-hidden mb-auto">
+        <p className="flex-1 body-sm md-exclude font-semibold overflow-hidden mb-auto">
           {description}
         </p>
         {(date || authorName || authorPlanet) && (
