@@ -31,7 +31,7 @@ export default function PostCard({
         className="h-2/3 bg-gray bg-center bg-cover rounded-t-lg p-4"
         style={style}
       >
-        <p className="h2b md-exclude">{title}</p>
+        <h3 className="h2b md-exclude">{title}</h3>
       </div>
       <div className="flex flex-col h-1/3 bg-brite text-gray rounded-b-lg p-4">
         <p className="body-sm md-exclude font-semibold overflow-hidden mb-auto">

@@ -19,7 +19,7 @@ export default function IconCard({
   return (
     <div className="text-2xl font-semibold text-lite">
       <div className="relative h-60 p-4 rounded-t-2xl bg-tint">
-        <p className="md-exclude">{title}</p>
+        <h4 className="md-exclude">{title}</h4>
         <div
           className="absolute w-32 h-32 bg-brite m-auto left-0 right-0 top-0 bottom-0"
           style={iconStyle}

@@ -27,7 +27,7 @@ export default function ContentCard({
           style={style}
         />
         <div className="flex flex-col items-start justify-between pl-4">
-          <p className="h2b md-exclude">{title}</p>
+          <h3 className="h2b md-exclude">{title}</h3>
           <div>
             <p className="body-sm text-lite md-exclude font-semibold mb-5">
               {description}

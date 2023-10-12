@@ -27,7 +27,7 @@ export default function ImageCard({
       style={style}
       href={href}
     >
-      <h3 className="md-exclude">{title}</h3>
+      <h4 className="md-exclude">{title}</h4>
       <p className="md-exclude font-semibold">{description}</p>
     </Link>
   );

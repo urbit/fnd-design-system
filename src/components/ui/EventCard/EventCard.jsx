@@ -26,7 +26,7 @@ export default function EventCard({
       href={href}
     >
       <div className="mb-auto">
-        <p className="h2b mb-4">{title}</p>
+        <h3 className="h2b mb-4">{title}</h3>
         <p className="body-sm">{description}</p>
       </div>
       <div className="h-1/6">
