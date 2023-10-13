@@ -12,9 +12,9 @@ export default function Tooltip({ data, label }) {
     <>
       {isOpen && (
         <div className="fixed flex items-center justify-center z-50 left-0 top-0 w-screen h-screen bg-[rgba(0,0,0,0.7)]">
-          <div className="px-6 py-5 mx-3 text-xl text-black bg-gray rounded-xl">
+          <div className="flex flex-col aspect-[2/1] w-full sm:w-5/6 md:w-2/3 lg:w-3/6 p-4 mx-3 body-sm text-black bg-gray rounded-xl">
             <div className="flex w-full justify-between">
-              <div className="mr-8 space-x-1">
+              <div className="space-x-1">
                 {slug.map((crumb, i) => {
                   const isFirst = i === 0;
                   const isLast = i + 1 === slug.length;
@@ -35,15 +35,17 @@ export default function Tooltip({ data, label }) {
                 Close
               </button>
             </div>
-            <hr className="md-exclude mt-5 mb-3.5 border-t-2 border-black rounded" />
-            <h4 className="md-exclude text-4xl font-semibold">
+            <hr className="md-exclude hr-horizontal border-black mt-5 mb-3.5" />
+            <h4 className="md-exclude h2c font-semibold">
               {data.symbol ? `${data.symbol} ("${data.name}")` : data.name}
             </h4>
             <p className="md-exclude my-3.5 font-medium">{data.usage}</p>
-            <p
-              className="md-exclude my-3.5"
-              dangerouslySetInnerHTML={{ __html: data.desc }}
-            />
+            <div className="flex-1 flex items-end">
+              <p
+                className="md-exclude my-3.5"
+                dangerouslySetInnerHTML={{ __html: data.desc }}
+              />
+            </div>
           </div>
         </div>
       )}
