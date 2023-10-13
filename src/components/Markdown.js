@@ -36,6 +36,7 @@ import PostCard from "./ui/PostCard/PostCard";
 import EventCard from "./ui/EventCard/EventCard";
 import Video from "./markdown/Video";
 import Tooltip from "./markdown/Tooltip";
+import FatBlock from "./layout/FatBlock"
 import parse from "html-react-parser";
 
 const Math = dynamic(() => import("./markdown/Math"), {
@@ -65,9 +66,11 @@ const Div = ({ className, id = "", title = "", children }) => {
 
 const Grid = ({ children }) => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-2.5 -mx-4 mb-16">
-      {children}
-    </div>
+    <FatBlock>
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-2.5 mb-16">
+        {children}
+      </div>
+    </FatBlock>
   );
 };
 
