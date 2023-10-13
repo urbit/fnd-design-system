@@ -32,7 +32,7 @@ export default function PostCard({
         style={style}
       >
         <h3
-          className="h2b md-exclude"
+          className="text-lite h2 md-exclude"
           style={{
             "-webkit-text-stroke-width": "1px",
             "-webkit-text-stroke-color": "var(--gray)",
