@@ -142,13 +142,13 @@
   @apply inline-flex justify-center items-center;
 }
 .btn-sm {
-  @apply btn text-2xl font-semibold leading-none px-2.5 py-1.5 rounded-xl;
+  @apply btn text-xl lg:text-2xl font-semibold leading-none px-2.5 py-1.5 rounded-xl;
 }
 .btn-md {
-  @apply btn text-3xl font-semibold leading-none px-3 py-1.5 rounded-xl;
+  @apply btn text-2xl lg:text-3xl font-semibold leading-none px-3 py-1.5 rounded-xl;
 }
 .btn-lg {
-  @apply btn text-4xl font-semibold leading-none px-3.5 py-2 rounded-2xl;
+  @apply btn text-3xl lg:text-4xl font-semibold leading-none px-3.5 py-2 rounded-2xl;
 }
 
 /* rule lines */
