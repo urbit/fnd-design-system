@@ -17,7 +17,7 @@ export default function EventCard({
   return (
     <Link
       className={classnames(
-        "flex flex-col rounded-lg p-4 h-[31rem]",
+        "aspect-[3/2] flex flex-col rounded-lg p-4",
         "text-2xl text-lite bg-gray md-exclude",
         className,
         { "bg-center bg-cover": imgSrc }
@@ -29,7 +29,7 @@ export default function EventCard({
         <h3 className="h2b mb-4">{title}</h3>
         <p className="body-sm">{description}</p>
       </div>
-      <div className="h-1/6">
+      <div className="h-3/12 md:h-1/6">
         <hr className="hr-horizontal border-lite my-3.5" />
         <div className="flex justify-between text-base font-medium">
           <p>{location}</p>
