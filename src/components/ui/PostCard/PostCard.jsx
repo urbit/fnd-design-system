@@ -11,15 +11,7 @@ export default function PostCard({
   authorPlanet,
   href,
   imgSrc,
-  icon,
-  weight = "regular",
 }) {
-  const iconUrl = `https://media.urbit.org/icons/${weight}/${icon}.svg`;
-  const iconStyle = {
-    "-webkit-mask-image": `url(${iconUrl})`,
-    "mask-image": `url(${iconUrl})`,
-  };
-
   const style = imgSrc ? { backgroundImage: `url(${imgSrc})` } : {};
 
   return (
