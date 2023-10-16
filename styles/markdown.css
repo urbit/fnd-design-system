@@ -11,25 +11,28 @@
   padding-bottom: unset;
 }
 
-.markdown p:not(.md-exclude),
+.markdown p:not(.md-exclude) {
+  @apply my-3;
+}
+
 .markdown ul,
 .markdown ol,
 .markdown blockquote {
-  @apply my-8;
+  @apply my-2;
 }
 
 /* Default Typography */
 
 .markdown h1 {
-  @apply text-5xl mt-32 mb-16;
+  @apply text-5xl mt-24 mb-12;
 }
 
 .markdown h2 {
-  @apply text-4xl mt-24 mb-12;
+  @apply text-4xl mt-16 mb-10;
 }
 
 .markdown h3:not(.md-exclude) {
-  @apply text-3xl font-medium mt-16 mb-8;
+  @apply text-3xl font-medium mt-12 mb-8;
 }
 
 .markdown h4:not(.md-exclude) {
@@ -51,11 +54,11 @@
 }
 
 .markdown li {
-  @apply py-2 ml-7 text-base md:text-lg;
+  @apply py-1 ml-6 text-base md:text-lg;
 }
 
 .markdown hr:not(.md-exclude) {
-  @apply my-16 border-t-2 border-gray rounded-sm;
+  @apply my-4 border-t-2 border-gray rounded-sm;
 }
 
 .markdown iframe {
@@ -70,15 +73,15 @@
 /* Technical Typography */
 
 .markdown.technical h1 {
-  @apply text-5xl text-lite mt-32 mb-16;
+  @apply text-5xl text-lite mt-24 mb-16;
 }
 
 .markdown.technical h2 {
-  @apply text-4xl text-lite mt-24 mb-12;
+  @apply text-4xl text-lite mt-16 mb-12;
 }
 
 .markdown.technical h3:not(.md-exclude) {
-  @apply text-3xl text-lite font-medium mt-16 mb-8;
+  @apply text-3xl text-lite font-medium mt-12 mb-8;
 }
 
 .markdown.technical h4:not(.md-exclude) {
@@ -95,7 +98,7 @@
 }
 
 .markdown.technical li {
-  @apply py-2 ml-8 text-xl text-lite;
+  @apply py-1 ml-6 text-xl text-lite;
 }
 
 /* Imagery */
@@ -105,7 +108,7 @@
 }
 
 .markdown span#figure {
-  @apply relative my-8 z-0 w-full left-0 block;
+  @apply relative my-4 z-0 w-full left-0 block;
 }
 
 .markdown pre,
