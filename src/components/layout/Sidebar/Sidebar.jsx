@@ -20,7 +20,7 @@ export default function Sidebar({
       )}
     >
       {right && <hr className="hr-vertical border-gray" />}
-      {children}
+      <div className="flex-1 overflow-x-hidden">{children}</div>
       {left && <hr className="hr-vertical border-gray" />}
     </div>
   );
