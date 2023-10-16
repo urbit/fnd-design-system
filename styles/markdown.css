@@ -44,7 +44,7 @@
 }
 
 .markdown p:not(.md-exclude) {
-  @apply text-xl text-lite leading-relaxed;
+  @apply text-xl text-lite;
 }
 
 .markdown-callout p {
@@ -89,7 +89,7 @@
 }
 
 .markdown.technical p:not(.md-exclude) {
-  @apply text-xl text-lite leading-relaxed;
+  @apply text-xl text-lite;
 }
 
 .markdown.technical p code {
@@ -98,7 +98,7 @@
 }
 
 .markdown.technical li {
-  @apply py-1 ml-6 text-xl text-lite;
+  @apply py-1 ml-6 text-base md:text-lg text-lite;
 }
 
 /* Imagery */
