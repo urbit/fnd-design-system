@@ -113,12 +113,12 @@
 
 .markdown pre,
 .markdown pre[class*="language-"] {
-  @apply block p-4 bg-tint rounded-lg w-full;
+  @apply block !p-3 bg-tint rounded-lg w-full;
 }
 
 .markdown code,
 .markdown code[class*="language-"] {
-  @apply font-mono font-semibold !px-1 !py-0.5 bg-tint rounded-lg;
+  @apply font-mono font-semibold !px-0.5 !py-px bg-tint rounded-md;
 }
 
 .markdown a code,
