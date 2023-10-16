@@ -7,7 +7,7 @@ export { default as Section } from "./Section";
 export { default as CarouselSection } from "./CarouselSection";
 export { default as ExpandSection } from "./ExpandSection";
 export { default as FatBlock } from "./FatBlock";
-export { default as SideBar } from "./Sidebar";
+export { default as Sidebar } from "./Sidebar";
 export { default as MenuTray } from "./MenuTray";
 export { default as ContentNav } from "./ContentNav";
 export { default as FragmentNav } from "./FragmentNav";
