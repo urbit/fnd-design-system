@@ -114,7 +114,8 @@
 /* Imagery */
 
 .markdown img {
-  @apply rounded-lg w-full h-auto;
+  @apply rounded-lg;
+  max-height: 75vh;
 }
 
 .markdown span#figure {
