@@ -12,13 +12,13 @@
 }
 
 .markdown p:not(.md-exclude) {
-  @apply my-3;
+  @apply my-4;
 }
 
 .markdown ul,
 .markdown ol,
 .markdown blockquote {
-  @apply my-2;
+  @apply my-4;
 }
 
 .markdown p a:not(:has(code), :has(pre)),
@@ -43,11 +43,11 @@
 }
 
 .markdown h3:not(.md-exclude) {
-  @apply text-3xl font-medium mt-12 mb-8;
+  @apply text-3xl font-medium mt-14 mb-10;
 }
 
 .markdown h4:not(.md-exclude) {
-  @apply text-2xl font-semibold mt-8 mb-4;
+  @apply text-2xl font-semibold mt-12 mb-8;
 }
 
 .markdown h5 {
@@ -59,9 +59,7 @@
 }
 
 .markdown-callout p {
-  @apply mt-1;
-  @apply mb-2;
-  font-size: 1rem;
+  @apply mt-1 mb-2 text-base;
 }
 
 .markdown li {
@@ -92,15 +90,15 @@
 }
 
 .markdown.technical h3:not(.md-exclude) {
-  @apply text-3xl text-lite font-medium mt-12 mb-8;
+  @apply text-3xl text-lite font-medium mt-14 mb-10;
 }
 
 .markdown.technical h4:not(.md-exclude) {
-  @apply text-2xl text-lite font-semibold mt-8 mb-4;
+  @apply text-2xl text-lite font-semibold mt-12 mb-8;
 }
 
 .markdown.technical p:not(.md-exclude) {
-  @apply text-xl text-lite;
+  @apply text-xl leading-tight text-lite;
 }
 
 .markdown.technical p code {
@@ -108,7 +106,7 @@
 }
 
 .markdown.technical li {
-  @apply py-1 ml-6 text-base md:text-lg text-lite;
+  @apply py-1 ml-6 text-base leading-tight md:text-lg md:leading-snug text-lite;
 }
 
 /* Imagery */
@@ -124,12 +122,12 @@
 
 .markdown pre,
 .markdown pre[class*="language-"] {
-  @apply block !p-3 bg-tint rounded-lg w-full;
+  @apply block my-6 !p-3 bg-tint rounded-lg w-full;
 }
 
 .markdown code,
 .markdown code[class*="language-"] {
-  @apply font-mono font-semibold !px-0.5 !py-0 bg-tint rounded-md;
+  @apply font-mono !px-0.5 !py-0 bg-tint rounded-md;
 }
 
 .markdown a code,
