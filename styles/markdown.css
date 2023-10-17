@@ -129,7 +129,7 @@
 
 .markdown code,
 .markdown code[class*="language-"] {
-  @apply font-mono font-semibold !px-0.5 !py-px bg-tint rounded-md;
+  @apply font-mono font-semibold !px-0.5 !py-0 bg-tint rounded-md;
 }
 
 .markdown a code,
