@@ -102,16 +102,19 @@
   @apply text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-light;
 }
 .h1 {
-  @apply text-4xl md:text-5xl xl:text-6xl font-medium;
+  @apply text-4xl sm:text-5xl md:text-6xl font-medium;
 }
 .h2 {
-  @apply text-2xl md:text-3xl xl:text-4xl font-semibold;
+  @apply text-2xl sm:text-3xl md:text-4xl font-semibold;
 }
 .h3 {
-  @apply text-lg md:text-xl xl:text-2xl font-bold;
+  @apply text-lg sm:text-xl md:text-2xl font-semibold;
 }
 
 /* text bodies */
+.body-xs {
+  @apply text-base sm:text-lg;
+}
 .body-sm {
   @apply text-base sm:text-lg md:text-xl;
 }
@@ -119,7 +122,7 @@
   @apply text-lg sm:text-xl md:text-2xl;
 }
 .body-lg {
-  @apply text-2xl sm:text-3xl md:text-4xl;
+  @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl;
 }
 
 /* button color schemes and sizes */
@@ -131,6 +134,9 @@
 }
 .btn {
   @apply inline-flex justify-center items-center;
+}
+.btn-xs {
+  @apply btn text-lg lg:text-xl font-semibold leading-none px-2.5 py-1.5 rounded-xl;
 }
 .btn-sm {
   @apply btn text-xl lg:text-2xl font-semibold leading-none px-2.5 py-1.5 rounded-xl;
