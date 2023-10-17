@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Icon from "../Icon"
+import Icon from "../Icon";
 
 export default function ConceptCard({
   className = "",
@@ -9,19 +9,26 @@ export default function ConceptCard({
   label,
   icon,
   href,
+  small = false,
 }) {
   return (
     <div
       className={`flex flex-col justify-between aspect-[2/1] max-w-2xl rounded-2xl text-2xl text-gray p-4 bg-brite md-exclude ${className}`}
       href={href}
     >
-      <h3 className="flex">
+      <div className="flex mb-8">
         <Icon className="h-full bg-gray" name="Identity" />
-        <span className="h2">{title}</span>
-      </h3>
+        <h3 className={small ? "h3" : "h2"}>{title}</h3>
+      </div>
       <div>
-        <p className="body-sm mb-3.5 md-exclude font-semibold">{description}</p>
-        <Link className="btn-sm btn-dark" href={href}>
+        <p
+          className={`${
+            small ? "body-xs" : "body-sm"
+          } mb-3.5 md-exclude font-semibold`}
+        >
+          {description}
+        </p>
+        <Link className={`${small ? "btn-xs" : "btn-sm"} btn-dark`} href={href}>
           {label}
         </Link>
       </div>

@@ -32,7 +32,7 @@ export default function ContentCard({
           <h3
             className={classnames(
               { h3: small, h2: !small },
-              "text-lite md-exclude"
+              "text-lite mb-3.5 md-exclude"
             )}
           >
             {title}

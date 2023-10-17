@@ -15,7 +15,7 @@ export default function ImageCard({
   return (
     <Link
       className={classnames(
-        "aspect-[1.5/1] flex flex-col justify-between rounded-2xl  max-w-xs md:max-w-sm xl:max-w-lg text-2xl p-4 md-exclude",
+        "aspect-[1.5/1] flex flex-col justify-between rounded-2xl max-w-sm sm:max-w-md md:max-w-lg text-2xl p-4 md-exclude",
         className,
         {
           "text-lite bg-gray": colorScheme === "gray",
@@ -27,8 +27,8 @@ export default function ImageCard({
       style={style}
       href={href}
     >
-      <h4 className="md-exclude">{title}</h4>
-      <p className="md-exclude font-semibold">{description}</p>
+      <h4 className="md-exclude h3">{title}</h4>
+      <p className="md-exclude body-md font-semibold">{description}</p>
     </Link>
   );
 }
