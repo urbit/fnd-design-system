@@ -10,7 +10,7 @@ export default function Footer({ title = "", data = [] }) {
             return (
               <React.Fragment key={i}>
                 {i === 0 && (
-                  <div className="w-full relative leading-none">
+                  <div className="type-ui w-full relative leading-none">
                     <span className="absolute flex justify-center items-center h-full w-5 md:w-8 lg:w-10 xl:w-12 -ml-5 md:-ml-8 lg:-ml-10 xl:-ml-12">
                       ~
                     </span>
@@ -21,7 +21,7 @@ export default function Footer({ title = "", data = [] }) {
                   {section.links.map((link) => {
                     return (
                       <Link
-                        className="hover:text-brite pb-1"
+                        className="type-ui hover:text-brite pb-1"
                         key={link.href}
                         href={link.href}
                         passHref
@@ -39,7 +39,11 @@ export default function Footer({ title = "", data = [] }) {
           {data?.[1]?.map((link) => {
             return (
               <div key={link.href} className="md:w-1/3">
-                <Link className="hover:text-brite" href={link.href} passHref>
+                <Link
+                  className="type-ui hover:text-brite"
+                  href={link.href}
+                  passHref
+                >
                   {link.title}
                 </Link>
               </div>
