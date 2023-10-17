@@ -50,7 +50,7 @@ const superscript = ({ children }) => <sup>{children}</sup>;
 
 const NextLink = ({ href, target, children }) => {
   return (
-    <Link className="underline" href={href} target={target}>
+    <Link href={href} target={target}>
       {children}
     </Link>
   );

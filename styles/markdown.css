@@ -21,6 +21,17 @@
   @apply my-2;
 }
 
+.markdown p a:not(:has(code), :has(pre)),
+.markdown li a:not(:has(code), :has(pre)),
+.markdown h1 a:not(:has(code), :has(pre)),
+.markdown h2 a:not(:has(code), :has(pre)),
+.markdown h3 a:not(:has(code), :has(pre)),
+.markdown h4 a:not(:has(code), :has(pre)),
+.markdown h5 a:not(:has(code), :has(pre)),
+.markdown h6 a:not(:has(code), :has(pre)) {
+  @apply underline text-brite;
+}
+
 /* Default Typography */
 
 .markdown h1 {
@@ -94,7 +105,6 @@
 
 .markdown.technical p code {
   white-space: pre-wrap;
-  @apply text-lite;
 }
 
 .markdown.technical li {
