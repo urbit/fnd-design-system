@@ -16,8 +16,8 @@ module.exports = {
         serif: ["Urbit Serif Italic"],
       },
       fontSize: {
-        base: ["1rem", "1.2"], // 16px, 19.2px
-        lg: ["1.125rem", "1.2"], // 18px, 21.6px
+        base: ["1rem", { lineHeight: "1.2", letterSpacing: "0.02" }], // 16px, 19.2px
+        lg: ["1.125rem", { lineHeight: "1.2", letterSpacing: "0.02" }], // 18px, 21.6px
         xl: ["1.25rem", "1.2"], // 20px, 24px
         "2xl": ["1.5625rem", "1.2"], // 25px, 30px
         "3xl": ["1.875rem", "1.2"], // 30px, 36px
