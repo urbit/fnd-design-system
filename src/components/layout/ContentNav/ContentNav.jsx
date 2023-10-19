@@ -7,53 +7,101 @@ function label(str, maxLen) {
   return str.length > maxLen ? str.slice(0, maxLen - 2).trim() + "..." : str;
 }
 
+function NavItem({ type, level = 0, label, href, path, isUnderThis }) {
+  const isOnThis = path === href;
+  const padding = classnames({
+    "pl-2": level === 1,
+    "pl-4": level === 2,
+    "pl-6": level === 3,
+    "pl-8": level === 4,
+  });
+
+  if (type === "dir" && level < 0) {
+    return (
+      <Link
+        className={classnames(
+          "flex justify-between text-xl font-semibold mb-2",
+          {
+            "text-gray hover:text-brite": !isUnderThis,
+            "text-brite": isUnderThis,
+          }
+        )}
+        href={href}
+      >
+        <span>—</span>
+        <span>{label}</span>
+        <span>—</span>
+      </Link>
+    );
+  } else if (type === "dir" && level >= 0) {
+    return (
+      <Link
+        className={classnames(
+          "flex justify-between w-full text-xl font-normal",
+          padding,
+          {
+            "text-gray hover:text-brite": !isUnderThis,
+            "text-brite": isUnderThis,
+          }
+        )}
+        href={href}
+      >
+        {label}
+        <span>{isUnderThis ? "-" : "+"}</span>
+      </Link>
+    );
+  }
+  return (
+    <Link
+      className={classnames("text-xl font-extralight", padding, {
+        "text-gray hover:text-brite": !isOnThis,
+        "text-brite": isOnThis,
+      })}
+      href={href}
+    >
+      {label}
+    </Link>
+  );
+}
+
 function NavSection({
   children,
   posts,
   root,
   path,
-  indent = 0,
+  level = -1,
   divider = false,
-  labelMaxLength,
 }) {
   const isUnderThisPage = `${path}/`.includes(`${root}/`);
 
   return (
     <>
       {divider && <div className="my-3.5 w-100 h-0.5 rounded-sm bg-gray" />}
-      <Link
-        className={classnames("font-bold", {
-          "text-gray hover:text-brite": !isUnderThisPage,
-          "text-brite": isUnderThisPage,
-        })}
-        style={{ paddingLeft: `${0.5 * indent}rem` }}
+      <NavItem
+        type="dir"
+        level={level}
+        label={posts.title}
         href={`/${root}`}
-      >
-        {labelMaxLength
-          ? label(posts.title, labelMaxLength - indent * 2)
-          : posts.title}
-      </Link>
-      {isUnderThisPage &&
+        path={path}
+        isUnderThis={isUnderThisPage}
+      />
+      {(isUnderThisPage || level < 0) &&
         posts.pages.map((page) => {
           const href = `/${root}/${page.slug}`;
           const isThisPage = path === href;
           return (
-            <Link
-              className={classnames("font-light", {
-                "text-gray hover:text-brite": !isThisPage,
-                "text-brite": isThisPage,
-              })}
-              style={{ paddingLeft: `${0.5 * (indent + 1)}rem` }}
-              href={href}
+            <NavItem
+              type="file"
+              level={level + 1}
+              label={page.title}
+              href={`/${root}/${page.slug}`}
+              path={path}
+              isUnderThis={isUnderThisPage}
               key={href}
-            >
-              {labelMaxLength
-                ? label(page.title, labelMaxLength - (indent + 1) * 2)
-                : page.title}
-            </Link>
+            />
           );
         })}
-      {isUnderThisPage &&
+      {(isUnderThisPage || level < 0) &&
         posts.children &&
         Object.keys(posts.children).length !== 0 &&
         Object.entries(posts.children).map(([k, v], i) => {
@@ -62,9 +110,8 @@ function NavSection({
               posts={v}
               root={join(root, k)}
               path={path}
-              indent={indent + 1}
+              level={level + 1}
               key={join(root, k)}
-              labelMaxLength={labelMaxLength}
             />
           );
         })}
@@ -76,16 +123,10 @@ export default function ContentNav({
   posts,
   root,
   firstCrumb,
-  labelMaxLength,
 }) {
   return (
     <nav
-      className={classnames(
-        "flex flex-col w-full overflow-y-auto overflow-x-hidden type-ui offset-r",
-        {
-          "whitespace-nowrap": labelMaxLength,
-        }
-      )}
+      className="flex flex-col w-full overflow-y-auto overflow-x-hidden offset-r"
     >
       {(posts.children &&
         Object.keys(posts.children).length !== 0 &&
@@ -97,7 +138,6 @@ export default function ContentNav({
               path={firstCrumb}
               key={"tray-" + join(root, k)}
               divider={i > 0}
-              labelMaxLength={labelMaxLength}
             />
           );
         })) || (
