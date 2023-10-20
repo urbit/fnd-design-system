@@ -10,13 +10,9 @@ export default function Sidebar({
   return (
     <div
       className={classnames(
-        "sticky flex top-12 md:top-16 z-40 py-5 content-height side-bar",
-        className,
-        {
-          "sidebar-with-margin": left || right,
-          "layout-pl": left,
-          "layout-pr": right,
-        }
+        "sticky flex top-12 md:top-16 z-40 py-5",
+        "content-height sidebar-with-margin",
+        className
       )}
     >
       {right && <hr className="hr-vertical border-gray" />}
