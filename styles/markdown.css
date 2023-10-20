@@ -21,15 +21,18 @@
   @apply my-4;
 }
 
-.markdown p a:not(:has(code), :has(pre)),
-.markdown li a:not(:has(code), :has(pre)),
-.markdown h1 a:not(:has(code), :has(pre)),
-.markdown h2 a:not(:has(code), :has(pre)),
-.markdown h3 a:not(:has(code), :has(pre)),
-.markdown h4 a:not(:has(code), :has(pre)),
-.markdown h5 a:not(:has(code), :has(pre)),
-.markdown h6 a:not(:has(code), :has(pre)) {
-  @apply underline text-brite;
+.markdown p a,
+.markdown li a {
+  @apply underline decoration-1 text-brite;
+}
+
+.markdown h1 a,
+.markdown h2 a,
+.markdown h3 a,
+.markdown h4 a,
+.markdown h5 a,
+.markdown h6 a {
+  @apply underline decoration-2 text-brite;
 }
 
 /* Default Typography */
@@ -132,7 +135,7 @@
 
 .markdown a code,
 .markdown a code[class*="language-"] {
-  @apply bg-gray text-brite;
+  @apply decoration-0 bg-lite text-gray;
 }
 
 .markdown ul {
