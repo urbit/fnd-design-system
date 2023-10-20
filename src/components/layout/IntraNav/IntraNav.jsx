@@ -135,12 +135,7 @@ export default function IntraNav({ ourSite, sites, pages, search }) {
             </div>
             {search && (
               <div className="h-full p-2 md:p-3 w-1/4 sm:w-1/3 md:w-52 lg:w-[14.5rem] xl:w-64 type-ui">
-                <button
-                  className="h-full w-full bg-brite text-gray rounded-lg"
-                  onClick={search}
-                >
-                  Search
-                </button>
+                {search}
               </div>
             )}
           </div>
