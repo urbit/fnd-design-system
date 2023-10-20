@@ -15,30 +15,13 @@ function NavItem({ type, level = 0, label, href, path, isUnderThis }) {
     "pl-6": level === 3,
     "pl-8": level === 4,
   });
+  const sigAlignment = "pl-1.5 md:pl-3 lg:pl-4 xl:pl-5";
 
   if (type === "dir" && level < 0) {
     return (
       <Link
         className={classnames(
-          "flex justify-between text-xl font-semibold mb-2",
-          {
-            "text-gray hover:text-brite": !isUnderThis,
-            "text-brite": isUnderThis,
-          }
-        )}
-        href={href}
-      >
-        <span>—</span>
-        <span>{label}</span>
-        <span>—</span>
-      </Link>
-    );
-  } else if (type === "dir" && level >= 0) {
-    return (
-      <Link
-        className={classnames(
-          "flex justify-between w-full text-xl font-normal",
-          padding,
+          "flex justify-between text-xl font-semibold mb-2 layout-pl",
           {
             "text-gray hover:text-brite": !isUnderThis,
             "text-brite": isUnderThis,
@@ -47,19 +30,35 @@ function NavItem({ type, level = 0, label, href, path, isUnderThis }) {
         href={href}
       >
         {label}
+      </Link>
+    );
+  } else if (type === "dir" && level >= 0) {
+    return (
+      <Link
+        className={classnames(
+          "flex justify-between w-full text-xl font-extralight",
+          sigAlignment,
+          {
+            "text-gray hover:text-brite": !isUnderThis,
+            "text-brite": isUnderThis,
+          }
+        )}
+        href={href}
+      >
+        <span className={classnames(padding)}>{label}</span>
         <span>{isUnderThis ? "-" : "+"}</span>
       </Link>
     );
   }
   return (
     <Link
-      className={classnames("text-xl font-extralight", padding, {
+      className={classnames("flex text-xl font-extralight", sigAlignment, {
         "text-gray hover:text-brite": !isOnThis,
         "text-brite": isOnThis,
       })}
       href={href}
     >
-      {label}
+      <span className={classnames(padding)}>{label}</span>
     </Link>
   );
 }
@@ -76,7 +75,11 @@ function NavSection({
 
   return (
     <>
-      {divider && <div className="my-3.5 w-100 h-0.5 rounded-sm bg-gray" />}
+      {divider && (
+        <div className="ml-1.5 md:ml-3 lg:ml-4 xl:ml-5">
+          <hr className="hr-horizontal border-gray my-3.5" />
+        </div>
+      )}
       <NavItem
         type="dir"
         level={level}
@@ -119,15 +122,9 @@ function NavSection({
   );
 }
 
-export default function ContentNav({
-  posts,
-  root,
-  firstCrumb,
-}) {
+export default function ContentNav({ posts, root, firstCrumb }) {
   return (
-    <nav
-      className="flex flex-col w-full overflow-y-auto overflow-x-hidden offset-r"
-    >
+    <nav className="flex flex-col w-full overflow-y-auto overflow-x-hidden offset-r">
       {(posts.children &&
         Object.keys(posts.children).length !== 0 &&
         Object.entries(posts.children).map(([k, v], i) => {
