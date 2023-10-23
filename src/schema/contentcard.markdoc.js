@@ -3,6 +3,7 @@ export const contentcard = {
   attributes: {
     className: {
       type: String,
+      default: "my-6"
     },
     title: {
       type: String,
