@@ -88,7 +88,7 @@ function NavSection({
         path={path}
         isUnderThis={isUnderThisPage}
       />
-      {(isUnderThisPage || level < 0) &&
+      {(isUnderThisPage || (level < 0 && posts.auto_expand !== false)) &&
         posts.pages.map((page) => {
           const href = `/${root}/${page.slug}`;
           const isThisPage = path === href;
@@ -104,7 +104,7 @@ function NavSection({
             />
           );
         })}
-      {(isUnderThisPage || level < 0) &&
+      {(isUnderThisPage || (level < 0 && posts.auto_expand !== false)) &&
         posts.children &&
         Object.keys(posts.children).length !== 0 &&
         Object.entries(posts.children).map(([k, v], i) => {
