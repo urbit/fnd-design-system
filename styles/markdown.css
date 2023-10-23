@@ -130,7 +130,7 @@
 
 .markdown code,
 .markdown code[class*="language-"] {
-  @apply font-mono !px-0.5 !py-0 bg-tint rounded-md;
+  @apply font-mono text-lite bg-tint rounded-md !px-0.5 !py-0;
 }
 
 .markdown a code,
