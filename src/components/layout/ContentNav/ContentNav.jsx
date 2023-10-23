@@ -125,7 +125,21 @@ function NavSection({
 export default function ContentNav({ posts, root, firstCrumb }) {
   return (
     <nav className="flex flex-col w-full overflow-y-auto overflow-x-hidden offset-r">
-      {(posts.children &&
+      {posts.pages.map((page) => {
+        const href = `/${root}/${page.slug}`;
+        return (
+          <NavItem
+            type="file"
+            level={-1}
+            label={page.title}
+            href={href}
+            path={firstCrumb}
+            isUnderThis={`${firstCrumb}/`.includes(`${root}/`)}
+            key={href}
+          />
+        );
+      })}
+      {posts.children &&
         Object.keys(posts.children).length !== 0 &&
         Object.entries(posts.children).map(([k, v], i) => {
           return (
@@ -134,12 +148,10 @@ export default function ContentNav({ posts, root, firstCrumb }) {
               root={join(root, k)}
               path={firstCrumb}
               key={"tray-" + join(root, k)}
-              divider={i > 0}
+              divider={i > 0 || posts.pages.length !== 0}
             />
           );
-        })) || (
-        <NavSection posts={posts} root={root} path={firstCrumb} longLabels />
-      )}
+        })}
     </nav>
   );
 }
