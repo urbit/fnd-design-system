@@ -20,6 +20,7 @@
 .markdown blockquote {
   @apply my-4;
 }
+
 .markdown p a:not(:has(code), :has(pre)),
 .markdown li a:not(:has(code), :has(pre)) {
   @apply underline decoration-1 text-brite;
@@ -32,6 +33,51 @@
 .markdown h5 a:not(:has(code), :has(pre)),
 .markdown h6 a:not(:has(code), :has(pre)) {
   @apply underline decoration-2 text-brite;
+}
+
+/* Lists */
+
+.markdown li {
+  @apply text-xl;
+}
+
+.markdown li:not(:last-child) {
+  @apply mb-0.5;
+}
+
+.markdown li li {
+  @apply ml-4;
+}
+
+.markdown ol li {
+  @apply relative;
+}
+
+.markdown li ul,
+.markdown li ol {
+  @apply mt-0.5 mb-0;
+}
+
+.markdown ul {
+  list-style: outside;
+  list-style-type: "— ";
+}
+
+.markdown ol {
+  list-style: outside;
+  list-style-type: none;
+  counter-reset: list-number;
+}
+
+.markdown ol li:before {
+  counter-increment: list-number;
+  content: counter(list-number) " ";
+  position: absolute;
+  left: -1rem;
+}
+
+.markdown li ol li:before {
+  content: counter(list-number, lower-alpha) " ";
 }
 
 /* Default Typography */
@@ -62,11 +108,6 @@
 
 .markdown-callout p {
   @apply mt-1 mb-2 text-base;
-}
-
-.markdown li {
-  @apply py-1 text-base md:text-lg;
-  list-style-type: "— ";
 }
 
 .markdown hr:not(.md-exclude) {
@@ -136,16 +177,6 @@
 .markdown a code,
 .markdown a code[class*="language-"] {
   @apply decoration-0 bg-lite text-gray;
-}
-
-.markdown ul {
-  list-style: outside;
-  list-style-type: disc;
-}
-
-.markdown ol {
-  list-style: outside;
-  list-style-type: decimal;
 }
 
 .markdown a:not(.md-exclude) {
