@@ -32,5 +32,8 @@ export const iconcard = {
         "bold",
       ],
     },
+    small: {
+      type: Boolean,
+    },
   },
 };
