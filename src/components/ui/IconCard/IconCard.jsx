@@ -21,7 +21,7 @@ export default function IconCard({
           href={href}
         >
           {icon && (
-            <div className="relative h-full w-1/4 rounded-l-2xl bg-tint">
+            <div className="relative h-full w-1/5 md:w-1/4 rounded-l-2xl bg-tint">
               <Icon
                 className="absolute w-3/4 bg-brite m-auto left-0 right-0 top-0 bottom-0"
                 name={icon}
@@ -31,7 +31,7 @@ export default function IconCard({
           <div
             className={classnames(
               "flex-1 flex flex-col justify-between",
-              " h-full p-4 pl-3 bg-gray md-exclude",
+              " h-full px-4 py-2 md:py-4 bg-gray md-exclude",
               { "rounded-r-2xl": icon, "rounded-2xl": !icon }
             )}
           >
