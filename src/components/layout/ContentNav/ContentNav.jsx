@@ -7,7 +7,15 @@ function label(str, maxLen) {
   return str.length > maxLen ? str.slice(0, maxLen - 2).trim() + "..." : str;
 }
 
-function NavItem({ type, level = 0, label, href, path, isUnderThis }) {
+function NavItem({
+  type,
+  level = 0,
+  label,
+  href,
+  path,
+  isUnderThis,
+  collapsed,
+}) {
   const isOnThis = path === href;
   const padding = classnames({
     "pl-2": level === 1,
@@ -46,7 +54,7 @@ function NavItem({ type, level = 0, label, href, path, isUnderThis }) {
         href={href}
       >
         <span className={classnames(padding)}>{label}</span>
-        <span>{isUnderThis ? "-" : "+"}</span>
+        {collapsed && <span>+</span>}
       </Link>
     );
   }
@@ -87,8 +95,9 @@ function NavSection({
         href={`/${root}`}
         path={path}
         isUnderThis={isUnderThisPage}
+        collapsed={!(posts.auto_expand || isUnderThisPage)}
       />
-      {(isUnderThisPage || (level < 0 && posts.auto_expand !== false)) &&
+      {(posts.auto_expand || isUnderThisPage) &&
         posts.pages.map((page) => {
           const href = `/${root}/${page.slug}`;
           const isThisPage = path === href;
@@ -100,11 +109,12 @@ function NavSection({
               href={`/${root}/${page.slug}`}
               path={path}
               isUnderThis={isUnderThisPage}
+              collapsed={!(posts.auto_expand || isUnderThisPage)}
               key={href}
             />
           );
         })}
-      {(isUnderThisPage || (level < 0 && posts.auto_expand !== false)) &&
+      {(posts.auto_expand || isUnderThisPage) &&
         posts.children &&
         Object.keys(posts.children).length !== 0 &&
         Object.entries(posts.children).map(([k, v], i) => {
