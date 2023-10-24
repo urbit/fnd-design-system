@@ -17,7 +17,7 @@ export default function ConceptCard({
       href={href}
     >
       <div className="flex mb-8">
-        <Icon className="h-full bg-gray" name={icon} />
+        <Icon className="h-full bg-gray mr-1.5" name={icon} />
         <h3 className={small ? "h3" : "h2"}>{title}</h3>
       </div>
       <div>
