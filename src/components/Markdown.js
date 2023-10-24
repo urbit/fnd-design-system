@@ -63,7 +63,7 @@ const Div = ({ className, id = "", title = "", children }) => {
 const Grid = ({ children }) => {
   return (
     <FatBlock>
-      <div className="grid grid-cols-1 xl:grid-cols-2 gap-2.5 my-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 my-6">
         {children}
       </div>
     </FatBlock>
