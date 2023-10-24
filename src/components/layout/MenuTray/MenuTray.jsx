@@ -15,7 +15,7 @@ export default function MenuTray({ children }) {
   return (
     <>
       {isOpen && (
-        <div className="flex md:hidden fixed z-50 left-0 top-0 w-screen h-screen text-4xl text-lite bg-[rgba(0,0,0,0.7)]">
+        <div className="flex lg:hidden fixed z-50 left-0 top-0 w-screen h-screen text-4xl text-lite bg-[rgba(0,0,0,0.7)]">
           <div className="w-9/12 h-full overflow-y-auto type-ui text-gray bg-black p-5">
             {children}
           </div>
@@ -23,7 +23,7 @@ export default function MenuTray({ children }) {
       )}
       <button
         className={classnames(
-          "flex md:hidden fixed bottom-4 right-4 items-center justify-center leading-none w-12 h-12 text-4xl text-lite bg-tint border border-gray rounded-full",
+          "flex lg:hidden fixed bottom-4 right-4 items-center justify-center leading-none w-12 h-12 text-4xl text-lite bg-tint border border-gray rounded-full",
           { "z-50": isOpen, "z-40": !isOpen }
         )}
         onClick={() => setOpen(!isOpen)}
