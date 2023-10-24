@@ -6,32 +6,26 @@ export default function ConceptCard({
   className = "",
   title,
   description,
-  label,
   icon,
   href,
   small = false,
 }) {
   return (
-    <div
-      className={`flex flex-col justify-between aspect-[2/1] max-w-2xl rounded-2xl text-2xl text-gray p-4 bg-brite md-exclude ${className}`}
+    <Link
+      className={`flex flex-col justify-between aspect-[2.5/1] xs:w-10/12 sm:w-full max-w-2xl rounded-2xl text-2xl text-gray p-4 bg-brite md-exclude ${className}`}
       href={href}
     >
-      <div className="flex mb-8">
+      <div className="flex mb-3.5">
         <Icon className="h-full bg-gray mr-1.5" name={icon} />
-        <h3 className={small ? "h3" : "h2"}>{title}</h3>
+        <h3 className={`${small ? "h3" : "h2"} md-exclude`}>{title}</h3>
       </div>
-      <div>
-        <p
-          className={`${
-            small ? "body-xs" : "body-sm"
-          } mb-3.5 md-exclude font-semibold`}
-        >
-          {description}
-        </p>
-        <Link className={`${small ? "btn-xs" : "btn-sm"} btn-dark`} href={href}>
-          {label}
-        </Link>
-      </div>
-    </div>
+      <p
+        className={`${
+          small ? "body-xs" : "body-sm"
+        } mb-3.5 md-exclude font-semibold`}
+      >
+        {description}
+      </p>
+    </Link>
   );
 }
