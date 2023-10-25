@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import classnames from "classnames";
 import { join } from "path";
@@ -15,6 +15,8 @@ function NavItem({
   path,
   isUnderThis,
   collapsed,
+  isOpen,
+  setOpen,
 }) {
   const isOnThis = path === href;
   const padding = classnames({
@@ -36,6 +38,17 @@ function NavItem({
           }
         )}
         href={href}
+        onClick={(e) => {
+          if (path === href) {
+            e.stopPropagation();
+            e.nativeEvent.stopImmediatePropagation();
+            setOpen(!isOpen);
+          } else {
+            e.stopPropagation();
+            e.nativeEvent.stopImmediatePropagation();
+            setOpen(true);
+          }
+        }}
       >
         {label}
       </Link>
@@ -44,7 +57,7 @@ function NavItem({
     return (
       <Link
         className={classnames(
-          "flex justify-between w-full text-xl font-extralight",
+          "flex justify-between w-full text-xl font-normal",
           sigAlignment,
           {
             "text-gray hover:text-brite": !isUnderThis,
@@ -52,9 +65,20 @@ function NavItem({
           }
         )}
         href={href}
+        onClick={(e) => {
+          if (path === href) {
+            e.stopPropagation();
+            e.nativeEvent.stopImmediatePropagation();
+            setOpen(!isOpen);
+          } else {
+            e.stopPropagation();
+            e.nativeEvent.stopImmediatePropagation();
+            setOpen(true);
+          }
+        }}
       >
         <span className={classnames(padding)}>{label}</span>
-        {collapsed && <span>+</span>}
+        <span>{isOpen ? "-" : "+"}</span>
       </Link>
     );
   }
@@ -79,7 +103,10 @@ function NavSection({
   level = -1,
   divider = false,
 }) {
-  const isUnderThisPage = `${path}/`.includes(`${root}/`);
+  const isUnderThis = `${path}/`.includes(`${root}/`);
+  const isUnderThisNotOn =
+    `${path}/`.includes(`${root}/`) && `/${root}` !== path;
+  const [isOpen, setOpen] = useState(posts.auto_expand || isUnderThis);
 
   return (
     <>
@@ -94,10 +121,12 @@ function NavSection({
         label={posts.title}
         href={`/${root}`}
         path={path}
-        isUnderThis={isUnderThisPage}
-        collapsed={!(posts.auto_expand || isUnderThisPage)}
+        isUnderThis={isUnderThis}
+        collapsed={!(posts.auto_expand || isUnderThis)}
+        isOpen={isOpen}
+        setOpen={setOpen}
       />
-      {(posts.auto_expand || isUnderThisPage) &&
+      {(isOpen || isUnderThisNotOn) &&
         posts.pages.map((page) => {
           const href = `/${root}/${page.slug}`;
           const isThisPage = path === href;
@@ -108,13 +137,13 @@ function NavSection({
               label={page.title}
               href={`/${root}/${page.slug}`}
               path={path}
-              isUnderThis={isUnderThisPage}
-              collapsed={!(posts.auto_expand || isUnderThisPage)}
+              isUnderThis={isUnderThis}
+              collapsed={!(posts.auto_expand || isUnderThis)}
               key={href}
             />
           );
         })}
-      {(posts.auto_expand || isUnderThisPage) &&
+      {(isOpen || isUnderThisNotOn) &&
         posts.children &&
         Object.keys(posts.children).length !== 0 &&
         Object.entries(posts.children).map(([k, v], i) => {
