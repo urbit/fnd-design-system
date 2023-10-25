@@ -12,10 +12,28 @@ export default function IconCard({
   icon,
   weight = "regular",
   small = false,
+  big = false,
 }) {
   return (
     <>
-      {!small && (
+      {big && !small && (
+        <Link
+          className="aspect-square max-w-md sm:max-w-md md:max-w-lg text-2xl font-semibold text-lite"
+          href={href}
+        >
+          <div className="relative h-2/3 p-4 rounded-t-2xl bg-tint">
+            <h4 className="h3 md-exclude">{title}</h4>
+            <Icon
+              className="absolute w-32 h-32 bg-brite m-auto left-0 right-0 top-0 bottom-0"
+              name={icon}
+            />
+          </div>
+          <p className="h-1/3 p-4 rounded-b-2xl bg-gray body-sm md-exclude">
+            {description}
+          </p>
+        </Link>
+      )}
+      {!small && !big && (
         <Link
           className="flex aspect-[2.5/1] rounded-2xl xs:w-10/12 sm:w-full max-w-2xl"
           href={href}
