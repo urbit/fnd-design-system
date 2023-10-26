@@ -176,7 +176,7 @@
 
 .markdown a code,
 .markdown a code[class*="language-"] {
-  @apply decoration-0 bg-lite text-gray;
+  @apply decoration-0 bg-brite text-gray;
 }
 
 .markdown a:not(.md-exclude) {
