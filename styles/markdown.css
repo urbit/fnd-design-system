@@ -191,7 +191,7 @@
 }
 
 .markdown table {
-  @apply table-fixed w-full;
+  @apply table-fixed w-full text-xl;
   border-collapse: separate;
   border-spacing: 0;
 }
