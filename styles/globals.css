@@ -47,7 +47,7 @@
 
 /* generic type settings for nav elements */
 .type-ui {
-  @apply text-base lg:text-lg xl:text-xl font-medium;
+  @apply text-base lg:text-lg xl:text-xl font-normal;
 }
 
 /* top level layout */

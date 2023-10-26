@@ -67,7 +67,7 @@ export default function FragmentNav({ markdown }) {
           <ul className="flex flex-col mb-2" key={heading.id}>
             <li>
               <a
-                className={classNames("text-lg font-semibold", {
+                className={classNames("type-ui", {
                   "text-gray hover:text-brite": !(heading.id === activeId),
                   "text-brite": heading.id === activeId,
                 })}
@@ -79,7 +79,7 @@ export default function FragmentNav({ markdown }) {
                 <ul className="flex flex-col">
                   {heading.items.map((child) => (
                     <a
-                      className={classNames("pl-2 text-lg font-extralight", {
+                      className={classNames("pl-2 type-ui", {
                         "text-gray hover:text-brite": !(child.id === activeId),
                         "text-brite": child.id === activeId,
                       })}

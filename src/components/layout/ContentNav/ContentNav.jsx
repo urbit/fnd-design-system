@@ -31,7 +31,7 @@ function NavItem({
     return (
       <Link
         className={classnames(
-          "flex justify-between text-xl font-semibold mb-2 layout-pl",
+          "flex justify-between type-ui mb-2 layout-pl",
           {
             "text-gray hover:text-brite": !isUnderThis,
             "text-brite": isUnderThis,
@@ -57,7 +57,7 @@ function NavItem({
     return (
       <Link
         className={classnames(
-          "flex justify-between w-full text-xl font-normal",
+          "flex justify-between w-full type-ui",
           sigAlignment,
           {
             "text-gray hover:text-brite": !isUnderThis,
@@ -84,7 +84,7 @@ function NavItem({
   }
   return (
     <Link
-      className={classnames("flex text-xl font-extralight", sigAlignment, {
+      className={classnames("flex type-ui", sigAlignment, {
         "text-gray hover:text-brite": !isOnThis,
         "text-brite": isOnThis,
       })}
