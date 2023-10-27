@@ -52,7 +52,7 @@
 
 /* top level layout */
 .layout {
-  @apply w-full max-w-screen-2xl;
+  @apply w-full max-w-screen-3xl;
 }
 
 .layout-narrow {
