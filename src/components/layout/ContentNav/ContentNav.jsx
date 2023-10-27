@@ -7,6 +7,13 @@ function label(str, maxLen) {
   return str.length > maxLen ? str.slice(0, maxLen - 2).trim() + "..." : str;
 }
 
+function sort(index) {
+  const sortBy = index["sort_by"] || "weight";
+  return (l, r) => {
+    return (l[sortBy] || 0) - (r[sortBy] || 0);
+  };
+}
+
 function NavItem({
   type,
   level = 0,
@@ -30,13 +37,10 @@ function NavItem({
   if (type === "dir" && level < 0) {
     return (
       <Link
-        className={classnames(
-          "flex justify-between type-ui mb-2 layout-pl",
-          {
-            "text-gray hover:text-brite": !isUnderThis,
-            "text-brite": isUnderThis,
-          }
-        )}
+        className={classnames("flex justify-between type-ui mb-2 layout-pl", {
+          "text-gray hover:text-brite": !isUnderThis,
+          "text-brite": isUnderThis,
+        })}
         href={href}
         onClick={(e) => {
           if (path === href) {
@@ -127,7 +131,7 @@ function NavSection({
         setOpen={setOpen}
       />
       {(isOpen || isUnderThisNotOn) &&
-        posts.pages.map((page) => {
+        posts.pages.sort(sort(posts)).map((page) => {
           const href = `/${root}/${page.slug}`;
           const isThisPage = path === href;
           return (
@@ -146,17 +150,19 @@ function NavSection({
       {(isOpen || isUnderThisNotOn) &&
         posts.children &&
         Object.keys(posts.children).length !== 0 &&
-        Object.entries(posts.children).map(([k, v], i) => {
-          return (
-            <NavSection
-              posts={v}
-              root={join(root, k)}
-              path={path}
-              level={level + 1}
-              key={join(root, k)}
-            />
-          );
-        })}
+        Object.entries(posts.children)
+          .sort(sort(posts))
+          .map(([k, v], i) => {
+            return (
+              <NavSection
+                posts={v}
+                root={join(root, k)}
+                path={path}
+                level={level + 1}
+                key={join(root, k)}
+              />
+            );
+          })}
     </>
   );
 }
@@ -164,7 +170,7 @@ function NavSection({
 export default function ContentNav({ posts, root, firstCrumb }) {
   return (
     <nav className="flex flex-col w-full overflow-y-auto overflow-x-hidden offset-r">
-      {posts.pages.map((page) => {
+      {posts.pages.sort(sort(posts)).map((page) => {
         const href = `/${root}/${page.slug}`;
         return (
           <NavItem
@@ -180,17 +186,19 @@ export default function ContentNav({ posts, root, firstCrumb }) {
       })}
       {posts.children &&
         Object.keys(posts.children).length !== 0 &&
-        Object.entries(posts.children).map(([k, v], i) => {
-          return (
-            <NavSection
-              posts={v}
-              root={join(root, k)}
-              path={firstCrumb}
-              key={"tray-" + join(root, k)}
-              divider={i > 0 || posts.pages.length !== 0}
-            />
-          );
-        })}
+        Object.entries(posts.children)
+          .sort(sort(posts))
+          .map(([k, v], i) => {
+            return (
+              <NavSection
+                posts={v}
+                root={join(root, k)}
+                path={firstCrumb}
+                key={"tray-" + join(root, k)}
+                divider={i > 0 || posts.pages.length !== 0}
+              />
+            );
+          })}
     </nav>
   );
 }
