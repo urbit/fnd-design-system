@@ -50,7 +50,7 @@ export default function Tooltip({ data, label }) {
         </div>
       )}
       <span
-        className="relative text-brite font-bold cursor-pointer underline"
+        className="relative text-xl text-brite font-bold cursor-pointer underline"
         onClick={() => setOpen(!isOpen)}
       >
         {label || data.symbol || data.name}
