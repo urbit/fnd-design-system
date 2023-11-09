@@ -3,10 +3,10 @@ import Link from "next/link";
 import classnames from "classnames";
 import { capitalize } from "../../lib/lib";
 
-export default function Tooltip({ data, label }) {
+function Tooltip({ data, label }) {
   const [isOpen, setOpen] = useState(false);
-  const [path, fragment] = data.link.split("#");
-  const slug = data.link.replace(/^\//g, "").split("/");
+  const [path, fragment] = data.slug.split("#");
+  const slug = data.slug.replace(/^\//g, "").split("/");
 
   return (
     <>
@@ -23,7 +23,7 @@ export default function Tooltip({ data, label }) {
                       {!isFirst && <span>/</span>}
                       {!isLast && <span>{capitalize(crumb)}</span>}
                       {isLast && (
-                        <Link className="text-brite" href={data.link}>
+                        <Link className="text-brite" href={data.slug}>
                           {capitalize(crumb.split("#")[0])}
                         </Link>
                       )}
@@ -36,15 +36,13 @@ export default function Tooltip({ data, label }) {
               </button>
             </div>
             <hr className="md-exclude hr-horizontal border-black mt-5 mb-3.5" />
-            <h3 className="md-exclude h2 font-semibold">
-              {data.symbol ? `${data.symbol} ("${data.name}")` : data.name}
-            </h3>
-            {data.usage && (
-              <p className="font-medium">{data.usage}</p>
-            )}
+            <h3
+              className="md-exclude h2 font-semibold"
+              dangerouslySetInnerHTML={{ __html: data.title }}
+            />
             <p
               className=""
-              dangerouslySetInnerHTML={{ __html: data.desc }}
+              dangerouslySetInnerHTML={{ __html: data.content }}
             />
           </div>
         </div>
@@ -53,8 +51,12 @@ export default function Tooltip({ data, label }) {
         className="relative text-xl text-brite font-bold cursor-pointer underline"
         onClick={() => setOpen(!isOpen)}
       >
-        {label || data.symbol || data.name}
+        {label}
       </span>
     </>
   );
+}
+
+export default function tooltipWrapper(index = {}) {
+  return ({ label, href }) => Tooltip({ data: index[href], label });
 }

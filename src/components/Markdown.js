@@ -31,8 +31,8 @@ import ImageCard from "./ui/ImageCard/ImageCard";
 import IconCard from "./ui/IconCard/IconCard";
 import ContentCard from "./ui/ContentCard/ContentCard";
 import Video from "./markdown/Video";
-import Tooltip from "./markdown/Tooltip";
-import FatBlock from "./layout/FatBlock"
+import tooltipWrapper from "./markdown/Tooltip";
+import FatBlock from "./layout/FatBlock";
 import parse from "html-react-parser";
 
 const Math = dynamic(() => import("./markdown/Math"), {
@@ -74,7 +74,7 @@ const Iframe = ({ className, width, height, src, children }) => {
   return <iframe width={width} height={height} src={src} />;
 };
 
-export function MarkdownParse({ post, variables={} }) {
+export function MarkdownParse({ post, variables = {} }) {
   const tokeniser = new Markdoc.Tokenizer({ html: true, linkify: true });
   const tokens = tokeniser.tokenize(post.content);
   const ast = Markdoc.parse(tokens);
@@ -113,7 +113,7 @@ export function MarkdownParse({ post, variables={} }) {
   });
 }
 
-export function MarkdownRender({ content }) {
+export function MarkdownRender({ content, tooltipData = {} }) {
   return Markdoc.renderers.react(content, React, {
     components: {
       IconCard,
@@ -131,7 +131,7 @@ export function MarkdownRender({ content }) {
       Math,
       Grid,
       Video,
-      Tooltip,
+      Tooltip: tooltipWrapper(tooltipData),
     },
   });
 }
