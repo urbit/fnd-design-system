@@ -1,5 +1,5 @@
 .markdown {
-  @apply text-lite;
+  @apply text-black dark:text-lite;
 }
 
 .markdown .display * {
@@ -21,9 +21,9 @@
   @apply my-4;
 }
 
-.markdown p a:not(:has(code), :has(pre)),
+.markdown p a:not(.md-exclude, :has(code), :has(pre)),
 .markdown li a:not(:has(code), :has(pre)) {
-  @apply underline decoration-1 text-brite;
+  @apply underline decoration-1 text-gray dark:text-brite;
 }
 
 .markdown h1 a:not(:has(code), :has(pre)),
@@ -32,7 +32,7 @@
 .markdown h4 a:not(:has(code), :has(pre)),
 .markdown h5 a:not(:has(code), :has(pre)),
 .markdown h6 a:not(:has(code), :has(pre)) {
-  @apply underline decoration-2 text-brite;
+  @apply underline decoration-2 text-gray dark:text-brite;
 }
 
 /* Lists */
@@ -103,7 +103,7 @@
 }
 
 .markdown p:not(.md-exclude) {
-  @apply text-xl text-lite;
+  @apply text-xl;
 }
 
 .markdown-callout p {
@@ -126,23 +126,23 @@
 /* Technical Typography */
 
 .markdown.technical h1 {
-  @apply text-5xl text-lite mt-24 mb-16;
+  @apply text-5xl mt-24 mb-16;
 }
 
 .markdown.technical h2 {
-  @apply text-4xl text-lite mt-16 mb-12;
+  @apply text-4xl mt-16 mb-12;
 }
 
 .markdown.technical h3:not(.md-exclude) {
-  @apply text-3xl text-lite font-medium mt-14 mb-10;
+  @apply text-3xl font-medium mt-14 mb-10;
 }
 
 .markdown.technical h4:not(.md-exclude) {
-  @apply text-2xl text-lite font-semibold mt-12 mb-8;
+  @apply text-2xl font-semibold mt-12 mb-8;
 }
 
 .markdown.technical p:not(.md-exclude) {
-  @apply text-xl leading-tight text-lite;
+  @apply text-xl leading-tight;
 }
 
 .markdown.technical p code {
@@ -180,7 +180,7 @@
 }
 
 .markdown a:not(.md-exclude) {
-  @apply text-brite font-semibold;
+  @apply text-gray dark:text-brite font-semibold;
 }
 
 .markdown blockquote {
@@ -204,13 +204,13 @@
   border-bottom-style: solid;
   padding: 8px !important;
   overflow-wrap: break-word;
-  @apply text-lite border-tint;
+  @apply border-tint;
 }
 
 .markdown table tr td:first-child {
   border-left-width: 2px;
   border-left-style: solid;
-  @apply text-lite border-tint;
+  @apply border-tint;
 }
 
 .markdown table tr th {

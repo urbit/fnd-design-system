@@ -33,14 +33,20 @@ function NavItem({
     "pl-8": level === 4,
   });
   const sigAlignment = "pl-1.5 md:pl-3 lg:pl-4 xl:pl-5";
+  const color = (b) => {
+    return {
+      "text-gray hover:text-black hover:dark:text-brite": !b,
+      "text-black dark:text-brite": b,
+    };
+  };
 
   if (type === "dir" && level < 0) {
     return (
       <Link
-        className={classnames("flex justify-between type-ui mb-2 layout-pl", {
-          "text-gray hover:text-brite": !isUnderThis,
-          "text-brite": isUnderThis,
-        })}
+        className={classnames(
+          "flex justify-between type-ui mb-2 layout-pl",
+          color(isUnderThis)
+        )}
         href={href}
         onClick={(e) => {
           if (path === href) {
@@ -63,10 +69,7 @@ function NavItem({
         className={classnames(
           "flex justify-between w-full type-ui",
           sigAlignment,
-          {
-            "text-gray hover:text-brite": !isUnderThis,
-            "text-brite": isUnderThis,
-          }
+          color(isUnderThis)
         )}
         href={href}
         onClick={(e) => {
@@ -88,10 +91,7 @@ function NavItem({
   }
   return (
     <Link
-      className={classnames("flex type-ui", sigAlignment, {
-        "text-gray hover:text-brite": !isOnThis,
-        "text-brite": isOnThis,
-      })}
+      className={classnames("flex type-ui", sigAlignment, color(isOnThis))}
       href={href}
     >
       <span className={classnames(padding)}>{label}</span>

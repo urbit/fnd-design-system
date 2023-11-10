@@ -68,8 +68,8 @@ export default function FragmentNav({ markdown }) {
             <li>
               <a
                 className={classNames("type-ui", {
-                  "text-gray hover:text-brite": !(heading.id === activeId),
-                  "text-brite": heading.id === activeId,
+                  "text-gray hover:text-black hover:dark:text-brite": !(heading.id === activeId),
+                  "text-black dark:text-brite": heading.id === activeId,
                 })}
                 href={`#${heading.id}`}
               >
@@ -80,8 +80,8 @@ export default function FragmentNav({ markdown }) {
                   {heading.items.map((child) => (
                     <a
                       className={classNames("pl-2 type-ui", {
-                        "text-gray hover:text-brite": !(child.id === activeId),
-                        "text-brite": child.id === activeId,
+                        "text-gray hover:text-black hover:dark:text-brite": !(child.id === activeId),
+                        "text-black dark:text-brite": child.id === activeId,
                       })}
                       href={`#${child.id}`}
                       key={child.id}

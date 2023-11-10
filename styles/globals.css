@@ -41,8 +41,13 @@
 
 :root {
   /* Default to MOS */
-  @apply mos;
-  background-color: var(--black);
+  @apply mos bg-white text-black;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @apply bg-black text-lite;
+  }
 }
 
 /* generic type settings for nav elements */

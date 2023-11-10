@@ -23,7 +23,7 @@ function Tooltip({ data, label }) {
                       {!isFirst && <span>/</span>}
                       {!isLast && <span>{capitalize(crumb)}</span>}
                       {isLast && (
-                        <Link className="text-brite" href={data.slug}>
+                        <Link className="md-exclude text-brite" href={data.slug}>
                           {capitalize(crumb.split("#")[0])}
                         </Link>
                       )}
@@ -47,12 +47,12 @@ function Tooltip({ data, label }) {
           </div>
         </div>
       )}
-      <span
-        className="relative text-xl text-brite font-bold cursor-pointer underline"
+      <a
+        className="relative cursor-pointer"
         onClick={() => setOpen(!isOpen)}
       >
         {label}
-      </span>
+      </a>
     </>
   );
 }

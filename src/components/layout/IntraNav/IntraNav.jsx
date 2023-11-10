@@ -3,37 +3,6 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import classnames from "classnames";
 
-function ActiveLink({
-  children,
-  href,
-  target,
-  className,
-  currentPath,
-  dark = false,
-}) {
-  const firstCrumb = currentPath.split("/")[1];
-  const activeClassName = !dark
-    ? classnames({
-        "text-lite": "/" + firstCrumb === href,
-        "text-brite hover:text-lite": "/" + firstCrumb !== href,
-      })
-    : classnames({
-        "text-black": "/" + firstCrumb === href,
-        "text-gray hover:text-black": "/" + firstCrumb !== href,
-      });
-
-  return (
-    <Link
-      className={`${className} ${activeClassName}`}
-      href={href}
-      target={target}
-      passHref
-    >
-      {children}
-    </Link>
-  );
-}
-
 function Dropdown({ className = "", label, items }) {
   const [isOpen, setOpen] = useState(false);
 
@@ -43,15 +12,15 @@ function Dropdown({ className = "", label, items }) {
     >
       {typeof label === "object" && (
         <Link
-          className="flex flex-1 relative h-full items-center text-gray hover:opacity-80"
+          className="flex flex-1 relative h-full items-center text-brite dark:text-gray hover:opacity-80"
           href="/"
         >
           <div className="flex items-center h-full bg-black">
-            <span className="flex justify-center items-center h-full w-5 md:w-8 lg:w-10 xl:w-12 bg-brite">
+            <span className="flex justify-center items-center h-full w-5 md:w-8 lg:w-10 xl:w-12 bg-gray dark:bg-brite">
               ~
             </span>
           </div>
-          <span className="flex items-center h-full w-full bg-brite text-gray">
+          <span className="flex items-center h-full w-full bg-gray dark:bg-brite text-brite dark:text-gray">
             {label.title}
           </span>
         </Link>
@@ -60,8 +29,10 @@ function Dropdown({ className = "", label, items }) {
         className={classnames(
           "flex items-center justify-center h-full hover:opacity-80",
           {
-            "bg-brite text-gray w-12": typeof label === "object",
-            "bg-gray text-brite w-full px-5": typeof label === "string",
+            "bg-gray text-brite dark:bg-brite dark:text-gray w-12":
+              typeof label === "object",
+            "bg-brite text-gray dark:bg-gray dark:text-brite w-full px-5":
+              typeof label === "string",
           }
         )}
         onClick={() => setOpen(!isOpen)}
@@ -71,24 +42,25 @@ function Dropdown({ className = "", label, items }) {
       </button>
       {isOpen && (
         <div className="absolute top-full w-full bg-black max-h-content overflow-y-scroll">
-          {items.map((item) => {
+          {items.map(({ title, theme, href, target }) => {
+            const firstCrumb = useRouter().asPath.split("/")[1];
             return (
-              <ActiveLink
+              <Link
                 className={classnames(
                   "flex whitespace-nowrap relative h-16 items-center hover:opacity-80 leading-none",
                   (typeof label === "object" && "layout-pl") || "pl-5",
-                  item.theme || "",
+                  theme || "",
                   {
-                    "bg-gray text-brite": !item.theme,
-                    "bg-brite text-gray": item.theme,
+                    "bg-brite text-gray dark:bg-gray dark:text-brite": !theme,
+                    "bg-gray text-brite dark:bg-brite dark:text-gray": theme,
+                    "text-black dark:text-lite": "/" + firstCrumb === href,
                   }
                 )}
-                href={item.href}
-                target={item.target || "_self"}
-                currentPath={useRouter().asPath}
+                href={href}
+                target={target || "_self"}
               >
-                {item.title}
-              </ActiveLink>
+                {title}
+              </Link>
             );
           })}
         </div>
@@ -98,6 +70,7 @@ function Dropdown({ className = "", label, items }) {
 }
 
 function Pages({ className, pages }) {
+  const firstCrumb = useRouter().asPath.split("/")[1];
   return (
     <nav
       className={classnames(
@@ -105,23 +78,28 @@ function Pages({ className, pages }) {
         className
       )}
     >
-      {pages.map((page) => (
-        <ActiveLink
-          currentPath={useRouter().asPath}
-          className="type-ui"
-          href={page.href}
-          key={page.title}
-        >
-          {page.title}
-        </ActiveLink>
-      ))}
+      {pages.map(({ title, href }) => {
+        return (
+          <Link
+            className={classnames("type-ui", {
+              "text-gray hover:text-black dark:text-brite hover:dark:text-lite":
+                "/" + firstCrumb !== href,
+              "text-black dark:text-lite": "/" + firstCrumb === href,
+            })}
+            href={href}
+            key={title}
+          >
+            {title}
+          </Link>
+        );
+      })}
     </nav>
   );
 }
 
 export default function IntraNav({ ourSite, sites, pages, search }) {
   return (
-    <div className="sticky top-0 z-50 flex flex-col items-center w-full bg-gray">
+    <div className="sticky top-0 z-50 flex flex-col items-center w-full bg-brite dark:bg-gray">
       <div className="relative layout h-12 md:h-16">
         <div className="flex justify-between items-center h-full">
           <div className="flex h-full w-full items-center">
