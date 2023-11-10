@@ -213,6 +213,12 @@
   @apply border-tint;
 }
 
+.markdown table tr th:first-child {
+  border-left-width: 2px;
+  border-left-style: solid;
+  @apply border-black;
+}
+
 .markdown table tr th {
   border-top-width: 2px;
   border-top-style: solid;
