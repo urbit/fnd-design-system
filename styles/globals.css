@@ -45,7 +45,7 @@
 }
 
 body {
-  @apply bg-white text-black dark:bg-black dark:text-lite
+  @apply bg-white text-tint dark:bg-black dark:text-lite
 }
 
 /* generic type settings for nav elements */

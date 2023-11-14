@@ -1,5 +1,5 @@
 .markdown {
-  @apply text-black dark:text-lite;
+  @apply text-tint dark:text-lite;
 }
 
 .markdown .display * {
