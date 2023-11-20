@@ -67,13 +67,14 @@
   list-style: outside;
   list-style-type: none;
   counter-reset: list-number;
+  margin-left: 2.5rem;
 }
 
 .markdown ol li:before {
   counter-increment: list-number;
   content: counter(list-number) " ";
   position: absolute;
-  left: -1rem;
+  left: -2.5rem;
 }
 
 .markdown li ol li:before {
