@@ -167,7 +167,7 @@
 
 .markdown pre,
 .markdown pre[class*="language-"] {
-  @apply block my-6 !p-3 bg-tint rounded-lg w-full;
+  @apply block !p-3 bg-tint rounded-lg w-full;
 }
 
 .markdown code,

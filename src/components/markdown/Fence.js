@@ -16,22 +16,22 @@ export default function Fence({
   const [collapsed, setCollapse] = React.useState(Boolean(mode === "collapse"));
   return (
     <div
-      className={classNames("relative rounded-xl z-0", {
+      className={classNames("relative rounded-xl my-6 z-0", {
         "max-h-60 overflow-hidden": collapsed,
       })}
     >
       {collapsed && (
         <>
           <div
-            className="absolute w-full h-full bottom-0 overflow-hidden bg-white z-10 rounded-xl"
-            style={{ opacity: "0.5" }}
+            className="absolute w-full h-full bottom-0 overflow-hidden bg-black z-10 rounded-xl"
+            style={{ opacity: "0.6" }}
           />
           <div
             className="absolute w-full h-full flex justify-center items-end z-20 cursor-pointer"
             onClick={() => setCollapse(false)}
           >
             <p
-              className="!text-sm !font-semibold"
+              className="!text-2xl"
               style={{ paddingBottom: "0.25rem" }}
             >
               Click to expand
