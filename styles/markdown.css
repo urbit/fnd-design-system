@@ -184,10 +184,10 @@
 }
 
 .markdown blockquote {
-  @apply border-l-2 border-lite pl-6 italic;
+  @apply border-l-2 border-lite pl-6;
 }
 .markdown blockquote cite {
-  @apply not-italic font-semibold;
+  @apply font-semibold;
 }
 
 .markdown table {
