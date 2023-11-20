@@ -7,12 +7,12 @@ const Tabs = ({ labels, children }) => {
 
   return (
     <TabContext.Provider value={currentTab}>
-      <ul className="flex items-center display cursor-pointer space-x-4">
+      <ul className="flex items-center cursor-pointer space-x-4 overflow-x-auto">
         {labels.map((label) => (
           <li
             className={
-              "block bg-wall-100 tab rounded-xl " +
-              (currentTab === label ? "font-semibold" : "")
+              "btn-sm " +
+              (currentTab === label ? "bg-gray text-brite" : "btn-light")
             }
             key={label}
             onClick={() => setCurrentTab(label)}
