@@ -48,6 +48,7 @@ const NextLink = ({ href, target, children }) => {
   return (
     <Link href={href} target={target}>
       {children}
+      {href.charAt(0) !== "/" && href.charAt(0) !== "#" && <span>↗</span>}
     </Link>
   );
 };
