@@ -42,11 +42,11 @@
 }
 
 .markdown li:not(:last-child) {
-  @apply mb-0.5;
+  /* @apply mb-0.5; */
 }
 
 .markdown li li {
-  @apply ml-4;
+  /* @apply ml-4; */
 }
 
 .markdown ol li {
@@ -55,7 +55,7 @@
 
 .markdown li ul,
 .markdown li ol {
-  @apply mt-0.5 mb-0;
+  /* @apply mt-0.5 mb-0; */
 }
 
 .markdown ul {
@@ -142,15 +142,11 @@
 }
 
 .markdown.technical p:not(.md-exclude) {
-  @apply text-2xl leading-tight;
+  @apply text-2xl;
 }
 
 .markdown.technical p code {
   white-space: pre-wrap;
-}
-
-.markdown.technical li {
-  @apply leading-tight md:leading-snug;
 }
 
 /* Imagery */
@@ -171,7 +167,7 @@
 
 .markdown code,
 .markdown code[class*="language-"] {
-  @apply font-mono text-lite bg-tint rounded-md !px-0.5 !py-0;
+  @apply font-mono text-lite bg-tint rounded-md !px-0 !py-0;
 }
 
 .markdown a code,
