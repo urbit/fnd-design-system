@@ -16,7 +16,7 @@ export default function MenuTray({ children }) {
     <>
       {isOpen && (
         <div className="flex lg:hidden fixed z-50 left-0 top-0 w-screen h-screen text-4xl text-lite bg-[rgba(0,0,0,0.7)]">
-          <div className="w-9/12 h-full overflow-y-auto type-ui text-gray bg-white dark:bg-black p-5">
+          <div className="w-9/12 h-full overflow-y-auto type-ui text-gray bg-black p-5">
             {children}
           </div>
         </div>

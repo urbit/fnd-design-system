@@ -35,8 +35,8 @@ function NavItem({
   const sigAlignment = "pl-1.5 md:pl-3 lg:pl-4 xl:pl-5";
   const color = (b) => {
     return {
-      "text-gray hover:text-black hover:dark:text-brite": !b,
-      "text-black dark:text-brite": b,
+      "text-gray hover:text-brite": !b,
+      "text-brite": b,
     };
   };
 

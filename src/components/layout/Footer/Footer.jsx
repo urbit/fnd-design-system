@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer({ title = "", data = [] }) {
   return (
-    <footer className="bg-brite dark:bg-tint text-tint dark:text-lite text-xl font-normal mt-20 w-full flex justify-center z-10">
+    <footer className="bg-tint text-lite text-xl font-normal mt-20 w-full flex justify-center z-10">
       <div className="layout layout-px">
         <section className="flex flex-row flex-wrap w-full pt-16 pb-8 ">
           {data?.[0]?.map((section, i) => {
@@ -21,7 +21,7 @@ export default function Footer({ title = "", data = [] }) {
                   {section.links.map((link) => {
                     return (
                       <Link
-                        className="type-ui hover:text-gray hover:dark:text-brite pb-1"
+                        className="type-ui hover:text-brite pb-1"
                         key={link.href}
                         href={link.href}
                         passHref
@@ -40,7 +40,7 @@ export default function Footer({ title = "", data = [] }) {
             return (
               <div key={link.href} className="md:w-1/3">
                 <Link
-                  className="type-ui hover:text-gray hover:dark:text-brite"
+                  className="type-ui hover:text-brite"
                   href={link.href}
                   passHref
                 >

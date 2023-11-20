@@ -12,15 +12,15 @@ function Dropdown({ className = "", label, items }) {
     >
       {typeof label === "object" && (
         <Link
-          className="flex flex-1 relative h-full items-center text-brite dark:text-gray hover:opacity-80"
+          className="flex flex-1 relative h-full items-center text-gray hover:opacity-80"
           href="/"
         >
           <div className="flex items-center h-full bg-black">
-            <span className="flex justify-center items-center h-full w-5 md:w-8 lg:w-10 xl:w-12 bg-gray dark:bg-brite">
+            <span className="flex justify-center items-center h-full w-5 md:w-8 lg:w-10 xl:w-12 bg-brite">
               ~
             </span>
           </div>
-          <span className="flex items-center h-full w-full bg-gray dark:bg-brite text-brite dark:text-gray">
+          <span className="flex items-center h-full w-full bg-brite text-gray">
             {label.title}
           </span>
         </Link>
@@ -29,9 +29,9 @@ function Dropdown({ className = "", label, items }) {
         className={classnames(
           "flex items-center justify-center h-full hover:opacity-80",
           {
-            "bg-gray text-brite dark:bg-brite dark:text-gray w-12":
+            "bg-brite text-gray w-12":
               typeof label === "object",
-            "bg-brite text-gray dark:bg-gray dark:text-brite w-full px-5":
+            "bg-gray text-brite w-full px-5":
               typeof label === "string",
           }
         )}
@@ -51,9 +51,9 @@ function Dropdown({ className = "", label, items }) {
                   (typeof label === "object" && "layout-pl") || "pl-5",
                   theme || "",
                   {
-                    "bg-brite text-gray dark:bg-gray dark:text-brite": !theme,
-                    "bg-gray text-brite dark:bg-brite dark:text-gray": theme,
-                    "text-black dark:text-lite": "/" + firstCrumb === href,
+                    "bg-gray text-brite": !theme,
+                    "bg-brite text-gray": theme,
+                    "text-lite": "/" + firstCrumb === href,
                   }
                 )}
                 href={href}
@@ -82,9 +82,9 @@ function Pages({ className, pages }) {
         return (
           <Link
             className={classnames("type-ui", {
-              "text-gray hover:text-black dark:text-brite hover:dark:text-lite":
+              "text-brite hover:text-lite":
                 "/" + firstCrumb !== href,
-              "text-black dark:text-lite": "/" + firstCrumb === href,
+              "text-lite": "/" + firstCrumb === href,
             })}
             href={href}
             key={title}
@@ -99,7 +99,7 @@ function Pages({ className, pages }) {
 
 export default function IntraNav({ ourSite, sites, pages, search }) {
   return (
-    <div className="sticky top-0 z-50 flex flex-col items-center w-full bg-brite dark:bg-gray">
+    <div className="sticky top-0 z-50 flex flex-col items-center w-full bg-gray">
       <div className="relative layout h-12 md:h-16">
         <div className="flex justify-between items-center h-full">
           <div className="flex h-full w-full items-center">
