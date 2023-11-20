@@ -47,12 +47,12 @@ function Tooltip({ data, label }) {
           </div>
         </div>
       )}
-      <a
-        className="relative cursor-pointer"
+      <span
+        className="text-brite bg-gray rounded-xl px-1.5 relative cursor-pointer"
         onClick={() => setOpen(!isOpen)}
       >
         {label}
-      </a>
+      </span>
     </>
   );
 }
