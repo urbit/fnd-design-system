@@ -11,6 +11,15 @@
   --lite: #F3F5F3;
   --brite: #C3CDC3;
 }
+.mos-light {
+  --black: #F8FAF8;
+  --white: #14140F;
+  --gray: #B7BFB7;
+  --tint: #D4D5D3;
+  --lite: #373733;
+  --brite: #5A5A55;
+}
+
 /* BLU color palette */
 .blu {
   --black: #14141E;
@@ -20,6 +29,15 @@
   --lite: #F0FFFF;
   --brite: #A0DCE6;
 }
+.blu-light {
+  --black: #F7FFFF;
+  --white: #14141E;
+  --gray: #9ACCD4;
+  --tint: #D1DEDF;
+  --lite: #383840;
+  --brite: #5A5A6E;
+}
+
 /* GRN color palette */
 .grn {
   --black: #141A14;
@@ -29,6 +47,15 @@
   --lite: #F5FFF5;
   --brite: #AAE68C;
 }
+.grn-light {
+  --black: #F9FFF9;
+  --white: #141A14;
+  --gray: #A2D489;
+  --tint: #D6DFD6;
+  --lite: #383C38;
+  --brite: #5A735A;
+}
+
 /* RED color palette */
 .red {
   --black: #1E1414;
@@ -37,6 +64,14 @@
   --tint: #403838;
   --lite: #FFFAFF;
   --brite: #FACDB9;
+}
+.red-light {
+  --black: #FFFCFF;
+  --white: #1E1414;
+  --gray: #E5BFAF;
+  --tint: #DFDADE;
+  --lite: #403838;
+  --brite: #645050;
 }
 
 :root {
