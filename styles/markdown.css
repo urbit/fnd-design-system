@@ -180,7 +180,7 @@
 }
 
 .markdown a:not(.md-exclude) {
-  @apply text-gray dark:text-brite font-semibold;
+  @apply text-gray dark:text-brite;
 }
 
 .markdown blockquote {
