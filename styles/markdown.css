@@ -38,7 +38,7 @@
 /* Lists */
 
 .markdown li {
-  @apply text-xl;
+  @apply text-2xl;
 }
 
 .markdown li:not(:last-child) {
@@ -103,7 +103,7 @@
 }
 
 .markdown p:not(.md-exclude) {
-  @apply text-xl;
+  @apply text-2xl;
 }
 
 .markdown-callout p {
@@ -142,7 +142,7 @@
 }
 
 .markdown.technical p:not(.md-exclude) {
-  @apply text-xl leading-tight;
+  @apply text-2xl leading-tight;
 }
 
 .markdown.technical p code {
@@ -191,7 +191,7 @@
 }
 
 .markdown table {
-  @apply table-fixed w-full text-xl;
+  @apply table-fixed w-full text-2xl;
   border-collapse: separate;
   border-spacing: 0;
 }

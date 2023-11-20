@@ -21,7 +21,7 @@ export default function ConceptCard({
       </div>
       <p
         className={`${
-          small ? "body-xs" : "body-sm"
+          small ? "body-sm" : "body-md"
         } mb-3.5 md-exclude font-semibold`}
       >
         {description}

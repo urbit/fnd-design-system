@@ -8,7 +8,7 @@ https://prismjs.com/download.html#themes=prism-coy&languages=markup+css+clike+ja
 
 code[class*="language-"],
 pre[class*="language-"] {
-  @apply text-lite text-lg font-mono font-semibold;
+  @apply text-lite text-2xl font-mono font-normal;
   background: none;
   text-align: left;
   white-space: pre;
