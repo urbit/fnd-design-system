@@ -195,36 +195,35 @@
   border-collapse: separate;
   border-spacing: 0;
 }
-
 .markdown table tr th,
 .markdown table tr td {
+  @apply font-normal;
   border-right-width: 2px;
   border-right-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
   padding: 8px !important;
   overflow-wrap: break-word;
-  @apply border-tint;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.markdown table tr td {
+  @apply border-b-2 border-tint;
 }
 
 .markdown table tr td:first-child {
-  border-left-width: 2px;
-  border-left-style: solid;
-  @apply border-tint;
-}
-
-.markdown table tr th:first-child {
-  border-left-width: 2px;
-  border-left-style: solid;
-  @apply border-black;
+  @apply border-l-2 border-tint;
 }
 
 .markdown table tr th {
-  border-top-width: 2px;
-  border-top-style: solid;
-  text-align: left;
-  vertical-align: middle;
-  @apply bg-tint text-lite border-black;
+  @apply bg-tint border-black;
+}
+
+.markdown table tr th:first-child {
+  @apply border-l-2 border-l-tint;
+}
+
+.markdown table tr th:last-child {
+  @apply border-r-2 border-r-tint;
 }
 
 /* top-left border-radius */
