@@ -83,19 +83,19 @@
 /* Default Typography */
 
 .markdown h1 {
-  @apply text-5xl mt-24 mb-12;
+  @apply text-6xl mt-24 mb-12;
 }
 
 .markdown h2 {
-  @apply text-4xl mt-16 mb-10;
+  @apply text-4xl mt-20 mb-10;
 }
 
 .markdown h3:not(.md-exclude) {
-  @apply text-3xl font-medium mt-14 mb-10;
+  @apply text-3xl font-medium mt-16 mb-8;
 }
 
 .markdown h4:not(.md-exclude) {
-  @apply text-2xl font-semibold mt-12 mb-8;
+  @apply text-2xl font-semibold mt-12 mb-6;
 }
 
 .markdown h5 {
@@ -126,19 +126,23 @@
 /* Technical Typography */
 
 .markdown.technical h1 {
-  @apply text-5xl mt-24 mb-16;
+  @apply text-6xl mt-24 mb-12;
 }
 
 .markdown.technical h2 {
-  @apply text-4xl mt-16 mb-12;
+  @apply text-6xl mt-24 mb-12;
 }
 
 .markdown.technical h3:not(.md-exclude) {
-  @apply text-3xl font-medium mt-14 mb-10;
+  @apply text-4xl mt-20 mb-10;
 }
 
 .markdown.technical h4:not(.md-exclude) {
-  @apply text-2xl font-semibold mt-12 mb-8;
+  @apply text-3xl font-medium mt-16 mb-8;
+}
+
+.markdown.technical h5:not(.md-exclude) {
+  @apply text-2xl font-semibold mt-12 mb-6;
 }
 
 .markdown.technical p:not(.md-exclude) {
