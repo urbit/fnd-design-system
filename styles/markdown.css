@@ -23,7 +23,7 @@
 
 .markdown p a:not(.md-exclude, :has(code), :has(pre)),
 .markdown li a:not(:has(code), :has(pre)) {
-  @apply underline decoration-1 text-gray dark:text-brite;
+  @apply underline decoration-1 underline-offset-4 text-gray dark:text-brite;
 }
 
 .markdown h1 a:not(:has(code), :has(pre)),
@@ -32,7 +32,7 @@
 .markdown h4 a:not(:has(code), :has(pre)),
 .markdown h5 a:not(:has(code), :has(pre)),
 .markdown h6 a:not(:has(code), :has(pre)) {
-  @apply underline decoration-2 text-gray dark:text-brite;
+  @apply underline decoration-2 underline-offset-4 text-gray dark:text-brite;
 }
 
 /* Lists */
