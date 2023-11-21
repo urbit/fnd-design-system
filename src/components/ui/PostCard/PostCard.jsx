@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import classnames from "classnames";
+import { defaultTarget } from "../utils";
 
 export default function PostCard({
   className,
@@ -10,6 +11,7 @@ export default function PostCard({
   authorName,
   authorPlanet,
   href,
+  target,
   imgSrc,
 }) {
   const style = imgSrc ? { backgroundImage: `url(${imgSrc})` } : {};
@@ -18,6 +20,7 @@ export default function PostCard({
     <Link
       className={`flex flex-col aspect-[1.5/2] max-w-xs sm:max-w-md md:max-w-lg md-exclude ${className}`}
       href={href}
+      target={target || defaultTarget(href)}
     >
       <div
         className="h-2/3 bg-gray bg-center bg-cover rounded-t-lg p-4"

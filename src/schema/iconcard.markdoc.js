@@ -16,6 +16,9 @@ export const iconcard = {
     href: {
       type: String,
     },
+    target: {
+      type: String,
+    },
     icon: {
       type: String,
     },

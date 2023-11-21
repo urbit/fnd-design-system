@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import classnames from "classnames";
+import { defaultTarget } from "../utils";
 
 export default function EventCard({
   className,
@@ -10,6 +11,7 @@ export default function EventCard({
   date,
   time,
   href,
+  target,
   imgSrc,
 }) {
   const style = imgSrc ? { backgroundImage: `url(${imgSrc})` } : {};
@@ -24,6 +26,7 @@ export default function EventCard({
       )}
       style={style}
       href={href}
+      target={target || defaultTarget(href)}
     >
       <div className="mb-auto">
         <h3 className="text-lite h2 mb-4">{title}</h3>

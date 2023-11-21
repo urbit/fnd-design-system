@@ -1,11 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import classnames from "classnames";
+import { defaultTarget } from "../utils";
 
 export default function ImageCard({
   className,
   colorScheme,
   href,
+  target,
   title,
   description,
   imgSrc,
@@ -26,6 +28,7 @@ export default function ImageCard({
       )}
       style={style}
       href={href}
+      target={target || defaultTarget(href)}
     >
       <h4 className="md-exclude h3">{title}</h4>
       <p className="md-exclude text-xl">{description}</p>

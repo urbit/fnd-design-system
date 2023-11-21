@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import classnames from "classnames";
-import FatBlock from "../../layout/FatBlock"
+import FatBlock from "../../layout/FatBlock";
+import { defaultTarget } from "../utils";
 
 export default function ContentCard({
   className,
@@ -9,6 +10,7 @@ export default function ContentCard({
   description,
   label,
   href,
+  target,
   imgSrc,
   small = false,
 }) {
@@ -19,13 +21,17 @@ export default function ContentCard({
       }
     : {};
 
+  const t = target || defaultTarget(href);
+
   return (
     <FatBlock className={className}>
       <div
         className={`aspect-[2.5/1] hidden sm:flex p-4 bg-gray rounded-lg ${width}`}
       >
         <div
-          className={`${small ? "aspect-[2/3]" : "aspect-square"} h-full bg-center bg-cover`}
+          className={`${
+            small ? "aspect-[2/3]" : "aspect-square"
+          } h-full bg-center bg-cover`}
           style={style}
         />
         <div className="flex flex-col items-start justify-between pl-4">
@@ -41,7 +47,11 @@ export default function ContentCard({
             <p className="body-sm text-lite md-exclude font-semibold mb-5">
               {description}
             </p>
-            <Link className="btn-sm btn-light md-exclude" href={href}>
+            <Link
+              className="btn-sm btn-light md-exclude"
+              href={href}
+              target={t}
+            >
               {label}
             </Link>
           </div>
@@ -58,7 +68,7 @@ export default function ContentCard({
         <p className="body-sm text-lite md-exclude font-semibold">
           {description}
         </p>
-        <Link className="btn-sm btn-light md-exclude" href={href}>
+        <Link className="btn-sm btn-light md-exclude" href={href} target={t}>
           {label}
         </Link>
       </div>

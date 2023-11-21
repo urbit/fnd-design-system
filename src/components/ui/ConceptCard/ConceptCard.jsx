@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Icon from "../Icon";
+import { defaultTarget } from "../utils";
 
 export default function ConceptCard({
   className = "",
@@ -8,12 +9,14 @@ export default function ConceptCard({
   description,
   icon,
   href,
+  target,
   small = false,
 }) {
   return (
     <Link
       className={`flex flex-col justify-between xs:w-10/12 sm:w-full max-w-2xl rounded-2xl text-2xl text-gray p-4 bg-brite md-exclude ${className}`}
       href={href}
+      target={target || defaultTarget(href)}
     >
       <div className="flex mb-3.5">
         <Icon className="h-full bg-gray mr-1.5" name={icon} />

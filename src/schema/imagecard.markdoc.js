@@ -12,6 +12,9 @@ export const imagecard = {
     href: {
       type: String,
     },
+    target: {
+      type: String,
+    },
     title: {
       type: String,
     },
