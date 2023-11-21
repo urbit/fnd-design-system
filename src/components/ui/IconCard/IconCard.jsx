@@ -28,14 +28,14 @@ export default function IconCard({
               name={icon}
             />
           </div>
-          <p className="h-1/3 p-4 rounded-b-2xl bg-gray body-sm md-exclude">
+          <p className="h-1/3 p-4 rounded-b-2xl bg-gray text-xl md-exclude">
             {description}
           </p>
         </Link>
       )}
       {!small && !big && (
         <Link
-          className="flex aspect-[2.5/1] rounded-2xl xs:w-10/12 sm:w-full max-w-2xl"
+          className="flex h-48 rounded-2xl xs:w-10/12 sm:w-full max-w-2xl"
           href={href}
         >
           {icon && (
@@ -53,10 +53,10 @@ export default function IconCard({
               { "rounded-r-2xl": icon, "rounded-2xl": !icon }
             )}
           >
-            <h3 className="text-brite h3 font-semibold md-exclude">
+            <h3 className="text-brite h3 mb-4 md-exclude">
               {title}
             </h3>
-            <p className="text-lite body-sm md-exclude">
+            <p className="text-lite text-xl md-exclude">
               {description}
             </p>
           </div>
@@ -71,7 +71,7 @@ export default function IconCard({
             {icon && <Icon className="h-full bg-brite mr-1.5" name={icon} />}
             <h3 className="text-brite font-semibold md-exclude">{title}</h3>
           </div>
-          <p className="text-lite body-sm md-exclude">
+          <p className="text-lite text-xl md-exclude">
             {description}
           </p>
         </Link>
