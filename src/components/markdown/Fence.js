@@ -5,6 +5,19 @@ import Copy from "../../lib/icons/copy";
 import Highlight, { defaultProps } from "prism-react-renderer";
 import Prism from "prismjs";
 import "prismjs/components/prism-hoon";
+import "prismjs/components/prism-c";
+import "prismjs/components/prism-clojure";
+import "prismjs/components/prism-csharp";
+import "prismjs/components/prism-groovy";
+import "prismjs/components/prism-haskell";
+import "prismjs/components/prism-java";
+import "prismjs/components/prism-javascript";
+import "prismjs/components/prism-python";
+import "prismjs/components/prism-ruby";
+import "prismjs/components/prism-rust";
+import "prismjs/components/prism-scala";
+import "prismjs/components/prism-scheme";
+import "prismjs/components/prism-swift";
 
 export default function Fence({
   children,
@@ -30,10 +43,7 @@ export default function Fence({
             className="absolute w-full h-full flex justify-center items-end z-20 cursor-pointer"
             onClick={() => setCollapse(false)}
           >
-            <p
-              className="!text-2xl"
-              style={{ paddingBottom: "0.25rem" }}
-            >
+            <p className="!text-2xl" style={{ paddingBottom: "0.25rem" }}>
               Click to expand
             </p>
           </div>
