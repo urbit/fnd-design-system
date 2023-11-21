@@ -188,7 +188,7 @@
 
 .markdown code,
 .markdown code[class*="language-"] {
-  @apply font-mono text-lite bg-tint rounded-md !px-0 !py-0;
+  @apply font-mono text-lite bg-tint rounded-md !px-0 !py-0 break-words;
 }
 
 .markdown a code,
