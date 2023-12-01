@@ -14,7 +14,7 @@
 .mos-light {
   --black: #F8FAF8;
   --white: #14140F;
-  --gray: #B7BFB7;
+  --gray: #A3ABA3;
   --tint: #D4D5D3;
   --lite: #373733;
   --brite: #5A5A55;
@@ -32,7 +32,7 @@
 .blu-light {
   --black: #F7FFFF;
   --white: #14141E;
-  --gray: #9ACCD4;
+  --gray: #85B7C0;
   --tint: #D1DEDF;
   --lite: #383840;
   --brite: #5A5A6E;
@@ -50,7 +50,7 @@
 .grn-light {
   --black: #F9FFF9;
   --white: #141A14;
-  --gray: #A2D489;
+  --gray: #8EC075;
   --tint: #D6DFD6;
   --lite: #383C38;
   --brite: #5A735A;
@@ -68,7 +68,7 @@
 .red-light {
   --black: #FFFCFF;
   --white: #1E1414;
-  --gray: #E5BFAF;
+  --gray: #D0AB9A;
   --tint: #DFDADE;
   --lite: #403838;
   --brite: #645050;
