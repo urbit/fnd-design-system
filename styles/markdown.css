@@ -192,7 +192,7 @@
 
 .markdown code,
 .markdown code[class*="language-"] {
-  @apply text-lite bg-tint rounded-md !px-0 !py-0 break-words;
+  @apply text-lite bg-tint rounded-md !px-[0.2em] !py-[0.1em] break-words;
   font-family: "Source Code Pro";
 }
 
