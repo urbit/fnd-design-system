@@ -1,5 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Source+Code+Pro:wght@100;200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Source+Code+Pro:wght@100;200;300;400;500;600;700;800&display=swap");
+
 .markdown {
   @apply text-lite;
+  font-family: "Inter";
 }
 
 .markdown .display * {
@@ -60,7 +64,7 @@
 
 .markdown ul {
   list-style: outside;
-  list-style-type: "— ";
+  list-style-type: "- ";
 }
 
 .markdown ol {
@@ -84,23 +88,23 @@
 /* Default Typography */
 
 .markdown h1 {
-  @apply text-6xl mt-24 mb-12;
+  @apply text-6xl mt-24 mb-12 font-sans;
 }
 
 .markdown h2 {
-  @apply text-4xl mt-20 mb-10;
+  @apply text-4xl mt-20 mb-10 font-sans;
 }
 
 .markdown h3:not(.md-exclude) {
-  @apply text-3xl font-medium mt-16 mb-8;
+  @apply text-3xl font-medium mt-16 mb-8 font-sans;
 }
 
 .markdown h4:not(.md-exclude) {
-  @apply text-2xl font-semibold mt-12 mb-6;
+  @apply text-2xl font-semibold mt-12 mb-6 font-sans;
 }
 
 .markdown h5 {
-  @apply text-2xl font-bold;
+  @apply text-xl font-bold font-sans;
 }
 
 .markdown p:not(.md-exclude) {
@@ -127,23 +131,23 @@
 /* Technical Typography */
 
 .markdown.technical h1 {
-  @apply text-6xl mt-24 mb-12;
+  @apply text-6xl mt-24 mb-12 font-sans;
 }
 
 .markdown.technical h2 {
-  @apply text-6xl mt-24 mb-12;
+  @apply text-6xl mt-24 mb-12 font-sans;
 }
 
 .markdown.technical h3:not(.md-exclude) {
-  @apply text-4xl mt-20 mb-10;
+  @apply text-4xl mt-20 mb-10 font-sans;
 }
 
 .markdown.technical h4:not(.md-exclude) {
-  @apply text-3xl font-medium mt-16 mb-8;
+  @apply text-3xl font-medium mt-16 mb-8 font-sans;
 }
 
 .markdown.technical h5:not(.md-exclude) {
-  @apply text-2xl font-semibold mt-12 mb-6;
+  @apply text-2xl font-semibold mt-12 mb-6 font-sans;
 }
 
 .markdown.technical hr + h1,
@@ -188,7 +192,7 @@
 
 .markdown code,
 .markdown code[class*="language-"] {
-  @apply font-mono text-lite bg-tint rounded-md !px-0 !py-0 break-words;
+  @apply text-lite bg-tint rounded-md !px-0 !py-0 break-words;
 }
 
 .markdown a code,
