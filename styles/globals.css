@@ -17,7 +17,7 @@
   --gray: #A3ABA3;
   --tint: #D4D5D3;
   --lite: #373733;
-  --brite: #5A5A55;
+  --brite: #54544F;
 }
 
 /* BLU color palette */
@@ -35,7 +35,7 @@
   --gray: #85B7C0;
   --tint: #D1DEDF;
   --lite: #383840;
-  --brite: #5A5A6E;
+  --brite: #545466;
 }
 
 /* GRN color palette */
@@ -53,7 +53,7 @@
   --gray: #8EC075;
   --tint: #D6DFD6;
   --lite: #383C38;
-  --brite: #5A735A;
+  --brite: #546A54;
 }
 
 /* RED color palette */
@@ -71,7 +71,7 @@
   --gray: #D0AB9A;
   --tint: #DFDADE;
   --lite: #403838;
-  --brite: #645050;
+  --brite: #5E4C4C;
 }
 
 :root {
