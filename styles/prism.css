@@ -32,7 +32,7 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
-  @apply text-lite text-2xl font-mono font-normal;
+  @apply text-lite text-2xl font-normal;
 	color: var(--prism-fg1); /* fg1 / fg */
 	direction: ltr;
   background: none;
@@ -50,6 +50,10 @@ pre[class*="language-"] {
 	-moz-hyphens: none;
 	-ms-hyphens: none;
 	hyphens: none;
+}
+
+pre[class*="language-"] {
+  @apply font-mono
 }
 
 pre[class*="language-"]::-moz-selection,
