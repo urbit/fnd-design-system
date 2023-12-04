@@ -85,7 +85,7 @@ body {
 
 /* generic type settings for nav elements */
 .type-ui {
-  @apply text-base lg:text-lg xl:text-xl font-normal;
+  @apply text-lg md:text-xl 3xl:text-2xl font-normal;
 }
 
 /* top level layout */
@@ -150,17 +150,17 @@ body {
 }
 
 /* text bodies */
-.body-xs {
-  @apply text-base sm:text-lg;
-}
 .body-sm {
-  @apply text-lg sm:text-xl;
+  @apply text-base md:text-lg 3xl:text-xl
 }
 .body-md {
-  @apply text-xl sm:text-2xl
+  @apply text-lg md:text-xl 3xl:text-2xl
 }
 .body-lg {
-  @apply text-2xl sm:text-3xl md:text-4xl;
+  @apply text-xl md:text-2xl 3xl:text-3xl
+}
+.body-xl {
+  @apply text-2xl md:text-4xl 3xl:text-5xl
 }
 
 /* button color schemes and sizes */

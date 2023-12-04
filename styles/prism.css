@@ -32,7 +32,7 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
-  @apply text-lite text-lg md:text-xl 3xl:text-2xl font-normal;
+  @apply text-lite font-normal;
 	color: var(--prism-fg1); /* fg1 / fg */
 	direction: ltr;
   background: none;

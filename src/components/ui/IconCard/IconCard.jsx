@@ -33,7 +33,7 @@ export default function IconCard({
               name={icon}
             />
           </div>
-          <p className="h-1/3 p-4 rounded-b-2xl bg-gray text-xl md-exclude">
+          <p className="h-1/3 p-4 rounded-b-2xl bg-gray body-md md-exclude">
             {description}
           </p>
         </Link>
@@ -60,7 +60,7 @@ export default function IconCard({
             )}
           >
             <h3 className="text-brite h3 mb-4 md-exclude">{title}</h3>
-            <p className="text-lite text-xl md-exclude">{description}</p>
+            <p className="text-lite body-md md-exclude">{description}</p>
           </div>
         </Link>
       )}
@@ -72,9 +72,9 @@ export default function IconCard({
         >
           <div className="flex items-center h3 h-[1em] mb-3.5 md-exclude">
             {icon && <Icon className="h-full bg-brite mr-1.5" name={icon} />}
-            <h3 className="text-brite font-semibold md-exclude">{title}</h3>
+            <h3 className="text-brite md-exclude">{title}</h3>
           </div>
-          <p className="text-lite text-xl md-exclude">{description}</p>
+          <p className="text-lite body-md md-exclude">{description}</p>
         </Link>
       )}
     </>
