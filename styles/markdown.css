@@ -6,6 +6,10 @@
   font-family: "Inter";
 }
 
+.md-spacing {
+  @apply my-4 md:my-6 3xl:my-8;
+}
+
 .markdown .display * {
   margin-top: unset;
   margin-bottom: unset;
@@ -16,13 +20,13 @@
 }
 
 .markdown p:not(.md-exclude) {
-  @apply my-4;
+  @apply md-spacing;
 }
 
 .markdown ul,
 .markdown ol,
 .markdown blockquote {
-  @apply my-4;
+  @apply md-spacing;
 }
 
 .markdown p a:not(.md-exclude, :has(code), :has(pre)),
@@ -116,7 +120,7 @@
 }
 
 .markdown hr:not(.md-exclude) {
-  @apply my-4 border-t-2 border-gray rounded-sm;
+  @apply md-spacing border-t-2 border-gray rounded-sm;
 }
 
 .markdown iframe {
@@ -182,7 +186,7 @@
 }
 
 .markdown span#figure {
-  @apply relative my-4 z-0 w-full left-0 block;
+  @apply relative md-spacing z-0 w-full left-0 block;
 }
 
 .markdown pre,
