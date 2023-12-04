@@ -42,7 +42,7 @@
 /* Lists */
 
 .markdown li {
-  @apply text-lg md:text-xl 3xl:text-2xl;
+  @apply text-lg md:text-xl 3xl:text-2xl !leading-normal;
 }
 
 .markdown li:not(:last-child) {
@@ -108,7 +108,7 @@
 }
 
 .markdown p:not(.md-exclude) {
-  @apply text-lg md:text-xl 3xl:text-2xl;
+  @apply text-lg md:text-xl 3xl:text-2xl !leading-normal;
 }
 
 .markdown-callout p {
@@ -167,7 +167,7 @@
 }
 
 .markdown.technical p:not(.md-exclude) {
-  @apply text-lg md:text-xl 3xl:text-2xl;
+  @apply text-lg md:text-xl 3xl:text-2xl !leading-normal;
 }
 
 .markdown.technical p code {
@@ -213,7 +213,7 @@
 }
 
 .markdown table {
-  @apply table-fixed w-full text-lg md:text-xl 3xl:text-2xl;
+  @apply table-fixed w-full text-lg md:text-xl 3xl:text-2xl !leading-normal;
   border-collapse: separate;
   border-spacing: 0;
 }
