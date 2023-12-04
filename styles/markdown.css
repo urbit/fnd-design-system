@@ -163,6 +163,14 @@
   @apply !mt-4;
 }
 
+.markdown h1 code,
+.markdown h2 code,
+.markdown h3 code,
+.markdown h4 code,
+.markdown h5 code {
+  @apply !font-mono;
+}
+
 .markdown.technical hr:not(.md-exclude):has(+ h1),
 .markdown.technical hr:not(.md-exclude):has(+ h2),
 .markdown.technical hr:not(.md-exclude):has(+ h3),
