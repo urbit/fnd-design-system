@@ -66,7 +66,7 @@ export default function IconCard({
       )}
       {small && (
         <Link
-          className="flex flex-col justify-between p-4 rounded-2xl bg-gray dark:bg-tint xs:w-10/12 sm:w-full max-w-2xl md-exclude"
+          className="flex flex-col p-4 rounded-2xl bg-gray dark:bg-tint xs:w-10/12 sm:w-full max-w-2xl md-exclude"
           href={href}
           target={t}
         >

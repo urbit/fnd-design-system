@@ -14,7 +14,7 @@ export default function ConceptCard({
 }) {
   return (
     <Link
-      className={`flex flex-col justify-between xs:w-10/12 sm:w-full max-w-2xl rounded-2xl text-2xl text-gray p-4 bg-brite md-exclude ${className}`}
+      className={`flex flex-col xs:w-10/12 sm:w-full max-w-2xl rounded-2xl text-2xl text-gray p-4 bg-brite md-exclude ${className}`}
       href={href}
       target={target || defaultTarget(href)}
     >
