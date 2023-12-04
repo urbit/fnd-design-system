@@ -8,7 +8,7 @@ function Dropdown({ className = "", label, items }) {
 
   return (
     <div
-      className={`relative flex h-full items-center bg-black w-1/2 md:w-52 lg:w-[14.5rem] xl:w-64 type-ui ${className}`}
+      className={`lg:relative flex h-full items-center bg-black w-1/2 lg:w-[14.5rem] xl:w-64 type-ui ${className}`}
     >
       {typeof label === "object" && (
         <Link
@@ -16,7 +16,7 @@ function Dropdown({ className = "", label, items }) {
           href="/"
         >
           <div className="flex items-center h-full bg-black">
-            <span className="flex justify-center items-center h-full w-5 md:w-8 lg:w-10 xl:w-12 bg-brite">
+            <span className="flex justify-center items-center h-full w-5 lg:w-10 xl:w-12 bg-brite">
               ~
             </span>
           </div>
@@ -41,13 +41,13 @@ function Dropdown({ className = "", label, items }) {
         <span>{(isOpen && "↑") || "↓"}</span>
       </button>
       {isOpen && (
-        <div className="absolute top-full w-full bg-black max-h-content overflow-y-scroll">
+        <div className="absolute top-full w-screen lg:w-full left-0 bg-black max-h-content overflow-y-scroll">
           {items.map(({ title, theme, href, target }) => {
             const firstCrumb = useRouter().asPath.split("/")[1];
             return (
               <Link
                 className={classnames(
-                  "flex whitespace-nowrap relative h-16 items-center hover:opacity-80 leading-none",
+                  "flex whitespace-nowrap relative h-12 md:h-16 items-center hover:opacity-80 leading-none",
                   (typeof label === "object" && "layout-pl") || "pl-5",
                   theme || "",
                   {
@@ -107,12 +107,12 @@ export default function IntraNav({ ourSite, sites, pages, search }) {
               <Dropdown label={ourSite} items={sites} />
               <Dropdown className="lg:hidden" label="Menu" items={pages} />
               <Pages
-                className="w-1/2 md:flex-1 overflow-x-auto"
+                className="flex-1 overflow-x-auto"
                 pages={pages}
               />
             </div>
             {search && (
-              <div className="h-full p-2 md:p-3 w-1/4 sm:w-1/3 md:w-52 lg:w-[14.5rem] xl:w-64 type-ui">
+              <div className="h-full p-2 md:p-3 w-1/3 lg:w-[14.5rem] xl:w-64 type-ui bg-brite">
                 {search}
               </div>
             )}
