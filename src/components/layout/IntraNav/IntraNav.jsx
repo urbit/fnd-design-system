@@ -29,10 +29,8 @@ function Dropdown({ className = "", label, items }) {
         className={classnames(
           "flex items-center justify-center h-full hover:opacity-80",
           {
-            "bg-brite text-gray w-12":
-              typeof label === "object",
-            "bg-gray text-brite w-full px-5":
-              typeof label === "string",
+            "bg-brite text-gray w-12": typeof label === "object",
+            "bg-gray text-brite w-full px-5": typeof label === "string",
           }
         )}
         onClick={() => setOpen(!isOpen)}
@@ -42,25 +40,31 @@ function Dropdown({ className = "", label, items }) {
       </button>
       {isOpen && (
         <div className="absolute top-full w-screen lg:w-full left-0 bg-black max-h-content overflow-y-scroll">
-          {items.map(({ title, theme, href, target }) => {
+          {items.map(({ title, theme, href, target }, i) => {
             const firstCrumb = useRouter().asPath.split("/")[1];
             return (
-              <Link
-                className={classnames(
-                  "flex whitespace-nowrap relative h-12 md:h-16 items-center hover:opacity-80 leading-none",
-                  (typeof label === "object" && "layout-pl") || "pl-5",
-                  theme || "",
-                  {
-                    "bg-gray text-brite": !theme,
-                    "bg-brite text-gray": theme,
-                    "text-lite": "/" + firstCrumb === href,
-                  }
+              <>
+                {typeof label === "string" && i > 0 && (
+                  <div className="layout-px bg-gray">
+                    <hr className="hr-horizontal border-brite" />
+                  </div>
                 )}
-                href={href}
-                target={target || "_self"}
-              >
-                {title}
-              </Link>
+                <Link
+                  className={classnames(
+                    "flex whitespace-nowrap relative h-12 md:h-16 items-center hover:opacity-80 leading-none layout-px",
+                    theme || "",
+                    {
+                      "bg-gray text-brite": !theme,
+                      "bg-brite text-gray": theme,
+                      "text-lite": "/" + firstCrumb === href,
+                    }
+                  )}
+                  href={href}
+                  target={target || "_self"}
+                >
+                  {title}
+                </Link>
+              </>
             );
           })}
         </div>
@@ -82,8 +86,7 @@ function Pages({ className, pages }) {
         return (
           <Link
             className={classnames("type-ui", {
-              "text-brite hover:text-lite":
-                "/" + firstCrumb !== href,
+              "text-brite hover:text-lite": "/" + firstCrumb !== href,
               "text-lite": "/" + firstCrumb === href,
             })}
             href={href}
@@ -106,10 +109,7 @@ export default function IntraNav({ ourSite, sites, pages, search }) {
             <div className="flex flex-1 h-full items-center">
               <Dropdown label={ourSite} items={sites} />
               <Dropdown className="lg:hidden" label="Menu" items={pages} />
-              <Pages
-                className="flex-1 overflow-x-auto"
-                pages={pages}
-              />
+              <Pages className="flex-1 overflow-x-auto" pages={pages} />
             </div>
             {search && (
               <div className="h-full p-2 md:p-3 w-1/3 lg:w-[14.5rem] xl:w-64 type-ui bg-brite">
