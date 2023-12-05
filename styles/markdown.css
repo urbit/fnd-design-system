@@ -97,23 +97,23 @@
 /* Default Typography */
 
 .markdown h1 {
-  @apply text-6xl mt-24 mb-12 font-sans;
+  @apply h1 mt-16 mb-8 md:mt-24 md:mb-12 font-sans;
 }
 
 .markdown h2 {
-  @apply text-4xl mt-20 mb-10 font-sans;
+  @apply h1 mt-16 mb-8 md:mt-24 md:mb-12 font-sans;
 }
 
 .markdown h3:not(.md-exclude) {
-  @apply text-3xl font-medium mt-16 mb-8 font-sans;
+  @apply h2 mt-12 mb-6 md:mt-20 md:mb-10 font-sans;
 }
 
 .markdown h4:not(.md-exclude) {
-  @apply text-2xl font-semibold mt-12 mb-6 font-sans;
+  @apply h3 mt-12 mb-6 md:mt-16 md:mb-8 font-sans;
 }
 
-.markdown h5 {
-  @apply text-xl font-bold font-sans;
+.markdown h5:not(.md-exclude) {
+  @apply h3 mt-12 mb-6 mt-16 mb-8 font-sans;
 }
 
 .markdown-callout p {
@@ -133,33 +133,11 @@
   font-style: normal;
 }
 
-/* Technical Typography */
-
-.markdown.technical h1 {
-  @apply text-6xl mt-24 mb-12 font-sans;
-}
-
-.markdown.technical h2 {
-  @apply text-6xl mt-24 mb-12 font-sans;
-}
-
-.markdown.technical h3:not(.md-exclude) {
-  @apply text-4xl mt-20 mb-10 font-sans;
-}
-
-.markdown.technical h4:not(.md-exclude) {
-  @apply text-3xl font-medium mt-16 mb-8 font-sans;
-}
-
-.markdown.technical h5:not(.md-exclude) {
-  @apply text-2xl font-semibold mt-12 mb-6 font-sans;
-}
-
-.markdown.technical hr + h1,
-.markdown.technical hr + h2,
-.markdown.technical hr + h3,
-.markdown.technical hr + h4,
-.markdown.technical hr + h5 {
+.markdown hr + h1,
+.markdown hr + h2,
+.markdown hr + h3,
+.markdown hr + h4,
+.markdown hr + h5 {
   @apply !mt-4;
 }
 
@@ -171,11 +149,11 @@
   @apply !font-mono;
 }
 
-.markdown.technical hr:not(.md-exclude):has(+ h1),
-.markdown.technical hr:not(.md-exclude):has(+ h2),
-.markdown.technical hr:not(.md-exclude):has(+ h3),
-.markdown.technical hr:not(.md-exclude):has(+ h4),
-.markdown.technical hr:not(.md-exclude):has(+ h5) {
+.markdown hr:not(.md-exclude):has(+ h1),
+.markdown hr:not(.md-exclude):has(+ h2),
+.markdown hr:not(.md-exclude):has(+ h3),
+.markdown hr:not(.md-exclude):has(+ h4),
+.markdown hr:not(.md-exclude):has(+ h5) {
   @apply !mt-20;
 }
 
