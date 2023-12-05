@@ -1,14 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import classnames from "classnames";
 
 function Dropdown({ className = "", label, items }) {
   const [isOpen, setOpen] = useState(false);
+  const wrapperRef = useRef();
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickListener);
+    return () => {
+      document.removeEventListener("mousedown", handleClickListener);
+    };
+  }, []);
+
+  const handleClickListener = (event) => {
+    if (wrapperRef && wrapperRef.current.contains(event.target)) {
+      return;
+    }
+    setOpen(false);
+  };
 
   return (
     <div
       className={`lg:relative flex h-full items-center bg-black w-1/2 lg:w-[14.5rem] xl:w-64 type-ui ${className}`}
+      ref={wrapperRef}
     >
       {typeof label === "object" && (
         <Link
