@@ -99,13 +99,13 @@ body {
 
 /* page margins */
 .layout-pl {
-  @apply pl-5 md:pl-8 lg:pl-10 xl:pl-12;
+  @apply pl-5 lg:pl-10 xl:pl-12;
 }
 .layout-pr {
-  @apply pr-5 md:pr-8 lg:pr-10 xl:pr-12;
+  @apply pr-5 lg:pr-10 xl:pr-12;
 }
 .layout-px {
-  @apply px-5 md:px-8 lg:px-10 xl:px-12;
+  @apply px-5 lg:px-10 xl:px-12;
 }
 
 /* general horizontal padding */

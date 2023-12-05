@@ -11,7 +11,7 @@ export default function Footer({ title = "", data = [] }) {
               <React.Fragment key={i}>
                 {i === 0 && (
                   <div className="type-ui w-full relative leading-none">
-                    <span className="absolute flex justify-center items-center h-full w-5 md:w-8 lg:w-10 xl:w-12 -ml-5 md:-ml-8 lg:-ml-10 xl:-ml-12">
+                    <span className="absolute flex justify-center items-center h-full w-5 lg:w-10 xl:w-12 -ml-5 lg:-ml-10 xl:-ml-12">
                       ~
                     </span>
                     {section.title}
