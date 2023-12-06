@@ -3,7 +3,32 @@
 }
 
 .md-spacing {
-  @apply my-4 md:my-6 3xl:my-8;
+  @apply my-5 md:my-[1.5625rem] 3xl:my-[1.875rem];
+}
+
+.markdown h1:not(.md-exclude),
+.markdown h2:not(.md-exclude) {
+  @apply mt-12 md:mt-[4.6875rem] 3xl:mt-[5.625rem];
+  @apply mb-5 md:mb-[1.5625rem] 3xl:mb-[1.875rem];
+}
+
+.markdown h3:not(.md-exclude),
+.markdown h4:not(.md-exclude),
+.markdown h5:not(.md-exclude) {
+  @apply mt-10 md:mt-[3.123rem] 3xl:mt-[3.75rem];
+  @apply mb-5 md:mb-[1.5625rem] 3xl:mb-[1.875rem];
+}
+
+.markdown hr + h1:not(.md-exclude),
+.markdown hr + h2:not(.md-exclude),
+.markdown hr + h3:not(.md-exclude),
+.markdown hr + h4:not(.md-exclude),
+.markdown hr + h5:not(.md-exclude) {
+  @apply !mt-0;
+}
+
+.markdown article > *:first-child {
+  @apply !mt-0
 }
 
 .markdown .display * {
@@ -24,14 +49,23 @@
   @apply !leading-normal;
 }
 
-.markdown p:not(.md-exclude) {
-  @apply md-spacing;
-}
-
+.markdown p:not(.md-exclude),
+.markdown hr:not(.md-exclude),
 .markdown ul,
 .markdown ol,
 .markdown blockquote {
   @apply md-spacing;
+}
+
+.markdown hr:not(.md-exclude):has(+ h1),
+.markdown hr:not(.md-exclude):has(+ h2) {
+  @apply my-12 md:my-[4.6875rem] 3xl:my-[5.625rem];
+}
+
+.markdown hr:not(.md-exclude):has(+ h3),
+.markdown hr:not(.md-exclude):has(+ h4),
+.markdown hr:not(.md-exclude):has(+ h5) {
+  @apply my-10 md:my-[3.123rem] 3xl:my-[3.75rem];
 }
 
 .markdown p a:not(.md-exclude, :has(code), :has(pre)),
@@ -93,31 +127,31 @@
 /* Default Typography */
 
 .markdown h1 {
-  @apply h1 mt-16 mb-8 md:mt-24 md:mb-12;
+  @apply h1;
 }
 
 .markdown h2 {
-  @apply h1 mt-16 mb-8 md:mt-24 md:mb-12;
+  @apply h2;
 }
 
 .markdown h3:not(.md-exclude) {
-  @apply h2 mt-12 mb-6 md:mt-20 md:mb-10;
+  @apply h3;
 }
 
 .markdown h4:not(.md-exclude) {
-  @apply h3 mt-12 mb-6 md:mt-16 md:mb-8;
+  @apply body-md font-bold;
 }
 
 .markdown h5:not(.md-exclude) {
-  @apply h3 mt-12 mb-6 mt-16 mb-8;
+  @apply body-md font-bold;
 }
 
 .markdown-callout p {
-  @apply mt-1 mb-2 text-base;
+  @apply mt-1 mb-2;
 }
 
 .markdown hr:not(.md-exclude) {
-  @apply md-spacing border-t-2 border-gray rounded-sm;
+  @apply border-t-2 border-gray rounded-sm;
 }
 
 .markdown iframe {
@@ -127,30 +161,6 @@
 /* Implicit "citation" heuristic */
 .markdown blockquote > p > strong {
   font-style: normal;
-}
-
-.markdown hr + h1,
-.markdown hr + h2,
-.markdown hr + h3,
-.markdown hr + h4,
-.markdown hr + h5 {
-  @apply !mt-4;
-}
-
-.markdown h1 code,
-.markdown h2 code,
-.markdown h3 code,
-.markdown h4 code,
-.markdown h5 code {
-  @apply !font-mono;
-}
-
-.markdown hr:not(.md-exclude):has(+ h1),
-.markdown hr:not(.md-exclude):has(+ h2),
-.markdown hr:not(.md-exclude):has(+ h3),
-.markdown hr:not(.md-exclude):has(+ h4),
-.markdown hr:not(.md-exclude):has(+ h5) {
-  @apply !mt-20;
 }
 
 .markdown.technical p code {
