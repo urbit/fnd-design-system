@@ -18,11 +18,11 @@ module.exports = {
         serif: ["Urbit Serif Italic"],
       },
       fontSize: {
-        base: ["1rem", { lineHeight: "1.2", letterSpacing: "0.02" }], // 16px, 19.2px
-        lg: ["1.125rem", { lineHeight: "1.2", letterSpacing: "0.02" }], // 18px, 21.6px
-        xl: ["1.25rem", "1.2"], // 20px, 24px
-        "2xl": ["1.5625rem", "1.2"], // 25px, 30px
-        "3xl": ["1.875rem", "1.2"], // 30px, 36px
+        base: ["1rem", { lineHeight: "1.2", letterSpacing: "0.02em" }], // 16px, 19.2px
+        lg: ["1.125rem", { lineHeight: "1.2", letterSpacing: "0.02em" }], // 18px, 21.6px
+        xl: ["1.25rem", { lineHeight: "1.2", letterSpacing: "0.02em" }], // 20px, 24px
+        "2xl": ["1.5625rem", { lineHeight: "1.2", letterSpacing: "0.02em" }], // 25px, 30px
+        "3xl": ["1.875rem", { lineHeight: "1.2", letterSpacing: "0.02em" }], // 30px, 36px
         "4xl": ["2.25rem", "1.1"], // 36px, 39.6px
         "5xl": ["3rem", "1.1"], // 48px, 52.8px
         "6xl": ["3.75rem", "1.1"], // 60px, 66px
