@@ -1,9 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Source+Code+Pro:wght@100;200;300;400;500;600;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Source+Code+Pro:wght@100;200;300;400;500;600;700;800&display=swap");
-
 .markdown {
   @apply text-lite;
-  font-family: "Inter";
 }
 
 .md-spacing {
@@ -73,7 +69,7 @@
 
 .markdown ul {
   list-style: outside;
-  list-style-type: "- ";
+  list-style-type: "— ";
 }
 
 .markdown ol {
@@ -97,23 +93,23 @@
 /* Default Typography */
 
 .markdown h1 {
-  @apply h1 mt-16 mb-8 md:mt-24 md:mb-12 font-sans;
+  @apply h1 mt-16 mb-8 md:mt-24 md:mb-12;
 }
 
 .markdown h2 {
-  @apply h1 mt-16 mb-8 md:mt-24 md:mb-12 font-sans;
+  @apply h1 mt-16 mb-8 md:mt-24 md:mb-12;
 }
 
 .markdown h3:not(.md-exclude) {
-  @apply h2 mt-12 mb-6 md:mt-20 md:mb-10 font-sans;
+  @apply h2 mt-12 mb-6 md:mt-20 md:mb-10;
 }
 
 .markdown h4:not(.md-exclude) {
-  @apply h3 mt-12 mb-6 md:mt-16 md:mb-8 font-sans;
+  @apply h3 mt-12 mb-6 md:mt-16 md:mb-8;
 }
 
 .markdown h5:not(.md-exclude) {
-  @apply h3 mt-12 mb-6 mt-16 mb-8 font-sans;
+  @apply h3 mt-12 mb-6 mt-16 mb-8;
 }
 
 .markdown-callout p {
@@ -174,13 +170,12 @@
 
 .markdown pre,
 .markdown pre[class*="language-"] {
-  @apply block !p-3 bg-tint rounded-lg w-full;
+  @apply font-mono block !p-3 bg-tint rounded-lg w-full;
 }
 
 .markdown code,
 .markdown code[class*="language-"] {
-  @apply text-lite bg-tint rounded-md !px-[0.2em] !py-[0.1em] break-words;
-  font-family: "Source Code Pro";
+  @apply font-mono text-lite bg-tint rounded-md !px-[0.2em] !py-[0.1em] break-words;
 }
 
 .markdown a code,
