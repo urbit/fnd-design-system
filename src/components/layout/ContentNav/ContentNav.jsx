@@ -24,6 +24,7 @@ function NavItem({
   collapsed,
   isOpen,
   setOpen,
+  alignSig,
 }) {
   const isOnThis = path === href;
   const padding = classnames({
@@ -32,7 +33,7 @@ function NavItem({
     "pl-6": level === 3,
     "pl-8": level === 4,
   });
-  const sigAlignment = "pl-1.5 md:pl-3 lg:pl-4 xl:pl-5";
+  const sigAlignment = alignSig ? "pl-1.5 md:pl-3 lg:pl-4 xl:pl-5" : "";
   const color = (b) => {
     return {
       "text-gray hover:text-brite": !b,
@@ -44,7 +45,8 @@ function NavItem({
     return (
       <Link
         className={classnames(
-          "flex justify-between type-ui mb-2 layout-pl",
+          "flex justify-between type-ui",
+          { "layout-pl": alignSig, "mb-2": isOpen && alignSig },
           color(isUnderThis)
         )}
         href={href}
@@ -85,7 +87,10 @@ function NavItem({
         }}
       >
         <span className={classnames(padding)}>{label}</span>
-        <span>{isOpen ? "-" : "+"}</span>
+        <span className={isOpen && !alignSig ? "pr-[0.175em]" : ""}>
+          {(isOpen && (alignSig ? "-" : "—")) ||
+            (!isOpen && (alignSig ? "+" : "＋"))}
+        </span>
       </Link>
     );
   }
@@ -106,6 +111,7 @@ function NavSection({
   path,
   level = -1,
   divider = false,
+  alignSig = false,
 }) {
   const isUnderThis = `${path}/`.includes(`${root}/`);
   const isUnderThisNotOn =
@@ -115,7 +121,7 @@ function NavSection({
   return (
     <>
       {divider && (
-        <div className="ml-1.5 md:ml-3 lg:ml-4 xl:ml-5">
+        <div className={alignSig ? "ml-1.5 md:ml-3 lg:ml-4 xl:ml-5" : ""}>
           <hr className="hr-horizontal border-gray my-3.5" />
         </div>
       )}
@@ -129,6 +135,7 @@ function NavSection({
         collapsed={!(posts.auto_expand || isUnderThis)}
         isOpen={isOpen}
         setOpen={setOpen}
+        alignSig={alignSig}
       />
       {(isOpen || isUnderThisNotOn) &&
         posts.pages.sort(sort(posts)).map((page) => {
@@ -143,6 +150,7 @@ function NavSection({
               path={path}
               isUnderThis={isUnderThis}
               collapsed={!(posts.auto_expand || isUnderThis)}
+              alignSig={alignSig}
               key={href}
             />
           );
@@ -159,6 +167,7 @@ function NavSection({
                 root={join(root, k)}
                 path={path}
                 level={level + 1}
+                alignSig={alignSig}
                 key={join(root, k)}
               />
             );
@@ -167,7 +176,12 @@ function NavSection({
   );
 }
 
-export default function ContentNav({ posts, root, firstCrumb }) {
+export default function ContentNav({
+  posts,
+  root,
+  firstCrumb,
+  mobile = false,
+}) {
   return (
     <nav className="flex flex-col w-full overflow-y-auto overflow-x-hidden offset-r">
       {posts.pages.sort(sort(posts)).map((page) => {
@@ -181,6 +195,7 @@ export default function ContentNav({ posts, root, firstCrumb }) {
             path={firstCrumb}
             isUnderThis={`${firstCrumb}/`.includes(`${root}/`)}
             key={href}
+            alignSig={!mobile}
           />
         );
       })}
@@ -196,6 +211,7 @@ export default function ContentNav({ posts, root, firstCrumb }) {
                 path={firstCrumb}
                 key={"tray-" + join(root, k)}
                 divider={i > 0 || posts.pages.length !== 0}
+                alignSig={!mobile}
               />
             );
           })}
