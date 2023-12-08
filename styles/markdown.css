@@ -83,21 +83,10 @@
 
 /* Lists */
 
-.markdown li:not(:last-child) {
-  /* @apply mb-0.5; */
-}
-
-.markdown li li {
-  /* @apply ml-4; */
-}
-
-.markdown ol li {
-  @apply relative;
-}
-
 .markdown li ul,
 .markdown li ol {
-  /* @apply mt-0.5 mb-0; */
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 .markdown ul {
@@ -105,11 +94,19 @@
   list-style-type: "— ";
 }
 
+.markdown article * ul {
+  margin-left: 1rem;
+}
+
 .markdown ol {
   list-style: outside;
   list-style-type: none;
   counter-reset: list-number;
-  margin-left: 2.5rem;
+  margin-left: 2.5rem !important;
+}
+
+.markdown ol li {
+  @apply relative;
 }
 
 .markdown ol li:before {
