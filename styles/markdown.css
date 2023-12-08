@@ -46,7 +46,6 @@
 .markdown code[class*="language-"],
 .markdown pre[class*="language-"] {
   @apply body-md;
-  @apply !leading-normal;
 }
 
 .markdown p:not(.md-exclude),
@@ -185,7 +184,7 @@
 
 .markdown code,
 .markdown code[class*="language-"] {
-  @apply font-mono text-lite bg-tint rounded-md !px-[0.2em] !py-[0.1em] break-words;
+  @apply font-mono text-lite bg-tint rounded-md break-words;
 }
 
 .markdown a code,
