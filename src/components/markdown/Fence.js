@@ -29,7 +29,7 @@ export default function Fence({
   const [collapsed, setCollapse] = React.useState(Boolean(mode === "collapse"));
   return (
     <div
-      className={classNames("relative rounded-xl my-6 z-0", {
+      className={classNames("relative rounded-xl md-spacing z-0", {
         "max-h-60 overflow-hidden": collapsed,
       })}
     >
@@ -86,7 +86,7 @@ export default function Fence({
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <pre
-            className={classNames(className, "!py-4", {
+            className={classNames(className, "!py-4 !my-0", {
               "max-h-96 overflow-y-auto": Boolean(mode === "scroll"),
             })}
             style={style}
