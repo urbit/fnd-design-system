@@ -22,6 +22,7 @@ import { contentcard } from "../schema/contentcard.markdoc";
 import { grid } from "../schema/grid.markdoc";
 import { video } from "../schema/video.markdoc";
 import { tooltip } from "../schema/tooltip.markdoc";
+import { markdocExample } from "../schema/markdoc-example.markdoc";
 import Tabs from "./markdown/Tabs";
 import Tab from "./markdown/Tab";
 import Button from "./markdown/Button";
@@ -111,6 +112,7 @@ export function MarkdownParse({ post, variables = {} }) {
       grid,
       video,
       tooltip,
+      markdocExample,
     },
     variables,
   });
