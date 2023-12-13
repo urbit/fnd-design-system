@@ -15,5 +15,9 @@ export const fence = {
       description:
         "Sets modes for code blocks. Specify either 'collapse' or 'scroll'.",
     },
+    fullscreen: {
+      type: Boolean,
+      description: "Adds a fullscreen button.",
+    },
   },
 };
