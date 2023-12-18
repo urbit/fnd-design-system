@@ -26,9 +26,15 @@ function Buttons({
   fullscreen,
   isFullscreen,
   setFullscreen,
+  className = "",
 }) {
   return (
-    <div className="absolute flex h-[21px] items-center justify-center space-x-1.5 top-3 right-3 z-10">
+    <div
+      className={classNames(
+        "absolute flex h-[21px] items-center justify-center space-x-1.5 top-3 right-3 z-10",
+        className
+      )}
+    >
       {copy && (
         <button className="!m-0" onClick={useCopy}>
           {copyStatus === "inactive" ? (
@@ -128,7 +134,7 @@ export default function Fence({
             {({ className, style, tokens, getLineProps, getTokenProps }) => (
               <pre
                 className={classNames(
-                  "relative !py-4 !my-0 h-full w-full overflow-y-auto",
+                  "!py-4 !my-0 h-full w-full overflow-y-auto",
                   className
                 )}
                 style={style}
@@ -147,6 +153,7 @@ export default function Fence({
                   fullscreen={fullscreen}
                   isFullscreen={isFullscreen}
                   setFullscreen={setFullscreen}
+                  className="top-8 right-8"
                 />
               </pre>
             )}
@@ -174,14 +181,6 @@ export default function Fence({
             </div>
           </>
         )}
-        <Buttons
-          copy={copy}
-          copyStatus={copyStatus}
-          useCopy={useCopy}
-          fullscreen={fullscreen}
-          isFullscree={isFullscreen}
-          setFullscreen={setFullscreen}
-        />
         <Highlight
           {...defaultProps}
           key={language}
@@ -204,6 +203,14 @@ export default function Fence({
                   ))}
                 </div>
               ))}
+              <Buttons
+                copy={copy}
+                copyStatus={copyStatus}
+                useCopy={useCopy}
+                fullscreen={fullscreen}
+                isFullscree={isFullscreen}
+                setFullscreen={setFullscreen}
+              />
             </pre>
           )}
         </Highlight>
