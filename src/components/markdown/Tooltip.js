@@ -48,7 +48,7 @@ function Tooltip({ data, label }) {
         </div>
       )}
       <span
-        className="text-brite bg-gray rounded-lg px-1.5 relative cursor-pointer"
+        className="text-brite border border-brite rounded-lg px-1.5 relative cursor-pointer"
         onClick={() => setOpen(!isOpen)}
       >
         {label}
