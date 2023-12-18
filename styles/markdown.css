@@ -181,7 +181,7 @@
 
 .markdown code,
 .markdown code[class*="language-"] {
-  @apply font-mono text-lite bg-tint rounded-md break-words;
+  @apply font-mono text-lite bg-tint rounded-md break-words px-1;
 }
 
 .markdown a code,
