@@ -73,12 +73,12 @@ function Tooltip({ data, label }) {
               className="md-exclude space-y-4"
               dangerouslySetInnerHTML={{ __html: data.content }}
             />
-            <Link
-              className="w-min mt-4 btn btn-light md-exclude"
-              href={data.slug}
-            >
-              Read More
-            </Link>
+            {/* <Link */}
+            {/*   className="w-min mt-4 btn btn-light md-exclude" */}
+            {/*   href={data.slug} */}
+            {/* > */}
+            {/*   Read More */}
+            {/* </Link> */}
           </div>
         </div>
       )}
