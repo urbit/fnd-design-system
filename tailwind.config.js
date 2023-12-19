@@ -14,7 +14,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Urbit Sans"],
-        mono: ["Urbit Sans Mono"],
+        mono: ["Urbit Sans", { fontVariationSettings: '"xtab" 500' }],
         serif: ["Urbit Serif Italic"],
       },
       fontSize: {
