@@ -122,7 +122,7 @@ export default function Fence({
   return (
     <>
       {isFullscreen && (
-        <div className="fixed p-4 z-50 top-0 left-0 w-screen h-screen bg-[rgba(0,0,0,0.7)]">
+        <div className="fixed lg:p-4 z-50 top-0 left-0 w-screen h-screen bg-[rgba(0,0,0,0.7)]">
           <Highlight
             {...defaultProps}
             key={language}
@@ -153,7 +153,7 @@ export default function Fence({
                   fullscreen={fullscreen}
                   isFullscreen={isFullscreen}
                   setFullscreen={setFullscreen}
-                  className="top-8 right-8"
+                  className="lg:top-8 lg:right-8"
                 />
               </pre>
             )}
@@ -161,7 +161,7 @@ export default function Fence({
         </div>
       )}
       <div
-        className={classNames("relative rounded-xl md-spacing z-0", {
+        className={classNames("relative lg:rounded-xl md-spacing z-0", {
           "max-h-60 overflow-hidden": collapsed,
         })}
       >
