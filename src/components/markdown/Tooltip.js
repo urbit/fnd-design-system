@@ -38,10 +38,7 @@ function Tooltip({ data, label }) {
     <>
       {isOpen && (
         <div className="fixed flex items-center justify-center z-50 left-0 top-0 w-screen h-screen bg-[rgba(0,0,0,0.7)]">
-          <div
-            className="flex flex-col w-full sm:w-5/6 md:w-2/3 lg:w-3/6 p-4 mx-3 bg-gray rounded-xl"
-            ref={ref}
-          >
+          <div className="flex flex-col bg-gray modal" ref={ref}>
             <div className="flex w-full justify-between items-center">
               <div className="text-black space-x-1">
                 {slug.map((crumb, i) => {

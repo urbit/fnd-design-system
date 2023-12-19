@@ -135,6 +135,22 @@ body {
   @apply w-[12.25rem] md:w-52 lg:w-[14.5rem] xl:w-64 type-ui;
 }
 
+.modal {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  overflow-y: auto;
+  @screen lg {
+    width: calc(100vw - 14.5rem - 14.5rem - 0.5rem);
+    height: auto;
+    max-height: calc(100vh - 4rem - 4rem - 0.5rem);
+    border-radius: 0.75rem;
+  }
+  @screen xl {
+    width: calc(100vw - 16.0rem - 16.0rem - 0.5rem);
+  }
+}
+
 /* headings */
 .h0 {
   @apply text-7xl md:text-8xl lg:text-9xl font-light;
