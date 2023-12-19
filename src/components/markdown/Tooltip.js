@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import classnames from "classnames";
 import { capitalize } from "../../lib/lib";
@@ -7,6 +7,17 @@ function Tooltip({ data, label }) {
   const [isOpen, setOpen] = useState(false);
   const [path, fragment] = data.slug.split("#");
   const slug = data.slug.replace(/^\//g, "").split("/");
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      if (isOpen) {
+        document.body.style.overflow = "visible";
+      }
+    };
+  }, [isOpen]);
 
   return (
     <>
