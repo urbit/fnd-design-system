@@ -130,9 +130,9 @@ body {
   @apply w-44 lg:w-48 xl:w-52;
 }
 
-/* sidebar width for overflow components */
+/* sidebar + margin width */
 .sidebar-with-margin {
-  @apply w-[12.25rem] md:w-52 lg:w-[14.5rem] xl:w-64 type-ui;
+  @apply w-[12.25rem] md:w-52 lg:w-[14.5rem] xl:w-64;
 }
 
 .modal {
@@ -212,13 +212,7 @@ body {
   @apply h-full border-l-2 rounded-sm;
 }
 
-/* vertical area remaining under header */
-.content-height {
-  height: calc(100vh - 3rem);
-  @screen md {
-    height: calc(100vh - 4rem);
-  }
-}
+/* vertical area remaining under IntraNav */
 .max-h-content {
   max-height: calc(100vh - 3rem);
   @screen md {
