@@ -171,7 +171,9 @@ body {
   @apply bg-brite hover:bg-lite text-gray;
 }
 .btn {
-  @apply inline-flex justify-center items-center whitespace-nowrap;
+  @apply inline-flex justify-center items-center whitespace-nowrap font-semibold;
+  padding: 0.2em 0.4em;
+  border-radius: 0.5em;
 }
 .btn-xs {
   @apply btn text-lg lg:text-xl font-semibold leading-none px-2.5 py-1.5 rounded-xl;
