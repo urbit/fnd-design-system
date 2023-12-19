@@ -48,7 +48,7 @@
   @apply body-md;
 }
 
-.markdown p:not(.md-exclude),
+.markdown *:not(.md-exclude) > p:not(.md-exclude),
 .markdown hr:not(.md-exclude),
 .markdown ul,
 .markdown ol,
