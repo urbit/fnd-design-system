@@ -93,5 +93,18 @@ function Tooltip({ data, label }) {
 }
 
 export default function tooltipWrapper(index = {}) {
-  return ({ label, href }) => Tooltip({ data: index[href], label });
+  return ({ label, href }) => {
+    if (index[href]) {
+      return Tooltip({ data: index[href], label });
+    } else {
+      return (
+        <Link
+          className="text-brite border border-brite rounded-lg px-1.5 relative cursor-pointer md-exclude"
+          href={href}
+        >
+          {label}
+        </Link>
+      );
+    }
+  };
 }
