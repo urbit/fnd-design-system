@@ -22,7 +22,7 @@ export default function IconCard({
     <>
       {big && !small && (
         <Link
-          className="aspect-square max-w-md sm:max-w-md md:max-w-lg text-2xl font-semibold text-lite"
+          className="aspect-square text-2xl font-semibold text-lite"
           href={href}
           target={t}
         >
@@ -40,7 +40,7 @@ export default function IconCard({
       )}
       {!small && !big && (
         <Link
-          className="flex h-48 rounded-2xl xs:w-10/12 sm:w-full max-w-2xl"
+          className="flex h-48 rounded-2xl xs:w-10/12 sm:w-full"
           href={href}
           target={t}
         >
@@ -66,7 +66,7 @@ export default function IconCard({
       )}
       {small && (
         <Link
-          className="flex flex-col p-4 rounded-2xl bg-gray dark:bg-tint xs:w-10/12 sm:w-full max-w-2xl md-exclude"
+          className="flex flex-col p-4 rounded-2xl bg-gray dark:bg-tint xs:w-10/12 sm:w-full md-exclude"
           href={href}
           target={t}
         >
