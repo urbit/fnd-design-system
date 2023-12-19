@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import classnames from "classnames";
+import { join } from "path";
 import { capitalize } from "../../lib/lib";
 
 function Tooltip({ data, label }) {
@@ -40,17 +41,24 @@ function Tooltip({ data, label }) {
         <div className="fixed flex items-center justify-center z-50 left-0 top-0 w-screen h-screen bg-[rgba(0,0,0,0.7)]">
           <div className="flex flex-col bg-gray modal" ref={ref}>
             <div className="flex w-full justify-between items-center">
-              <div className="text-black space-x-1">
+              <div className="text-brite space-x-1">
                 {slug.map((crumb, i) => {
                   const isFirst = i === 0;
                   const isLast = i + 1 === slug.length;
                   return (
                     <>
                       {!isFirst && <span>/</span>}
-                      {!isLast && <span>{capitalize(crumb)}</span>}
+                      {!isLast && (
+                        <Link
+                          className="md-exclude !no-underline"
+                          href={"/" + join(...slug.slice(0, i + 1))}
+                        >
+                          {capitalize(crumb)}
+                        </Link>
+                      )}
                       {isLast && (
                         <Link
-                          className="md-exclude text-brite"
+                          className="md-exclude !no-underline"
                           href={data.slug}
                         >
                           {capitalize(crumb.split("#")[0])}
