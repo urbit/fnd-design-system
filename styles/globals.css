@@ -76,7 +76,7 @@
 
 :root {
   /* Default to MOS */
-  @apply mos antialiased;
+  @apply mos;
 }
 
 body {
