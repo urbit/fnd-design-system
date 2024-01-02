@@ -108,6 +108,10 @@ body {
   @apply px-5 lg:px-10 xl:px-12;
 }
 
+.-layout-mx {
+  @apply -mx-5 lg:-mx-10 xl:-mx-12;
+}
+
 /* general horizontal padding */
 .offset-l {
   @apply pl-5;
