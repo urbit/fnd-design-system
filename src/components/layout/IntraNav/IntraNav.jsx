@@ -128,7 +128,7 @@ export default function IntraNav({ ourSite, sites, pages, search }) {
               <Pages className="flex-1 overflow-x-auto" pages={pages} />
             </div>
             {search && (
-              <div className="h-full p-2 md:p-3 w-1/3 lg:w-[14.5rem] xl:w-64 type-ui bg-brite">
+              <div className="h-full w-1/3 lg:w-[14.5rem] xl:w-64 type-ui">
                 {search}
               </div>
             )}
