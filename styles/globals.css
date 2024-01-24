@@ -85,7 +85,7 @@ body {
 
 /* generic type settings for nav elements */
 .type-ui {
-  @apply text-lg md:text-xl 3xl:text-2xl font-normal;
+  @apply text-base md:text-lg 2xl:text-xl font-normal leading-none;
 }
 
 /* top level layout */
@@ -157,30 +157,30 @@ body {
 
 /* headings */
 .h0 {
-  @apply text-7xl md:text-8xl lg:text-9xl font-light;
+  @apply text-6xl md:text-7xl 2xl:text-9xl font-light;
 }
 .h1 {
-  @apply text-5xl md:text-6xl 3xl:text-7xl font-normal;
+  @apply text-4xl md:text-5xl 2xl:text-6xl font-normal;
 }
 .h2 {
-  @apply text-3xl md:text-4xl 3xl:text-5xl font-normal;
+  @apply text-2xl md:text-3xl 2xl:text-4xl font-semibold;
 }
 .h3 {
-  @apply text-xl md:text-2xl 3xl:text-3xl font-semibold;
+  @apply text-xl md:text-2xl 2xl:text-3xl font-semibold;
+}
+.h4 {
+  @apply text-lg md:text-xl 2xl:text-2xl font-bold;
 }
 
 /* text bodies */
 .body-sm {
-  @apply text-base md:text-lg 3xl:text-xl
+  @apply text-base md:text-lg 2xl:text-xl;
 }
 .body-md {
-  @apply text-lg md:text-xl 3xl:text-2xl
+  @apply text-lg md:text-xl 2xl:text-2xl;
 }
 .body-lg {
-  @apply text-xl md:text-2xl 3xl:text-3xl
-}
-.body-xl {
-  @apply text-2xl md:text-4xl 3xl:text-5xl
+  @apply text-2xl md:text-3xl 2xl:text-4xl;
 }
 
 /* button color schemes and sizes */
