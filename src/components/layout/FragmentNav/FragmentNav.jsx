@@ -64,10 +64,10 @@ export default function FragmentNav({ markdown }) {
     >
       {nestedHeadings.map((heading, index) => (
         <>
-          <ul className="flex flex-col mb-2" key={heading.id}>
+          <ul className="flex flex-col" key={heading.id}>
             <li>
               <a
-                className={classNames("type-ui", {
+                className={classNames("body-sm", {
                   "text-gray hover:text-brite": !(heading.id === activeId),
                   "text-brite": heading.id === activeId,
                 })}
@@ -79,7 +79,7 @@ export default function FragmentNav({ markdown }) {
                 <ul className="flex flex-col">
                   {heading.items.map((child) => (
                     <a
-                      className={classNames("pl-2 type-ui", {
+                      className={classNames("pl-2.5 xl:pl-3.5 body-sm", {
                         "text-gray hover:text-brite": !(child.id === activeId),
                         "text-brite": child.id === activeId,
                       })}

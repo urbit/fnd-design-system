@@ -28,12 +28,12 @@ function NavItem({
 }) {
   const isOnThis = path === href;
   const padding = classnames({
-    "pl-2": level === 1,
-    "pl-4": level === 2,
-    "pl-6": level === 3,
-    "pl-8": level === 4,
+    "pl-2.5 xl:pl-3.5": level === 1,
+    "pl-5 xl:pl-7": level === 2,
+    "pl-[1.875rem] xl:pl-[2.625rem]": level === 3,
+    "pl-10 xl:pl-14": level === 4,
   });
-  const sigAlignment = alignSig ? "pl-1.5 md:pl-3 lg:pl-4 xl:pl-5" : "";
+  const sigAlignment = alignSig ? "pl-1.5 lg:pl-4 xl:pl-5" : "";
   const color = (b) => {
     return {
       "text-gray hover:text-brite": !b,
@@ -45,7 +45,7 @@ function NavItem({
     return (
       <Link
         className={classnames(
-          "flex justify-between type-ui",
+          "flex justify-between body-sm",
           { "layout-pl": alignSig, "mb-2": isOpen && alignSig },
           color(isUnderThis)
         )}
@@ -69,7 +69,7 @@ function NavItem({
     return (
       <Link
         className={classnames(
-          "flex justify-between w-full type-ui",
+          "flex justify-between w-full body-sm",
           sigAlignment,
           color(isUnderThis)
         )}
@@ -87,7 +87,9 @@ function NavItem({
         }}
       >
         <span className={classnames(padding)}>{label}</span>
-        <span className={isOpen && !alignSig ? "pr-[0.175em]" : ""}>
+        <span
+          className={!alignSig ? "flex items-center justify-center w-14" : ""}
+        >
           {(isOpen && (alignSig ? "-" : "—")) ||
             (!isOpen && (alignSig ? "+" : "＋"))}
         </span>
@@ -96,7 +98,7 @@ function NavItem({
   }
   return (
     <Link
-      className={classnames("flex type-ui", sigAlignment, color(isOnThis))}
+      className={classnames("flex body-sm", sigAlignment, color(isOnThis))}
       href={href}
     >
       <span className={classnames(padding)}>{label}</span>
@@ -121,7 +123,7 @@ function NavSection({
   return (
     <>
       {divider && (
-        <div className={alignSig ? "ml-1.5 md:ml-3 lg:ml-4 xl:ml-5" : ""}>
+        <div className={alignSig ? "ml-1.5 md:ml-3 lg:ml-4 xl:ml-5" : "mr-5"}>
           <hr className="hr-horizontal border-gray my-3.5" />
         </div>
       )}
@@ -183,7 +185,12 @@ export default function ContentNav({
   mobile = false,
 }) {
   return (
-    <nav className="flex flex-col w-full overflow-y-auto overflow-x-hidden offset-r">
+    <nav
+      className={classnames(
+        "flex flex-col w-full overflow-y-auto overflow-x-hidden",
+        { "offset-r": !mobile }
+      )}
+    >
       {posts.pages.sort(sort(posts)).map((page) => {
         const href = `/${root}/${page.slug}`;
         return (
