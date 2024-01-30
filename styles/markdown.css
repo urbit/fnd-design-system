@@ -42,10 +42,13 @@
 
 .markdown p:not(.md-exclude),
 .markdown li,
-.markdown table,
 .markdown code[class*="language-"],
 .markdown pre[class*="language-"] {
   @apply body-md;
+}
+
+.markdown table {
+  @apply body-sm;
 }
 
 .markdown *:not(.md-exclude) > p:not(.md-exclude),
