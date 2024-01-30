@@ -147,7 +147,7 @@
 }
 
 .markdown hr:not(.md-exclude) {
-  @apply border-t-2 border-gray rounded-sm;
+  @apply border-t border-gray rounded-sm;
 }
 
 .markdown iframe {
@@ -194,7 +194,7 @@
 }
 
 .markdown blockquote {
-  @apply border-l-2 border-lite pl-6;
+  @apply border-l border-lite pl-6;
 }
 .markdown blockquote cite {
   @apply font-semibold;
@@ -208,7 +208,7 @@
 .markdown table tr th,
 .markdown table tr td {
   @apply font-normal;
-  border-right-width: 2px;
+  border-right-width: 1px;
   border-right-style: solid;
   padding: 8px !important;
   overflow-wrap: break-word;
@@ -217,11 +217,11 @@
 }
 
 .markdown table tr td {
-  @apply border-b-2 border-tint;
+  @apply border-b border-tint;
 }
 
 .markdown table tr td:first-child {
-  @apply border-l-2 border-tint;
+  @apply border-l border-tint;
 }
 
 .markdown table tr th {
@@ -229,11 +229,11 @@
 }
 
 .markdown table tr th:first-child {
-  @apply border-l-2 border-l-tint;
+  @apply border-l border-l-tint;
 }
 
 .markdown table tr th:last-child {
-  @apply border-r-2 border-r-tint;
+  @apply border-r border-r-tint;
 }
 
 /* top-left border-radius */

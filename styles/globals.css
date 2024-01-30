@@ -210,10 +210,10 @@ body {
 
 /* rule lines */
 .hr-horizontal {
-  @apply w-full border-t-2 rounded-sm;
+  @apply w-full border-t rounded-sm;
 }
 .hr-vertical {
-  @apply h-full border-l-2 rounded-sm;
+  @apply h-full border-l rounded-sm;
 }
 
 /* vertical area remaining under IntraNav */

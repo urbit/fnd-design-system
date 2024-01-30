@@ -12,8 +12,8 @@ export default function Sidebar({
       className={classnames(
         "flex overflow-x-hidden overflow-y-auto",
         {
-          "border-l-2 rounded-sm border-gray": right,
-          "border-r-2 rounded-sm border-gray": left,
+          "border-l rounded-sm border-gray": right,
+          "border-r rounded-sm border-gray": left,
         },
         className
       )}
