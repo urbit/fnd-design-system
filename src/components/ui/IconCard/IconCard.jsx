@@ -14,65 +14,47 @@ export default function IconCard({
   icon,
   weight = "regular",
   small = false,
-  big = false,
 }) {
   const t = target || defaultTarget(href);
 
   return (
     <>
-      {big && !small && (
-        <Link
-          className="aspect-square text-2xl font-semibold text-lite"
-          href={href}
-          target={t}
-        >
-          <div className="relative h-2/3 p-4 rounded-t-2xl bg-tint">
-            <h4 className="h3 md-exclude">{title}</h4>
-            <Icon
-              className="absolute w-32 h-32 bg-brite m-auto left-0 right-0 top-0 bottom-0"
-              name={icon}
-            />
-          </div>
-          <p className="h-1/3 p-4 rounded-b-2xl bg-gray body-md md-exclude">
-            {description}
-          </p>
-        </Link>
-      )}
-      {!small && !big && (
-        <Link
-          className="flex h-48 rounded-2xl xs:w-10/12 sm:w-full"
-          href={href}
-          target={t}
-        >
+      {!small && (
+        <Link className="flex rounded-2xl w-full" href={href} target={t}>
           {icon && (
-            <div className="relative h-full w-1/5 md:w-1/4 rounded-l-2xl bg-tint">
-              <Icon
-                className="absolute w-3/4 bg-brite m-auto left-0 right-0 top-0 bottom-0"
-                name={icon}
-              />
+            <div className="relative flex items-center h-full w-1/5 md:w-1/4 p-2.5 rounded-l-2xl bg-tint">
+              <Icon className="flex-1 bg-brite mx-auto" name={icon} />
             </div>
           )}
           <div
             className={classnames(
               "flex-1 flex flex-col justify-between",
-              " h-full px-4 py-2 md:py-4 bg-gray md-exclude",
+              "h-full p-2.5 bg-gray md-exclude",
               { "rounded-r-2xl": icon, "rounded-2xl": !icon }
             )}
           >
-            <h3 className="text-brite h3 mb-4 md-exclude">{title}</h3>
-            <p className="text-lite body-md md-exclude">{description}</p>
+            <h3 className="text-brite h4 mb-4 md-exclude">{title}</h3>
+            <div className="flex flex-col justify-end min-h-[5em] text-lite body-md">
+              <p className="md-exclude">{description}</p>
+            </div>
           </div>
         </Link>
       )}
       {small && (
         <Link
-          className="flex flex-col p-4 rounded-2xl bg-gray dark:bg-tint xs:w-10/12 sm:w-full md-exclude"
+          className="flex flex-col p-2.5 rounded-2xl bg-gray w-full md-exclude"
           href={href}
           target={t}
         >
-          <div className="flex items-center h3 h-[1em] mb-3.5 md-exclude">
-            {icon && <Icon className="h-full bg-brite mr-1.5" name={icon} />}
+          <div className="flex items-center h4 h-[1em] mb-3.5 md-exclude">
             <h3 className="text-brite md-exclude">{title}</h3>
+            {icon && (
+              <Icon
+                className="h-full bg-brite ml-[0.25em]"
+                name={icon}
+                weight="bold"
+              />
+            )}
           </div>
           <p className="text-lite body-md md-exclude">{description}</p>
         </Link>

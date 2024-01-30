@@ -14,18 +14,16 @@ export default function ConceptCard({
 }) {
   return (
     <Link
-      className={`flex flex-col xs:w-10/12 sm:w-full rounded-2xl text-2xl text-gray p-4 bg-brite md-exclude ${className}`}
+      className={`flex flex-col w-full rounded-2xl text-gray bg-brite p-2.5 md-exclude ${className}`}
       href={href}
       target={target || defaultTarget(href)}
     >
       <div className="flex mb-3.5">
-        <Icon className="h-full bg-gray mr-1.5" name={icon} />
-        <h3 className={`${small ? "h3" : "h2"} md-exclude`}>{title}</h3>
+        <h3 className="h4 md-exclude">{title}</h3>
+        <Icon className="h-full bg-gray ml-[0.25em]" name={icon} weight="bold" />
       </div>
       <p
-        className={`${
-          small ? "body-md" : "body-lg"
-        } mb-3.5 md-exclude font-semibold`}
+        className={"body-md md-exclude"}
       >
         {description}
       </p>
