@@ -9,10 +9,8 @@ export default function Main({
   return (
     <main
       className={classnames(
-        "flex flex-col flex-1 layout",
-        {
-          "layout-px": singleColumn,
-        },
+        "flex flex-1 layout",
+        { "flex-col space-y-16 layout-px": singleColumn },
         className
       )}
     >

@@ -6,20 +6,27 @@ export default function Section({
   className = "",
   divider = false,
   narrow = false,
+  tight = false,
+  id,
 }) {
-  const width = classnames();
   return (
-    <>
-      {divider && <hr className="hr-horizontal border-gray my-4" />}
-      <div
+    <div className="w-full">
+      {divider && <hr className="hr-horizontal border-brite" />}
+      <section
         className={classnames(
-          "mb-16",
-          { "layout-narrow": narrow, "w-full": !narrow },
+          {
+            "layout-narrow": narrow,
+            "w-full": !narrow,
+            "pt-5": divider,
+            "space-y-5": tight,
+            "space-y-8": !tight,
+          },
           className
         )}
+        id={id}
       >
         {children}
-      </div>
-    </>
+      </section>
+    </div>
   );
 }
