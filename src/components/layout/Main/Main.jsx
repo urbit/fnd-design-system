@@ -10,7 +10,10 @@ export default function Main({
     <main
       className={classnames(
         "flex flex-1 layout",
-        { "flex-col space-y-16 layout-px": singleColumn },
+        {
+          "flex-col space-y-5 md:space-y-8 lg:space-y-[3.75rem] layout-px":
+            singleColumn,
+        },
         className
       )}
     >

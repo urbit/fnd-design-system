@@ -28,7 +28,7 @@ export default function Section({
             "w-full": !narrow,
             "pt-5": divider,
             "space-y-5": tight,
-            "space-y-8": !tight,
+            "space-y-5 md:space-y-[1.875rem]": !tight,
           },
           className
         )}
