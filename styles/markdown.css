@@ -112,14 +112,14 @@
   @apply relative;
 }
 
-.markdown ol li:before {
+.markdown ol > li:before {
   counter-increment: list-number;
   content: counter(list-number) " ";
   position: absolute;
   left: -2.5rem;
 }
 
-.markdown li ol li:before {
+.markdown ol > li ol > li:before {
   content: counter(list-number, lower-alpha) " ";
 }
 
