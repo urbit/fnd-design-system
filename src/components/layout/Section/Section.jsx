@@ -11,7 +11,15 @@ export default function Section({
 }) {
   return (
     <div className="w-full">
-      {divider && <hr className="hr-horizontal border-brite" />}
+      {divider && typeof divider === "object" ? (
+        divider
+      ) : (
+        <hr
+          className={`hr-horizontal ${
+            typeof divider === "string" ? divider : "border-brite"
+          }`}
+        />
+      )}
       <section
         className={classnames(
           {
