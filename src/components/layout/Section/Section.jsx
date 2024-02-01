@@ -7,6 +7,7 @@ export default function Section({
   divider = false,
   narrow = false,
   tight = false,
+  loose = false,
   id,
 }) {
   return (
@@ -27,8 +28,10 @@ export default function Section({
             "layout-narrow": narrow,
             "w-full": !narrow,
             "pt-5": divider,
-            "space-y-5": tight,
-            "space-y-5 md:space-y-[1.875rem]": !tight,
+            "space-y-5": tight && !loose,
+            "space-y-5 md:space-y-[1.875rem]": !tight && !loose,
+            "space-y-5 md:space-y-[1.875rem] lg:space-y-[3.75rem]":
+              !tight && loose,
           },
           className
         )}
