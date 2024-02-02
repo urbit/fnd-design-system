@@ -33,7 +33,7 @@ export default function IconCard({
               { "rounded-r-2xl": icon, "rounded-2xl": !icon }
             )}
           >
-            <h3 className="text-brite h4 mb-4 md-exclude">{title}</h3>
+            <h3 className="text-brite h3 mb-4 md-exclude">{title}</h3>
             <div className="flex flex-col justify-end min-h-[5em] text-lite body-md">
               <p className="md-exclude">{description}</p>
             </div>
@@ -46,13 +46,13 @@ export default function IconCard({
           href={href}
           target={t}
         >
-          <div className="flex items-center h4 h-[1em] mb-3.5 md-exclude">
+          <div className="flex items-center h3 h-[1em] mb-3.5 md-exclude">
             <h3 className="text-brite md-exclude">{title}</h3>
             {icon && (
               <Icon
                 className="h-full bg-brite ml-[0.25em]"
                 name={icon}
-                weight="bold"
+                weight="semibold"
               />
             )}
           </div>

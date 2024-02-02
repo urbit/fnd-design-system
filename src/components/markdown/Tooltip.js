@@ -74,7 +74,7 @@ function Tooltip({ data, label }) {
             </div>
             <hr className="md-exclude hr-horizontal border-black my-4" />
             <h2
-              className="md-exclude h3 text-black mb-8"
+              className="md-exclude h2 text-black mb-8"
               dangerouslySetInnerHTML={{ __html: data.title }}
             />
             <div

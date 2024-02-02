@@ -30,7 +30,7 @@ export default function ImageCard({
       href={href}
       target={target || defaultTarget(href)}
     >
-      <h4 className="md-exclude h3">{title}</h4>
+      <h3 className="md-exclude h3">{title}</h3>
       <p className="md-exclude text-xl">{description}</p>
     </Link>
   );

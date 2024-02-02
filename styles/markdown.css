@@ -134,7 +134,7 @@
 }
 
 .markdown h3:not(.md-exclude) {
-  @apply h3;
+  @apply text-xl md:text-2xl 2xl:text-3xl font-semibold;
 }
 
 .markdown h4:not(.md-exclude) {

@@ -19,8 +19,8 @@ export default function ConceptCard({
       target={target || defaultTarget(href)}
     >
       <div className="flex mb-3.5">
-        <h3 className="h4 md-exclude">{title}</h3>
-        <Icon className="h-full bg-gray ml-[0.25em]" name={icon} weight="bold" />
+        <h3 className="h3 md-exclude">{title}</h3>
+        <Icon className="h-full bg-gray ml-[0.25em]" name={icon} weight="semibold" />
       </div>
       <p
         className={"body-md md-exclude"}
