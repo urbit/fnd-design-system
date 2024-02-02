@@ -145,13 +145,13 @@ body {
   padding: 1rem;
   overflow-y: auto;
   @screen lg {
-    width: calc(100vw - 14.5rem - 14.5rem - 0.5rem);
+    width: calc(100% - 14.5rem - 14.5rem - 0.5rem);
     height: auto;
     max-height: calc(100vh - 4rem - 4rem - 0.5rem);
     border-radius: 0.75rem;
   }
   @screen xl {
-    width: calc(100vw - 16.0rem - 16.0rem - 0.5rem);
+    width: calc(100% - 16.0rem - 16.0rem - 0.5rem);
   }
 }
 
