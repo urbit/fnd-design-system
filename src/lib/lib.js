@@ -70,6 +70,19 @@ export const getPage = (path, lastModified = false) => {
   }
 };
 
+export function getPreviousPosts(slug, fields = [], key, n = 3, sort = "date") {
+  let resultPosts = null;
+
+  getAllPosts(fields, key, sort).forEach((post, index, array) => {
+    if (post.slug === slug) {
+      if (typeof array[index + 1] !== "undefined") {
+        resultPosts = array.slice(index + 1, index + 1 + n);
+      }
+    }
+  });
+  return resultPosts;
+}
+
 export function getPreviousPost(slug, fields = [], key, sort = "date") {
   let resultPost = null;
 
@@ -81,6 +94,22 @@ export function getPreviousPost(slug, fields = [], key, sort = "date") {
     }
   });
   return resultPost;
+}
+
+export function getNextPosts(slug, fields = [], key, n = 3, sort = "date") {
+  let resultPosts = null;
+
+  getAllPosts(fields, key, sort).forEach((post, index, array) => {
+    if (post.slug === slug) {
+      if (typeof array[index - 1] !== "undefined") {
+        resultPosts = array.slice(
+          Math.max(0, index - n),
+          index
+        );
+      }
+    }
+  });
+  return resultPosts;
 }
 
 export function getNextPost(slug, fields = [], key, sort = "date") {
