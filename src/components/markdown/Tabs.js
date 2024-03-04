@@ -11,7 +11,7 @@ const Tabs = ({ labels, children }) => {
         {labels.map((label) => (
           <li
             className={
-              "btn-sm " +
+              "btn " +
               (currentTab === label ? "bg-gray text-brite" : "btn-light")
             }
             key={label}
