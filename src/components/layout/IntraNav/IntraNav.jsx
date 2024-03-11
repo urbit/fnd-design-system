@@ -55,7 +55,7 @@ function Dropdown({ className = "", label, items }) {
         <span>{(isOpen && "↑") || "↓"}</span>
       </button>
       {isOpen && (
-        <div className="absolute top-full w-screen lg:w-full left-0 bg-black max-h-content overflow-y-scroll">
+        <div className="absolute top-full w-screen lg:w-full left-0 bg-black max-h-content overflow-y-auto">
           {items.map(({ title, theme, href, target }, i) => {
             const firstCrumb = useRouter().asPath.split("/")[1];
             return (
