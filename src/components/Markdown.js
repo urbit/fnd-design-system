@@ -21,6 +21,7 @@ import { iconcard } from "../schema/iconcard.markdoc";
 import { grid } from "../schema/grid.markdoc";
 import { video } from "../schema/video.markdoc";
 import { tooltip } from "../schema/tooltip.markdoc";
+import { faq, faqSection } from "../schema/faq.markdoc";
 import { markdocExample } from "../schema/markdoc-example.markdoc";
 import Tabs from "./markdown/Tabs";
 import Tab from "./markdown/Tab";
@@ -31,6 +32,7 @@ import ImageCard from "./ui/ImageCard/ImageCard";
 import IconCard from "./ui/IconCard/IconCard";
 import Video from "./markdown/Video";
 import tooltipWrapper from "./markdown/Tooltip";
+import { Faq, FaqSection } from "./markdown/Faq";
 import FatBlock from "./layout/FatBlock";
 import parse from "html-react-parser";
 
@@ -109,6 +111,8 @@ export function MarkdownParse({ post, variables = {} }) {
       grid,
       video,
       tooltip,
+      faq,
+      faqSection,
       markdocExample,
     },
     variables,
@@ -133,6 +137,8 @@ export function MarkdownRender({ content, tooltipData = {} }) {
       Grid,
       Video,
       Tooltip: tooltipWrapper(tooltipData),
+      Faq,
+      FaqSection,
     },
   });
 }
@@ -149,10 +155,10 @@ const uniqHead = (ast) => {
         if (uniqueHeadings.has(children.attributes.content)) {
           uniqueHeadings.set(
             children.attributes.content,
-            uniqueHeadings.get(children.attributes.content) + 1
+            uniqueHeadings.get(children.attributes.content) + 1,
           );
           return `${children.attributes.content}-${uniqueHeadings.get(
-            children.attributes.content
+            children.attributes.content,
           )}`;
         } else {
           uniqueHeadings.set(children.attributes.content, 0);
@@ -183,7 +189,7 @@ const uniqHead = (ast) => {
           ...e.attributes,
           id: generateID(e.children, e.attributes),
         },
-        e.children
+        e.children,
       );
     } else {
       return e;
@@ -243,7 +249,7 @@ const footnoteParse = (partialAst) => {
         // Remove the markdown footnote syntax (e.g. [^1]) from the string
         fn[0].attributes.content = fn[0].attributes.content.replace(
           token[0],
-          ""
+          "",
         );
         // Create a new footnote item and append to the fnList
         const id = token[1];
@@ -253,7 +259,7 @@ const footnoteParse = (partialAst) => {
             id: `fn${id}`,
             href: `#fnref${id}`,
           },
-          fn
+          fn,
         );
         fnList.push(fnItem);
       }
