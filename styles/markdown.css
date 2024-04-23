@@ -40,10 +40,7 @@
   padding-bottom: unset;
 }
 
-.markdown p:not(.md-exclude),
-.markdown li,
-.markdown code[class*="language-"],
-.markdown pre[class*="language-"] {
+.markdown {
   @apply body-md;
 }
 
