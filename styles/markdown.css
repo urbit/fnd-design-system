@@ -67,7 +67,7 @@
   @apply my-10 md:my-[3.123rem] 3xl:my-[3.75rem];
 }
 
-.markdown p a:not(.md-exclude, :has(code), :has(pre)),
+.markdown p a:not(.md-exclude, .btn, :has(code), :has(pre)),
 .markdown li a:not(:has(code), :has(pre)) {
   @apply underline decoration-1 underline-offset-4 text-brite;
 }
@@ -189,7 +189,7 @@
   @apply decoration-0 bg-brite text-gray;
 }
 
-.markdown a:not(.md-exclude) {
+.markdown a:not(.md-exclude, .btn) {
   @apply text-brite;
 }
 
