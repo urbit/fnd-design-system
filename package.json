@@ -1,6 +1,6 @@
 {
   "name": "@urbit/fdn-design-system",
-  "version": "1.0.0-rc.9",
+  "version": "1.0.0-rc.10",
   "description": "A system of design variables, Markdoc and React components intended for the redesigned Urbit Foundation projects.",
   "main": "build/cjs/index.js",
   "module": "build/esm/index.js",
