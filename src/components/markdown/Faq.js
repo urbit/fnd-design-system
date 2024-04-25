@@ -4,7 +4,7 @@ export function FaqSection({ children, question, first = false }) {
   const [expand, setExpand] = useState(false);
   return (
     <div
-      className={`${first ? "border-t " : ""}border-b border-gray`}
+      className={`${first ? "border-t " : ""}border-b border-gray cursor-pointer`}
       onClick={() => setExpand(!expand)}
     >
       <p className="flex justify-between md-exclude py-1.5">
